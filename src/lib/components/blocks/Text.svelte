@@ -31,11 +31,11 @@
       fontSize = 0.9;
     }
 
-    return `clamp(${minFontSize ?? '0.9rem'}, ${fontSize}rem, ${maxFontSize ?? '4.5rem'})`;
+    return `clamp(${minFontSize ? minFontSize : '0.9rem'}, ${fontSize}rem, ${maxFontSize ? maxFontSize : '4.5rem'})`;
   }
 
   const resized = (n:UIEvent):any => {
-    element.attributeStyleMap.set('font-size', minFontSize ?? '0.9rem')
+    element.attributeStyleMap.set('font-size', minFontSize ? minFontSize : '0.9rem')
     const newFontSize = calcFontSize();
     element.attributeStyleMap.set('font-size', newFontSize)
   }
@@ -47,7 +47,7 @@
       let content = dictEntry(lang, ref);
       hiddenElement.innerHTML = content;
       
-      element.attributeStyleMap.set('font-size', minFontSize ?? '0.9rem')
+      element.attributeStyleMap.set('font-size', minFontSize ? minFontSize : '0.9rem')
       element.innerHTML = content;
 
       const newFontSize = calcFontSize();
