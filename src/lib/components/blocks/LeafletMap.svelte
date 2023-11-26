@@ -63,7 +63,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 200;
+    z-index: 998;
     padding: 1rem;
     color: var(--picture-link-font-color);
     background-color: var(--picture-link-bg-color);
