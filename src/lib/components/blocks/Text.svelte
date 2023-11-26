@@ -47,7 +47,7 @@
       let content = dictEntry(lang, ref);
       hiddenElement.innerHTML = content;
       
-      element.attributeStyleMap.set('font-size', minFontSize)
+      element.attributeStyleMap.set('font-size', minFontSize ?? '0.9rem')
       element.innerHTML = content;
 
       const newFontSize = calcFontSize();
