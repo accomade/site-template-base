@@ -3,8 +3,9 @@
   
   import { dictEntry } from '$lib/conf/translations';
 
-  import { ACCOMADE_USER_ID } from '$lib/conf/settings';
-  export let logoLink:string = `https://ipajhcabityibeaqfzju.supabase.co/storage/v1/object/public/users/${ACCOMADE_USER_ID}/logo.svg`
+  import { ACCOMADE_USER_ID, PUBLIC_SUPABASE_URL } from '$lib/conf/settings';
+
+  export let logoLink:string = `${PUBLIC_SUPABASE_URL}/storage/v1/object/public/users/${ACCOMADE_USER_ID}/logo.svg`
 </script>
 
 <header>
