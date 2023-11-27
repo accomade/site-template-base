@@ -1,11 +1,14 @@
 <script lang="ts">
   import { currentLang } from '$lib/stores/lang';
-  import Logo from '$lib/components/svg/LogoSVG.svelte';
+  
   import { dictEntry } from '$lib/conf/translations';
+
+  import { ACCOMADE_USER_ID } from '$lib/conf/settings';
+  export let logoLink:string = `https://ipajhcabityibeaqfzju.supabase.co/storage/v1/object/public/users/${ACCOMADE_USER_ID}/logo.svg`
 </script>
 
 <header>
-  <div class="logo"><Logo/></div>
+  <object title="logo" class="logo" data="{logoLink}"/>
   <div class="text-wrapper">
     <div class="header"><h1>{dictEntry($currentLang, "headerTitle")}</h1></div>
     <div class="slug">{dictEntry($currentLang,"headerSlug")}</div>
