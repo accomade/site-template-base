@@ -14,9 +14,9 @@
     <div class="ext-link-wrapper">
       <a 
         href="{n.path}" 
-        target="_blank" 
-        rel="noreferrer noopener"
-        on:click|stopPropagation={close}>
+        target="_blank"
+        on:click
+        rel="noreferrer noopener">
           { dictEntry($currentLang, n.key) }
       </a>
       <div class="link-icon-wrapper">
@@ -24,7 +24,9 @@
       </div>
     </div>
     {:else}
-      <a href="{n.path}" on:click|stopPropagation={close}>{ dictEntry($currentLang, n.key) }</a>
+      <a href="{n.path}" on:click>
+          { dictEntry($currentLang, n.key) }
+      </a>
     {/if}
   {:else}
       <span>{ dictEntry($currentLang, n.key) }</span>
