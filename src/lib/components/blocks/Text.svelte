@@ -23,11 +23,11 @@
     ratio = containerArea / hiddenArea
     let fontSize = (Math.round( Math.max(0, (Math.log( ratio ))) * 100 ) / 100) + 0.8;
     if(fontSize == Infinity) {
-      console.log('Calculated fontSize == Infinity')
+      //console.log('Calculated fontSize == Infinity')
       fontSize = 2;
     }
     if(!fontSize) {
-      console.log('Calculated fontSize falsy');
+      //console.log('Calculated fontSize falsy');
       fontSize = 0.9;
     }
 
