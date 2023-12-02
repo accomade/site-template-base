@@ -13,7 +13,7 @@ export const initLangStore = () => {
     if( i18n?.preferBrowserLang ) {
       const browserLang = navigator.language;
       const shortCode = browserLang.slice(0,2)
-      console.log("Discoverd browser lang: ", shortCode)
+      //console.log("Discoverd browser lang: ", shortCode)
 
       if( !!i18n.translations[shortCode] ) {
         defaultLang = shortCode;

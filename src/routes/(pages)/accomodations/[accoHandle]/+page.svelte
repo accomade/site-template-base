@@ -5,11 +5,7 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   
-  $: {
-    console.log($page.url.pathname)
-    console.log(data.accoHandle)
-  }
-
+  
   export let data: App.PageData & Record<string, any>;
   $: acco = accos.find( (a) => a.path == $page.url.pathname )
   
