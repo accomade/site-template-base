@@ -5,8 +5,13 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   
+  $: {
+    console.log($page.url.pathname)
+    console.log(data.accoHandle)
+  }
+
   export let data: App.PageData & Record<string, any>;
-  let acco = accos.find( (a) => a.path == $page.url.pathname )
+  $: acco = accos.find( (a) => a.path == $page.url.pathname )
   
   onMount( () => {
     if( !acco ) {
@@ -35,7 +40,6 @@
     {/each}
   {/if}
 {/if}
-
 
 <style>
   .section-wrapper {
