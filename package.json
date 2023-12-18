@@ -12,18 +12,18 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^2.0.3",
-		"@sveltejs/kit": "^1.27.6",
+		"@sveltejs/kit": "^1.30.3",
 		"@twicpics/components": "^0.25.1",
 		"@types/js-cookie": "^3.0.6",
-		"@types/luxon": "^3.3.6",
+		"@types/luxon": "^3.3.7",
 		"@types/web": "^0.0.119",
 		"gdpr-cooco-banner": "^0.0.5",
-		"occuplan": "^0.2.7",
+		"occuplan": "^0.2.8",
 		"svelte": "^4.2.8",
 		"svelte-check": "^3.6.2",
 		"tslib": "^2.6.2",
-		"typescript": "^5.3.2",
-		"vite": "^4.5.0"
+		"typescript": "^5.3.3",
+		"vite": "^4.5.1"
 	},
 	"type": "module",
 	"engines": {
@@ -31,9 +31,9 @@
 	},
 	"dependencies": {
 		"@dinero.js/currencies": "2.0.0-alpha.14",
-		"@fontsource/arizonia": "^5.0.17",
+		"@fontsource/arizonia": "^5.0.18",
 		"@fontsource/carrois-gothic": "^5.0.8",
-		"@fontsource/raleway": "^5.0.15",
+		"@fontsource/raleway": "^5.0.16",
 		"@types/geojson": "^7946.0.13",
 		"@types/leaflet": "^1.9.8",
 		"dinero.js": "2.0.0-alpha.14",
