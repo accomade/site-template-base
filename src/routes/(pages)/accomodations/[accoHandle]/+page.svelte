@@ -4,12 +4,17 @@
   import { accos } from '$lib/conf';
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
+  import type { Acco } from '$lib/types/accos';
   
   
   export let data: App.PageData & Record<string, any>;
-  $: acco = accos.find( (a) => a.path == $page.url.pathname )
-  
+  let acco:Acco|undefined
+
   onMount( () => {
+    acco = accos.find( (a) => {
+      return a.path === $page.url.pathname || `${a.path}/` === $page.url.pathname 
+    })
+  
     if( !acco ) {
       goto('/accomodations')
     }

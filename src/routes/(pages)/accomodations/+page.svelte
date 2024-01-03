@@ -8,10 +8,10 @@
 </script>
 
 <svelte:head>
-  <title>{dictEntry($currentLang,"accomodations")}</title>
+  <title>{ dictEntry($currentLang,"accomodations") }</title>
 </svelte:head>
 
-<h1>{dictEntry($currentLang, "accomodations")}</h1>
+<h1>{ dictEntry($currentLang, "accomodations") }</h1>
 
 <main style="max-width: {maxWidth};">
   {#each accos as a}
