@@ -24,107 +24,119 @@
 
 <div class="amneties-wrapper">
   {#if theCore}
-  <div class="element-wrapper">
-    <AreaSvg size="2rem"/>
-    <div>
-    {@html formatSize($currentLang, theCore.size)}
+    <div class="element-wrapper">
+      <AreaSvg size="2rem"/>
+      <div>
+      {@html formatSize($currentLang, theCore.size)}
+      </div>
     </div>
-  </div>
-  <div class="element-wrapper">
-    <PeopleSvg size="2rem"/>
-    <div>
-    {theCore.peopleMin}-{theCore.peopleMax}
+    <div class="element-wrapper">
+      <PeopleSvg size="2rem"/>
+      <div>
+      {theCore.peopleMin}-{theCore.peopleMax}
+      </div>
     </div>
-  </div>
-  <div class="element-wrapper">
-    <BedroomSvg size="2rem"/>
-    <div>
-    {theCore.bedRooms}
+    <div class="element-wrapper">
+      <BedroomSvg size="2rem"/>
+      <div>
+      {theCore.bedRooms}
+      </div>
     </div>
-  </div>
-  <div class="element-wrapper">
-    <BathroomSvg size="2rem"/>
-    <div>
-    {theCore.bathRooms}
+    <div class="element-wrapper">
+      <BathroomSvg size="2rem"/>
+      <div>
+      {theCore.bathRooms}
+      </div>
     </div>
-  </div>
-  <div class="bool-element-wrapper">
-    {#if !theCore.pets}
-    <div class="main-icon-container">
-      <PetsSvg size="1.6rem"/>
-    </div>
-    <div class="not-icon-container">
-      <NotSvg size="2.2rem"/>
-    </div>
-    {:else}
-    <div class="main-icon-container">
-      <PetsSvg size="2rem"/>
+    {#if theCore.showPets}
+    <div class="bool-element-wrapper">
+      {#if !theCore.pets}
+      <div class="main-icon-container">
+        <PetsSvg size="1.6rem"/>
+      </div>
+      <div class="not-icon-container">
+        <NotSvg size="2.2rem"/>
+      </div>
+      {:else}
+      <div class="main-icon-container">
+        <PetsSvg size="2rem"/>
+      </div>
+      {/if}
     </div>
     {/if}
-  </div>
-  <div class="bool-element-wrapper">
-    {#if !theCore.wifi}
-    <div class="main-icon-container">
-      <WifiSvg size="1.6rem"/>
+    {#if theCore.showWifi}
+    <div class="bool-element-wrapper">
+      {#if !theCore.wifi}
+      <div class="main-icon-container">
+        <WifiSvg size="1.6rem"/>
+      </div>
+      <div class="not-icon-container">
+        <NotSvg size="2.2rem"/>
+      </div>
+      {:else}
+      <WifiSvg size="2rem"/>
+      {/if}
     </div>
-    <div class="not-icon-container">
-      <NotSvg size="2.2rem"/>
-    </div>
-    {:else}
-    <WifiSvg size="2rem"/>
     {/if}
-  </div>
-  <div class="bool-element-wrapper">
-    {#if !theCore.smoking}
-    <div class="main-icon-container">
-      <SmokingSvg size="1.6rem"/>
+    {#if theCore.showSmoking}
+    <div class="bool-element-wrapper">
+      {#if !theCore.smoking}
+      <div class="main-icon-container">
+        <SmokingSvg size="1.6rem"/>
+      </div>
+      <div class="not-icon-container">
+        <NotSvg size="2.2rem"/>
+      </div>
+      {:else}
+      <SmokingSvg size="2rem"/>
+      {/if}
     </div>
-    <div class="not-icon-container">
-      <NotSvg size="2.2rem"/>
-    </div>
-    {:else}
-    <SmokingSvg size="2rem"/>
     {/if}
-  </div>
-  <div class="bool-element-wrapper">
-    {#if !theCore.ac}
-    <div class="main-icon-container">
-      <AcSvg size="1.6rem"/>
+    {#if theCore.showAc}
+    <div class="bool-element-wrapper">
+      {#if !theCore.ac}
+      <div class="main-icon-container">
+        <AcSvg size="1.6rem"/>
+      </div>
+      <div class="not-icon-container">
+        <NotSvg size="2.2rem"/>
+      </div>
+      {:else}
+      <AcSvg size="2rem"/>
+      {/if}
     </div>
-    <div class="not-icon-container">
-      <NotSvg size="2.2rem"/>
-    </div>
-    {:else}
-    <AcSvg size="2rem"/>
     {/if}
-  </div>
-  <div class="bool-element-wrapper">
-    {#if !theCore.tv}
-    <div class="main-icon-container">
-      <TvSvg size="1.6rem"/>
+    {#if theCore.showTv}
+    <div class="bool-element-wrapper">
+      {#if !theCore.tv}
+      <div class="main-icon-container">
+        <TvSvg size="1.6rem"/>
+      </div>
+      <div class="not-icon-container">
+        <NotSvg size="2.2rem"/>
+      </div>
+      {:else}
+      <TvSvg size="2rem"/>
+      {/if}
     </div>
-    <div class="not-icon-container">
-      <NotSvg size="2.2rem"/>
-    </div>
-    {:else}
-    <TvSvg size="2rem"/>
     {/if}
-  </div>
-  <div class="bool-element-wrapper">
-    {#if !theCore.parking}
-    <div class="main-icon-container">
-      <ParkingSvg size="1.6rem"/>
+    {#if theCore.showParking}
+    <div class="bool-element-wrapper">
+      {#if !theCore.parking}
+      <div class="main-icon-container">
+        <ParkingSvg size="1.6rem"/>
+      </div>
+      <div class="not-icon-container">
+        <NotSvg size="2.2rem"/>
+      </div>
+      {:else}
+      <ParkingSvg size="2rem"/>
+      {/if}
     </div>
-    <div class="not-icon-container">
-      <NotSvg size="2.2rem"/>
-    </div>
-    {:else}
-    <ParkingSvg size="2rem"/>
     {/if}
-  </div>
   {/if}
-
 </div>
+
 
 <style>
   .amneties-wrapper {
