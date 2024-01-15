@@ -9,7 +9,9 @@
         {
           "kind": "text",
           "content": {
-            "ref": "landing_town_html"
+            "ref": "landing_town_html",
+            "headerFontSize": "2.5rem",
+            "textFontSize": "1.3rem"
           }
         },
         {
@@ -21,26 +23,6 @@
             "link": "http://www.koserow.de",
             "external": true,
             "height": "40vh"
-          }
-        },
-        {
-          "kind": "text",
-          "content": {
-            "ref": "text_example_1"
-          }
-        },
-        {
-          "kind": "text",
-          "content": {
-            "ref": "text_example_2",
-            "minHeight": "10rem",
-            "maxFontSize": "1rem"
-          }
-        },
-        {
-          "kind": "text",
-          "content": {
-            "ref": "text_example_3"
           }
         }
       ]
@@ -67,7 +49,9 @@
         {
           "kind": "text",
           "content": {
-            "ref": "landing_apartments_html"
+            "ref": "landing_apartments_html",
+            "headerFontSize": "1.5rem",
+            "textFontSize": "1rem"
           }
         },
         {
