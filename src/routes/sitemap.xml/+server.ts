@@ -9,7 +9,7 @@ let accoStrings = ''
 accos.forEach( (a) => {
   accoStrings += `
   <url>
-    <loc>https://accoma.de/accomodations/${a.path}</loc>
+    <loc>https://accoma.de${a.path}</loc>
     <lastmod>${deployDate.trim()}</lastmod>
   </url>
   `
