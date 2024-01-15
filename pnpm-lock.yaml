@@ -55,6 +55,9 @@ devDependencies:
   '@types/luxon':
     specifier: ^3.4.1
     version: 3.4.1
+  '@types/node':
+    specifier: ^18.19.7
+    version: 18.19.7
   '@types/web':
     specifier: ^0.0.119
     version: 0.0.119
@@ -78,7 +81,7 @@ devDependencies:
     version: 5.3.3
   vite:
     specifier: ^4.5.1
-    version: 4.5.1
+    version: 4.5.1(@types/node@18.19.7)
 
 packages:
 
@@ -407,7 +410,7 @@ packages:
       svelte: 4.2.8
       tiny-glob: 0.2.9
       undici: 5.26.5
-      vite: 4.5.1
+      vite: 4.5.1(@types/node@18.19.7)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -423,7 +426,7 @@ packages:
       '@sveltejs/vite-plugin-svelte': 2.5.3(svelte@4.2.8)(vite@4.5.1)
       debug: 4.3.4
       svelte: 4.2.8
-      vite: 4.5.1
+      vite: 4.5.1(@types/node@18.19.7)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -442,7 +445,7 @@ packages:
       magic-string: 0.30.5
       svelte: 4.2.8
       svelte-hmr: 0.15.3(svelte@4.2.8)
-      vite: 4.5.1
+      vite: 4.5.1(@types/node@18.19.7)
       vitefu: 0.2.5(vite@4.5.1)
     transitivePeerDependencies:
       - supports-color
@@ -476,6 +479,12 @@ packages:
 
   /@types/luxon@3.4.1:
     resolution: {integrity: sha512-m1KQEZZCITtheRhMVq5jDvAl0HwFhunLs7x6tpFFvUTJpKfmewS/Ymg+YA97/s8w1I1nC4pJyi0aAnn+vf3yew==}
+    dev: true
+
+  /@types/node@18.19.7:
+    resolution: {integrity: sha512-IGRJfoNX10N/PfrReRZ1br/7SQ+2vF/tK3KXNwzXz82D32z5dMQEoOlFew18nLSN+vMNcLY4GrKfzwi/yWI8/w==}
+    dependencies:
+      undici-types: 5.26.5
     dev: true
 
   /@types/pug@2.0.10:
@@ -1173,6 +1182,10 @@ packages:
     hasBin: true
     dev: true
 
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: true
+
   /undici@5.26.5:
     resolution: {integrity: sha512-cSb4bPFd5qgR7qr2jYAi0hlX9n5YKK2ONKkLFkxl+v/9BvC0sOpZjBHDBSXc5lWAf5ty9oZdRXytBIHzgUcerw==}
     engines: {node: '>=14.0'}
@@ -1180,7 +1193,7 @@ packages:
       '@fastify/busboy': 2.1.0
     dev: true
 
-  /vite@4.5.1:
+  /vite@4.5.1(@types/node@18.19.7):
     resolution: {integrity: sha512-AXXFaAJ8yebyqzoNB9fu2pHoo/nWX+xZlaRwoeYUxEqBO+Zj4msE5G+BhGBll9lYEKv9Hfks52PAF2X7qDYXQA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -1208,6 +1221,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 18.19.7
       esbuild: 0.18.20
       postcss: 8.4.33
       rollup: 3.29.4
@@ -1223,7 +1237,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.5.1
+      vite: 4.5.1(@types/node@18.19.7)
     dev: true
 
   /wrappy@1.0.2:

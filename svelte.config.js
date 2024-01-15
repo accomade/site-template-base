@@ -28,6 +28,8 @@ const config = {
 				"/accomodations",
 				"/imprint",
 				"/terms",
+				"/robots.txt",
+				"/sitemap.xml",
 				...accoEntries
 			]
 		},

@@ -16,6 +16,7 @@
 		"@twicpics/components": "^0.25.1",
 		"@types/js-cookie": "^3.0.6",
 		"@types/luxon": "^3.4.1",
+		"@types/node": "^18.19.7",
 		"@types/web": "^0.0.119",
 		"gdpr-cooco-banner": "^0.0.7",
 		"occuplan": "^0.2.8",
