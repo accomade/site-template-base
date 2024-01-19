@@ -15,6 +15,8 @@
   import type { LayoutData } from './$types';
   
   export let data: LayoutData;
+  
+  initLangStore(data?.lang)
 
   installTwicPics( {
       "domain": `https://accomade.twic.pics`,
@@ -38,8 +40,6 @@
     cookieSelection.set(currentSelection)
   }
 
-  //console.log('Lang Cookie layout', data)
-  initLangStore(data?.lang)
   
 </script>
 

@@ -1,17 +1,18 @@
 import { i18n } from '$lib/conf/translations';
 const defaultLang = i18n.defaultLang ?? 'en'
 // src/hooks.server.ts
-import { redirect, type Handle } from '@sveltejs/kit';
+import type { Handle } from '@sveltejs/kit';
+
 export const handle: Handle = async ({ event, resolve }) => {
   
   //prefer cookie lang
-  let lang = event.cookies.get('lang');  
+  let cookieLang = event.cookies.get('lang');  
   //console.log(`Lang Cookie Hook: ${lang}`) 
-  if(lang) {
-    event.locals.lang = lang;
+  if(!!cookieLang) {
+    event.locals.lang = cookieLang;
     return resolve(event, {
       transformPageChunk: ({ html, done }) => {
-        return html.replace('%lang%', lang ?? 'en');
+        return html.replace('%lang%', cookieLang ?? defaultLang);
       }
     });
   }
@@ -21,11 +22,11 @@ export const handle: Handle = async ({ event, resolve }) => {
     const browserLang = event.request.headers.get('accept-language')
     const langCode = browserLang ? browserLang.slice(0,2) : null
   
-    event.locals.lang = lang;
+    event.locals.lang = langCode;
 
     return resolve(event, {
       transformPageChunk: ({ html, done }) => {
-        return html.replace('%lang%', lang ?? 'en');
+        return html.replace('%lang%', langCode ?? defaultLang);
       }
     });
   }
@@ -34,7 +35,7 @@ export const handle: Handle = async ({ event, resolve }) => {
   event.locals.lang = defaultLang;
   return resolve(event, {
     transformPageChunk: ({ html, done }) => {
-      return html.replace('%lang%', lang ?? 'en');
+      return html.replace('%lang%', defaultLang ?? defaultLang);
     }
   });
   
@@ -44,6 +45,4 @@ export const handle: Handle = async ({ event, resolve }) => {
 
 export const handleError = ({ event, error}) => {
   console.error(error)
-
-  throw redirect(302, '/')
 }
