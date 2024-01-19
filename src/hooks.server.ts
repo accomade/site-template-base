@@ -22,7 +22,7 @@ export const handle: Handle = async ({ event, resolve }) => {
     const browserLang = event.request.headers.get('accept-language')
     const langCode = browserLang ? browserLang.slice(0,2) : null
   
-    event.locals.lang = langCode;
+    event.locals.lang = langCode ?? defaultLang;
 
     return resolve(event, {
       transformPageChunk: ({ html, done }) => {
