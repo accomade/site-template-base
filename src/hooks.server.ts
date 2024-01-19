@@ -1,7 +1,7 @@
 import { i18n } from '$lib/conf/translations';
 const defaultLang = i18n.defaultLang ?? 'en'
 // src/hooks.server.ts
-import type { Handle } from '@sveltejs/kit';
+import { redirect, type Handle } from '@sveltejs/kit';
 export const handle: Handle = async ({ event, resolve }) => {
   
   //prefer cookie lang
@@ -40,3 +40,10 @@ export const handle: Handle = async ({ event, resolve }) => {
   
   
 };
+
+
+export const handleError = ({ event, error}) => {
+  console.error(error)
+
+  throw redirect(302, '/')
+}
