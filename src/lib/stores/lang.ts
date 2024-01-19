@@ -7,24 +7,8 @@ import { cookieSelection } from "./cookies";
 
 const langStore = writable<string>(i18n.defaultLang)
 
-export const initLangStore = () => {
-  let defaultLang = i18n.defaultLang;
-  if(browser) {
-    if( i18n?.preferBrowserLang ) {
-      const browserLang = navigator.language;
-      const shortCode = browserLang.slice(0,2)
-      //console.log("Discoverd browser lang: ", shortCode)
-
-      if( !!i18n.translations[shortCode] ) {
-        defaultLang = shortCode;
-      }
-    }
-  }
-
-  const langCookie = Cookie.get('lang')
-  if (langCookie && !!i18n.translations[langCookie] ) {
-    defaultLang = langCookie
-  }
+export const initLangStore = (lang: string) => {
+  langStore.set(lang)
 }
 
 

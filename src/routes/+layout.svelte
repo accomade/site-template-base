@@ -12,8 +12,10 @@
   // Here is an example of +layout.svelte file
   import { installTwicPics } from "@twicpics/components/sveltekit";
   import "@twicpics/components/style.css";
-  import { onMount } from 'svelte';
+  import type { LayoutData } from './$types';
   
+  export let data: LayoutData;
+
   installTwicPics( {
       "domain": `https://accomade.twic.pics`,
   } );
@@ -36,10 +38,9 @@
     cookieSelection.set(currentSelection)
   }
 
-  onMount( () => {
-    initLangStore()
-  });
-
+  //console.log('Lang Cookie layout', data)
+  initLangStore(data?.lang)
+  
 </script>
 
 <svelte:head>
