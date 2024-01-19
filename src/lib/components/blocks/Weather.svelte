@@ -23,7 +23,7 @@
   })
 
   $: {
-    if(initialLoadDone) {
+    if(initialLoadDone && $currentLang) {
       document.getElementById('weatherwidget-io-js')?.remove();
       load(callback, window);
     }
@@ -40,5 +40,5 @@
     data-theme="pure" >
     {dictEntry($currentLang, header1)} {dictEntry($currentLang, header2)}
   </a>
-
+  
 </div>
