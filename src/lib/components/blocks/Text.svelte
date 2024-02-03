@@ -40,6 +40,7 @@
 
   .content :global(h3) {
     font-size: var(--font-size-header-text-editor);
+    text-align: left;
   }
 
   .container {
