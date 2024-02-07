@@ -667,7 +667,7 @@
                       "scale": 2
                     },
                     "perNightPrice": {
-                      "amount": 3500,
+                      "amount": 6500,
                       "currency": {
                         "code": "EUR",
                         "base": 10,
