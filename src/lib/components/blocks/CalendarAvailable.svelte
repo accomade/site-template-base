@@ -20,15 +20,15 @@
 <div class="cal-wrapper">
   <h3>{dictEntry($currentLang, "availability")}</h3>
   <OccuPlanAvailableInfo
-      let:available={av}
-      {search}
+      let:available={ av }
+      { search }
       on:result={ () => calLoading = false }
-      {calUrl}
+      { calUrl }
       >
 
       <ul>
         {#each search as s} 
-        <li>{fromFun( av[s], s)}</li>
+        <li>{ fromFun( av[s], s) }</li>
         {/each}
       </ul>
 

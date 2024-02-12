@@ -17,7 +17,7 @@
   {/if}
   <OccuPlanWrapper 
     on:result={ () => calLoading = false }
-    calUrl={calUrl} 
+    { calUrl } 
     headerContent={dictEntry($currentLang, "calendarHeader")}
     translations={calendar}
     />
