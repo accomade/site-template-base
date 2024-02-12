@@ -1,149 +1,106 @@
 {
-  "headerPhoto": "prev/users/template1/hero.jpg",
+  "headerPhoto": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/a04d9149-d9cf-4ae4-9bcd-681856955231",
   "sections": [
     {
+      "blocks": [
+        {
+          "content": {
+            "headerFontSize": "2rem",
+            "minHeight": "",
+            "ref": "excellent-coakum",
+            "textFontSize": "1.4rem"
+          },
+          "kind": "text",
+          "id": "comparative-goldenglow"
+        },
+        {
+          "content": {
+            "alt": "rich-black-eyed-susan",
+            "attribution": "",
+            "height": "40vh",
+            "link": "",
+            "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/299435a8-7844-48ca-b8c2-167bc6ce6389"
+          },
+          "kind": "photo",
+          "id": "pale-mahogany-birch"
+        },
+        {
+          "kind": "text",
+          "content": {
+            "ref": "arbitrary-sharp-fringed-sow-thistle-text",
+            "textFontSize": "1rem",
+            "headerFontSize": "1.5rem"
+          },
+          "id": "gothic-three-leaved-coneflower"
+        }
+      ],
+      "columnCount": 2,
       "header": "town",
-      "columnCount": 2,
-      "padding": "10vw",
-      "blocks": [
-        {
-          "kind": "text",
-          "content": {
-            "ref": "landing_town_html",
-            "headerFontSize": "2.5rem",
-            "textFontSize": "1.3rem"
-          }
-        },
-        {
-          "kind": "photo",
-          "content": {
-            "photoPath": "prev/users/template1/church_koserow.jpg",
-            "alt": "town_church",
-            "attribution": "<a href=\"https://commons.wikimedia.org/wiki/File:Koserowkirche.jpg\">Unukorno</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a>, via Wikimedia Commons",
-            "link": "http://www.koserow.de",
-            "external": true,
-            "height": "40vh"
-          }
-        }
-      ]
+      "padding": "10vw"
     },
     {
-      "header": "weather",
-      "columnCount": 1,
-      "padding": "0",
       "blocks": [
         {
+          "content": {
+            "location": "54d0514d00/koserow/",
+            "header1": "nasty-thin-leaved-coneflower-block-compact-swamp-hellebore",
+            "header2": "nasty-thin-leaved-coneflower-block-devoted-mango"
+          },
           "kind": "weather",
-          "content": {
-            "header1": "koserow",
-            "header2": "weather",
-            "location": "54d0514d00/koserow/"
-          }
+          "id": "cooing-bur-oak"
         }
-      ]
-    },
-    {
-      "header": "accomodations",
-      "columnCount": 2,
-      "blocks": [
-        {
-          "kind": "text",
-          "content": {
-            "ref": "landing_apartments_html",
-            "headerFontSize": "1.5rem",
-            "textFontSize": "1rem"
-          }
-        },
-        {
-          "kind": "photo",
-          "content": {
-            "photoPath": "prev/users/template1/building_1.jpg",
-            "alt": "apartment_1_alt",
-            "link": "/accomodations/acco_cornflower",
-            "height": "30vh"
-          }
-        },
-        {
-          "kind": "photo",
-          "content": {
-            "photoPath": "prev/users/template1/building_2.jpg",
-            "alt": "apartment_2_alt",
-            "link": "/accomodations/acco_sunflower",
-            "height": "40vh"
-          }
-        },
-        {
-          "kind": "photo",
-          "content": {
-            "photoPath": "prev/users/template1/building_3.jpg",
-            "alt": "apartment_3_alt",
-            "link": "/accomodations/acco_rosebush",
-            "height": "40vh"
-          }
-        }
-      ]
-    },
-    {
-      "header": "impressions",
+      ],
       "columnCount": 1,
-      "padding": "0",
+      "header": "weather",
+      "padding": "0"
+    },
+    {
       "blocks": [
         {
-          "kind": "photo-gallery",
           "content": {
+            "gridPhotoWidth": 500,
             "photos": [
               {
-                "photoPath": "prev/users/template1/beach_1.jpg",
-                "alt": "beach_alt"
+                "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/f883c950-da8d-4b07-ad79-44260e847c02"
               },
               {
-                "photoPath": "prev/users/template1/beach_2.jpg",
-                "alt": "beach_alt"
+                "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/05b30839-e37b-4788-857a-43f2c3042598"
               },
               {
-                "photoPath": "prev/users/template1/beach_3.jpg",
-                "alt": "beach_alt"
+                "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/a04d9149-d9cf-4ae4-9bcd-681856955231"
               },
               {
-                "photoPath": "prev/users/template1/beach_4.jpg",
-                "alt": "beach_alt"
+                "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/3656e302-28e9-46b0-926f-60f6dae4aa86"
               },
               {
-                "photoPath": "prev/users/template1/beach_5.jpg",
-                "alt": "beach_alt"
-              },
-              {
-                "photoPath": "prev/users/template1/beach_6.jpg",
-                "alt": "beach_alt"
-              },
-              {
-                "photoPath": "prev/users/template1/beach_6.jpg",
-                "alt": "beach_alt"
-              },
-              {
-                "photoPath": "prev/users/template1/beach_6.jpg",
-                "alt": "beach_alt"
-              }              
+                "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/e5056f8f-5402-41d7-bda4-befda567d64b"
+              }
             ]
-          }
+          },
+          "kind": "photo-gallery",
+          "id": "salty-bow-wood"
         }
-      ]
+      ],
+      "columnCount": 1,
+      "header": "impressions",
+      "padding": "0"
     },
     {
-      "header": "directions",
-      "columnCount": 1,
-      "padding": "10vw",
       "blocks": [
         {
-          "kind": "leaflet-map",
           "content": {
             "address": "Achterstr. 3, 17459 Koserow",
-            "lat": 54.0483609,
-            "long": 13.9965374,
-            "zoom": 16
-          }
+            "lat": "54.048225890957866",
+            "long": "13.997402242070073",
+            "zoom": 17
+          },
+          "kind": "leaflet-map",
+          "id": "constitutional-orange-milkweed"
         }
-      ]
+      ],
+      "columnCount": 1,
+      "header": "directions",
+      "padding": "10vw"
     }
   ]
 }

@@ -139,8 +139,8 @@
         "blocks": [
           {
             "content": {
-              "maxFontSize": "",
-              "minFontSize": "",
+              "headerFontSize": "1.5rem",
+              "textFontSize": "1.1rem",
               "minHeight": "",
               "ref": "equal-black-cap"
             },
@@ -435,8 +435,8 @@
           {
             "content": {
               "ref": "substantial-silky-dogwood",
-              "minFontSize": "",
-              "maxFontSize": "",
+              "headerFontSize": "1.5rem",
+              "textFontSize": "1.1rem",
               "minHeight": ""
             },
             "kind": "text"
@@ -729,8 +729,8 @@
           {
             "content": {
               "ref": "resonant-horsetail-milkweed",
-              "minFontSize": "",
-              "maxFontSize": "",
+              "headerFontSize": "1.5rem",
+              "textFontSize": "1.1rem",
               "minHeight": ""
             },
             "kind": "text"
