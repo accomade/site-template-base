@@ -1,59 +1,52 @@
 {
-  "main": [
-    {
-      "key": "home",
-      "path": "/",
-      "external": false
-    },
-    {
-      "key": "accomodations",
-      "path": "/accomodations",
-      "external": false
-    },
-    {
-      "key": "accoCornflower",
-      "path": "/accomodations/acco_cornflower",
-      "sub": true,
-      "external": false
-    },
-    {
-      "key": "accoSunflower",
-      "path": "/accomodations/acco_sunflower",
-      "sub": true,
-      "external": false
-    },
-    {
-      "key": "accoRosebush",
-      "path": "/accomodations/acco_rosebush",
-      "sub": true,
-      "external": false
-    },
-    {
-      "key": "koserow",
-      "path": "http://www.koserower.de",
-      "external": true
-    },
-    {
-      "key": "usedom",
-      "path": "http://inselusedom.de",
-      "external": true
-    }
-  ],
   "footer": [
     {
+      "external": false,
       "key": "home",
-      "path": "/",
-      "external": false
+      "path": "/"
     },
     {
+      "external": false,
       "key": "imprint",
-      "path": "/imprint",
-      "external": false
+      "path": "/imprint"
     },
     {
+      "external": false,
       "key": "terms",
-      "path": "/terms",
-      "external": false
+      "path": "/terms"
+    }
+  ],
+  "main": [
+    {
+      "external": false,
+      "key": "home",
+      "path": "/"
+    },
+    {
+      "external": false,
+      "key": "accomodations",
+      "path": "/accomodations"
+    },
+    {
+      "acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
+      "external": false,
+      "key": "e5cace58-d435-420f-a1dc-17e844469e7e",
+      "path": "/accomodations/e5cace58-d435-420f-a1dc-17e844469e7e",
+      "sub": true
+    },
+    {
+      "acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+      "external": false,
+      "key": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+      "path": "/accomodations/050edcb4-680e-4542-96df-3ae4a2af89a5",
+      "sub": true
+    },
+    {
+      "acco": "83cd06fd-858d-4e21-994f-325778812713",
+      "external": false,
+      "key": "83cd06fd-858d-4e21-994f-325778812713",
+      "path": "/accomodations/83cd06fd-858d-4e21-994f-325778812713",
+      "sub": true
     }
   ]
 }

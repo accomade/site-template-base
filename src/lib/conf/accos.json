@@ -1,2133 +1,875 @@
 [
   {
-    "path": "/accomodations/acco_cornflower",
-    "displayName": "Wohnung: Kornblume",
     "cardContent": {
-      "coverPhoto": {
-        "photoPath": "prev/users/template1/building_1.jpg",
-        "alt": "apartment_1_alt",
-        "link": "/accomodations/acco_cornflower"
-      },
-      "slug": "cornflower_card_slug",
       "blocks": [
         {
-          "kind": "amneties-core",
+          "acco": "83cd06fd-858d-4e21-994f-325778812713",
           "content": {
             "core": {
-              "peopleMin": 1,
+              "accoPath": "83cd06fd-858d-4e21-994f-325778812713",
+              "peopleMin": 2,
+              "peopleMax": 4,
+              "size": 45,
+              "bedRooms": 2,
+              "bathRooms": 1,
+              "pets": true,
+              "wifi": true,
+              "smoking": false,
+              "ac": false,
+              "tv": true,
+              "parking": true,
+              "showPets": true,
+              "showWifi": true,
+              "showSmoking": true,
+              "showAc": false,
+              "showTv": true,
+              "showParking": true
+            }
+          },
+          "kind": "amneties-core"
+        },
+        {
+          "acco": "83cd06fd-858d-4e21-994f-325778812713",
+          "content": {
+            "accoPath": "83cd06fd-858d-4e21-994f-325778812713",
+            "entries": [
+              {
+                "entry": {
+                  "firstNightPrice": {
+                    "amount": 8000,
+                    "currency": {
+                      "base": 10,
+                      "code": "EUR",
+                      "exponent": 2
+                    }
+                  },
+                  "kind": "entry",
+                  "minNumberOfNights": 3,
+                  "perNightPrice": {
+                    "amount": 5000,
+                    "currency": {
+                      "base": 10,
+                      "code": "EUR",
+                      "exponent": 2
+                    }
+                  }
+                },
+                "from": "2024-08-01T02:00:00.000+02:00",
+                "kind": "range",
+                "to": "2024-12-21T01:00:00.000+01:00"
+              },
+              {
+                "entry": {
+                  "firstNightPrice": {
+                    "amount": 8000,
+                    "currency": {
+                      "base": 10,
+                      "code": "EUR",
+                      "exponent": 2
+                    }
+                  },
+                  "kind": "entry",
+                  "minNumberOfNights": 3,
+                  "perNightPrice": {
+                    "amount": 5000,
+                    "currency": {
+                      "base": 10,
+                      "code": "EUR",
+                      "exponent": 2
+                    }
+                  }
+                },
+                "from": "2024-01-09T01:00:00.000+01:00",
+                "kind": "range",
+                "to": "2024-06-30T02:00:00.000+02:00"
+              }
+            ],
+            "footnote": "beautiful-sycamore-american",
+            "global": {
+              "firstNightPrice": {
+                "amount": 10000,
+                "currency": {
+                  "base": 10,
+                  "code": "EUR",
+                  "exponent": 2
+                }
+              },
+              "kind": "entry",
+              "minNumberOfNights": 5,
+              "perNightPrice": {
+                "amount": 7000,
+                "currency": {
+                  "base": 10,
+                  "code": "EUR",
+                  "exponent": 2
+                }
+              }
+            },
+            "showMaximum": true,
+            "showMinimum": true
+          },
+          "kind": "pricing-short"
+        },
+        {
+          "acco": "83cd06fd-858d-4e21-994f-325778812713",
+          "content": {
+            "accoPath": "83cd06fd-858d-4e21-994f-325778812713",
+            "calUrl": "https://accoma.de/ical?user=81e66599-ac3c-4ad6-b261-fceeb784f9e9&acco=83cd06fd-858d-4e21-994f-325778812713",
+            "search": [
+              3,
+              7,
+              14
+            ]
+          },
+          "kind": "calendar-available"
+        }
+      ],
+      "coverPhoto": {
+        "alt": "acco_default_alt",
+        "external": false,
+        "link": "accomodations/83cd06fd-858d-4e21-994f-325778812713",
+        "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/94bdc010-15d1-4c03-adcd-0d86eebaa885"
+      },
+      "slug": "acco_card_slug"
+    },
+    "displayName": "Wohnung 1 Ferienhaus",
+    "path": "/accomodations/83cd06fd-858d-4e21-994f-325778812713",
+    "siteContent": [
+      {
+        "blocks": [
+          {
+            "content": {
+              "maxFontSize": "",
+              "minFontSize": "",
+              "minHeight": "",
+              "ref": "equal-black-cap"
+            },
+            "kind": "text",
+            "id": "tough-collard"
+          },
+          {
+            "acco": "83cd06fd-858d-4e21-994f-325778812713",
+            "content": {
+              "accoPath": "83cd06fd-858d-4e21-994f-325778812713",
+              "calUrl": "https://accoma.de/ical?user=81e66599-ac3c-4ad6-b261-fceeb784f9e9&acco=83cd06fd-858d-4e21-994f-325778812713"
+            },
+            "kind": "calendar",
+            "id": "extraordinary-river-ash"
+          }
+        ],
+        "columnCount": 2,
+        "header": "major-swinies",
+        "padding": "10vw"
+      },
+      {
+        "blocks": [
+          {
+            "acco": "83cd06fd-858d-4e21-994f-325778812713",
+            "content": {
+              "accoPath": "83cd06fd-858d-4e21-994f-325778812713",
+              "columns": [
+                "timeRange",
+                "firstNight",
+                "eachNight",
+                "minNumNights"
+              ],
+              "entries": [
+                {
+                  "entry": {
+                    "firstNightPrice": {
+                      "amount": 8000,
+                      "currency": {
+                        "base": 10,
+                        "code": "EUR",
+                        "exponent": 2
+                      }
+                    },
+                    "kind": "entry",
+                    "minNumberOfNights": 3,
+                    "perNightPrice": {
+                      "amount": 5000,
+                      "currency": {
+                        "base": 10,
+                        "code": "EUR",
+                        "exponent": 2
+                      }
+                    }
+                  },
+                  "from": "2024-08-01T02:00:00.000+02:00",
+                  "kind": "range",
+                  "to": "2024-12-21T01:00:00.000+01:00"
+                },
+                {
+                  "entry": {
+                    "firstNightPrice": {
+                      "amount": 8000,
+                      "currency": {
+                        "base": 10,
+                        "code": "EUR",
+                        "exponent": 2
+                      }
+                    },
+                    "kind": "entry",
+                    "minNumberOfNights": 3,
+                    "perNightPrice": {
+                      "amount": 5000,
+                      "currency": {
+                        "base": 10,
+                        "code": "EUR",
+                        "exponent": 2
+                      }
+                    }
+                  },
+                  "from": "2024-01-09T01:00:00.000+01:00",
+                  "kind": "range",
+                  "to": "2024-06-30T02:00:00.000+02:00"
+                }
+              ],
+              "footnote": "main-coast-live-oak",
+              "global": {
+                "firstNightPrice": {
+                  "amount": 10000,
+                  "currency": {
+                    "base": 10,
+                    "code": "EUR",
+                    "exponent": 2
+                  }
+                },
+                "kind": "entry",
+                "minNumberOfNights": 5,
+                "perNightPrice": {
+                  "amount": 7000,
+                  "currency": {
+                    "base": 10,
+                    "code": "EUR",
+                    "exponent": 2
+                  }
+                }
+              }
+            },
+            "kind": "pricing",
+            "id": "fatal-common-tansy"
+          }
+        ],
+        "columnCount": 1,
+        "header": "furious-skunk-cabbage",
+        "padding": "10vw"
+      },
+      {
+        "blocks": [
+          {
+            "content": {
+              "gridPhotoWidth": "",
+              "photos": [
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/c3a3cb48-1ab0-49c7-a693-7cba87f9baa8"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/f611ec78-293b-4248-b458-37f1aaf1c4c9"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/de12baec-fdd3-4063-8cde-e8704d61f437"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/9232f8da-ad5b-4700-a758-e83bf0256306"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/94bdc010-15d1-4c03-adcd-0d86eebaa885"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/93e7bbc2-0cdd-4f7a-9e29-aa2ae8c00544"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/b02cfdce-d135-4847-b040-7943707b5778"
+                }
+              ]
+            },
+            "kind": "photo-gallery",
+            "id": "dark-drumstick"
+          }
+        ],
+        "columnCount": 1,
+        "header": "funny-nodding-thistle",
+        "padding": "0"
+      }
+    ]
+  },
+  {
+    "cardContent": {
+      "blocks": [
+        {
+          "acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+          "content": {
+            "core": {
+              "accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+              "peopleMin": 2,
               "peopleMax": 4,
               "size": 55,
               "bedRooms": 2,
               "bathRooms": 1,
               "pets": true,
               "wifi": true,
-              "smoking": true,
+              "smoking": false,
               "ac": false,
-              "tv": false,
-              "parking": false
+              "tv": true,
+              "parking": true,
+              "showPets": true,
+              "showWifi": true,
+              "showSmoking": true,
+              "showAc": false,
+              "showTv": true,
+              "showParking": true
             }
-          }
+          },
+          "kind": "amneties-core"
         },
         {
-          "kind": "pricing-short",
+          "acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
           "content": {
+            "accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
             "entries": [
               {
-                "kind": "range",
-                "from": "2022-12-20T00:00:00.000+01:00",
-                "to": "2023-01-06T00:00:00.000+01:00",
                 "entry": {
-                  "kind": "entry",
                   "firstNightPrice": {
                     "amount": 8000,
                     "currency": {
-                      "code": "EUR",
                       "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "perNightPrice": {
-                    "amount": 3500,
-                    "currency": {
                       "code": "EUR",
-                      "base": 10,
                       "exponent": 2
-                    },
-                    "scale": 2
+                    }
                   },
-                  "additionalPersonPrice1": {
-                    "amount": 1000,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice2": {
-                    "amount": 500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice3": {
-                    "amount": 0,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonText1": "adults",
-                  "additionalPersonText2": "7-14",
-                  "additionalPersonText3": "0-6",
-                  "minNumberOfNights": 3
-                }
-              },
-              {
-                "kind": "range",
-                "from": "2023-01-01T00:00:00.000+01:00",
-                "to": "2023-03-24T00:00:00.000+01:00",
-                "entry": {
                   "kind": "entry",
-                  "firstNightPrice": {
-                    "amount": 5500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
+                  "minNumberOfNights": 3,
                   "perNightPrice": {
-                    "amount": 3500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice1": {
-                    "amount": 1000,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice2": {
-                    "amount": 500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice3": {
-                    "amount": 0,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonText1": "adults",
-                  "additionalPersonText2": "7-14",
-                  "additionalPersonText3": "0-6",
-                  "minNumberOfNights": 3
-                }
-              },
-              {
-                "kind": "range",
-                "from": "2023-03-25T00:00:00.000+01:00",
-                "to": "2023-06-30T00:00:00.000+02:00",
-                "entry": {
-                  "kind": "entry",
-                  "firstNightPrice": {
                     "amount": 5000,
                     "currency": {
-                      "code": "EUR",
                       "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "perNightPrice": {
-                    "amount": 3000,
-                    "currency": {
                       "code": "EUR",
-                      "base": 10,
                       "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice1": {
-                    "amount": 1000,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice2": {
-                    "amount": 500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice3": {
-                    "amount": 0,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonText1": "adults",
-                  "additionalPersonText2": "7-14",
-                  "additionalPersonText3": "0-6",
-                  "minNumberOfNights": 3
-                }
+                    }
+                  }
+                },
+                "from": "2024-01-06T01:00:00.000+01:00",
+                "kind": "range",
+                "to": "2024-06-30T02:00:00.000+02:00"
               },
               {
-                "kind": "range",
-                "from": "2023-07-01T00:00:00.000+02:00",
-                "to": "2023-08-31T00:00:00.000+02:00",
                 "entry": {
-                  "kind": "entry",
                   "firstNightPrice": {
-                    "amount": 8500,
+                    "amount": 8000,
                     "currency": {
-                      "code": "EUR",
                       "base": 10,
+                      "code": "EUR",
                       "exponent": 2
-                    },
-                    "scale": 2
+                    }
                   },
+                  "kind": "entry",
+                  "minNumberOfNights": 3,
                   "perNightPrice": {
-                    "amount": 5500,
+                    "amount": 5000,
                     "currency": {
-                      "code": "EUR",
                       "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice1": {
-                    "amount": 1000,
-                    "currency": {
                       "code": "EUR",
-                      "base": 10,
                       "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice2": {
-                    "amount": 500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice3": {
-                    "amount": 0,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonText1": "adults",
-                  "additionalPersonText2": "7-14",
-                  "additionalPersonText3": "0-6",
-                  "minNumberOfNights": 7
-                }
-              },
-              {
+                    }
+                  }
+                },
+                "from": "2024-09-01T02:00:00.000+02:00",
                 "kind": "range",
-                "from": "2023-09-01T00:00:00.000+02:00",
-                "to": "2023-12-20T00:00:00.000+01:00",
-                "entry": {
-                  "kind": "entry",
-                  "firstNightPrice": {
-                    "amount": 5500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "perNightPrice": {
-                    "amount": 3500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice1": {
-                    "amount": 1000,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice2": {
-                    "amount": 500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice3": {
-                    "amount": 0,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonText1": "adults",
-                  "additionalPersonText2": "7-14",
-                  "additionalPersonText3": "0-6",
-                  "minNumberOfNights": 3
-                }
-              },
-              {
-                "kind": "range",
-                "from": "2023-12-21T00:00:00.000+01:00",
-                "to": "2024-01-05T00:00:00.000+01:00",
-                "entry": {
-                  "kind": "entry",
-                  "firstNightPrice": {
-                    "amount": 8500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "perNightPrice": {
-                    "amount": 5500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice1": {
-                    "amount": 1000,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice2": {
-                    "amount": 500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice3": {
-                    "amount": 0,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonText1": "adults",
-                  "additionalPersonText2": "7-14",
-                  "additionalPersonText3": "0-6",
-                  "minNumberOfNights": 5
-                }
+                "to": "2024-12-21T01:00:00.000+01:00"
               }
             ],
-            "footnote": "pricing-footnote-acco-cornflower"
-          }
-        },
-        {
-          "kind": "calendar-available",
-          "content": {
-            "calUrl": "https://calendar.google.com/calendar/ical/0512a05fa900ee7118de13a14d5244d3ebe2eba056af845e76996e6b9c4f885c%40group.calendar.google.com/public/basic.ics",
-            "search": [
-              3,
-              14,
-              21
-            ]
-          }
-        }
-      ]
-    },
-    "siteContent": [
-      {
-        "header": "amneties",
-        "columnCount": 1,
-        "blocks": [
-          {
-            "kind": "amneties",
-            "content": {
-              "amneties": {
-                "size": 55,
-                "descriptions": [
-                  {
-                    "label": "quiet",
-                    "desc": "cornflower_quiet"
-                  },
-                  {
-                    "label": "shopping",
-                    "desc": "cornflower_shopping"
-                  },
-                  {
-                    "label": "sightSeeing",
-                    "desc": "cornflower_sightseeing"
-                  },
-                  {
-                    "label": "beach",
-                    "desc": "cornflower_beach"
-                  },
-                  {
-                    "label": "culture",
-                    "desc": "cornflower_culture"
-                  },
-                  {
-                    "label": "desc",
-                    "desc": "cornflower_desc"
-                  }
-                ],
-                "sections": [
-                  {
-                    "hr": true,
-                    "specs": [
-                      {
-                        "label": "size",
-                        "kind": "size",
-                        "value": 55
-                      },
-                      {
-                        "label": "parkingLots",
-                        "kind": "numValue",
-                        "value": 2
-                      },
-                      {
-                        "label": "parkingOnSite",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "trainStation",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "airportShuttle",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "onSiteContact",
-                        "kind": "checkWithDesc",
-                        "value": true,
-                        "desc": "onSiteContact_desc"
-                      },
-                      {
-                        "label": "pets",
-                        "desc": "cornflower_pets_desc",
-                        "kind": "checkWithDesc",
-                        "value": true
-                      }
-                    ]
-                  },
-                  {
-                    "hr": true,
-                    "header": "Features",
-                    "specs": [
-                      {
-                        "label": "wifi",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "vaccuum",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "ac",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "iron",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "washingMachine",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "dryingRack",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "clothesDryer",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "sauna",
-                        "kind": "checkWithDesc",
-                        "desc": "cornflower_sauna_desc",
-                        "value": true
-                      },
-                      {
-                        "label": "whirlpool",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "solarium",
-                        "kind": "check",
-                        "value": true
-                      }
-                    ]
-                  }
-                ],
-                "rooms": [
-                  {
-                    "header": "bedroom_1_label",
-                    "specs": [
-                      {
-                        "kind": "beds",
-                        "value": {
-                          "specs": [
-                            {
-                              "kind": "kings",
-                              "heads": 2
-                            },
-                            {
-                              "kind": "solo",
-                              "heads": 1,
-                              "optional": true
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "label": "tv",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "ac",
-                        "kind": "check",
-                        "value": true
-                      }
-                    ],
-                    "desc": "cornflower_bedroom_1_desc"
-                  },
-                  {
-                    "header": "bedroom_2_label",
-                    "specs": [
-                      {
-                        "kind": "beds",
-                        "value": {
-                          "specs": [
-                            {
-                              "kind": "bunkbed",
-                              "heads": 2
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "label": "tv",
-                        "kind": "check",
-                        "value": true
-                      },
-                      {
-                        "label": "ac",
-                        "kind": "check",
-                        "value": true
-                      }
-                    ]
-                  },
-                  {
-                    "header": "kitchen",
-                    "specs": [
-                      {
-                        "label": "coffeeMachine",
-                        "kind": "coffeeMachine",
-                        "value": [
-                          "nespresso",
-                          "beans",
-                          "filter"
-                        ]
-                      },
-                      {
-                        "label": "eatingTable",
-                        "kind": "seats",
-                        "value": 6
-                      },
-                      {
-                        "label": "microwave",
-                        "kind": "check",
-                        "value": true
-                      }
-                    ],
-                    "desc": "cornflower_kitchen_desc"
-                  }
-                ],
-                "outdoors": [
-                  {
-                    "header": "backyard",
-                    "specs": [
-                      {
-                        "label": "size",
-                        "kind": "size",
-                        "value": 32
-                      },
-                      {
-                        "label": "fenced",
-                        "kind": "check",
-                        "value": false
-                      }
-                    ],
-                    "desc": "cornflower_backyard_desc"
-                  }
-                ]
-              }
-            }
-          }
-        ]
-      },
-      {
-        "header": "pricing",
-        "columnCount": 1,
-        "blocks": [
-          {
-            "kind": "pricing",
-            "content": {
-              "columns": [
-                "timeRange",
-                "firstNight",
-                "eachNight",
-                "extraPerson",
-                "minNumNights"
-              ],
-              "entries": [
-                {
-                  "kind": "range",
-                  "from": "2022-12-20T00:00:00.000+01:00",
-                  "to": "2023-01-06T00:00:00.000+01:00",
-                  "entry": {
-                    "kind": "entry",
-                    "firstNightPrice": {
-                      "amount": 8000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "perNightPrice": {
-                      "amount": 6500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice1": {
-                      "amount": 1000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice2": {
-                      "amount": 500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice3": {
-                      "amount": 0,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonText1": "adults",
-                    "additionalPersonText2": "7-14",
-                    "additionalPersonText3": "0-6",
-                    "minNumberOfNights": 3
-                  }
-                },
-                {
-                  "kind": "range",
-                  "from": "2023-01-01T00:00:00.000+01:00",
-                  "to": "2023-03-24T00:00:00.000+01:00",
-                  "entry": {
-                    "kind": "entry",
-                    "firstNightPrice": {
-                      "amount": 5500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "perNightPrice": {
-                      "amount": 4500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice1": {
-                      "amount": 1000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice2": {
-                      "amount": 500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice3": {
-                      "amount": 0,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonText1": "adults",
-                    "additionalPersonText2": "7-14",
-                    "additionalPersonText3": "0-6",
-                    "minNumberOfNights": 3
-                  }
-                },
-                {
-                  "kind": "range",
-                  "from": "2023-03-25T00:00:00.000+01:00",
-                  "to": "2023-06-30T00:00:00.000+02:00",
-                  "entry": {
-                    "kind": "entry",
-                    "firstNightPrice": {
-                      "amount": 5000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "perNightPrice": {
-                      "amount": 3000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice1": {
-                      "amount": 1000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice2": {
-                      "amount": 500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice3": {
-                      "amount": 0,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonText1": "adults",
-                    "additionalPersonText2": "7-14",
-                    "additionalPersonText3": "0-6",
-                    "minNumberOfNights": 3
-                  }
-                },
-                {
-                  "kind": "range",
-                  "from": "2023-07-01T00:00:00.000+02:00",
-                  "to": "2023-08-31T00:00:00.000+02:00",
-                  "entry": {
-                    "kind": "entry",
-                    "firstNightPrice": {
-                      "amount": 8500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "perNightPrice": {
-                      "amount": 5500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice1": {
-                      "amount": 1000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice2": {
-                      "amount": 500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice3": {
-                      "amount": 0,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonText1": "adults",
-                    "additionalPersonText2": "7-14",
-                    "additionalPersonText3": "0-6",
-                    "minNumberOfNights": 7
-                  }
-                },
-                {
-                  "kind": "range",
-                  "from": "2023-09-01T00:00:00.000+02:00",
-                  "to": "2023-12-20T00:00:00.000+01:00",
-                  "entry": {
-                    "kind": "entry",
-                    "firstNightPrice": {
-                      "amount": 5500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "perNightPrice": {
-                      "amount": 3500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice1": {
-                      "amount": 1000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice2": {
-                      "amount": 500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice3": {
-                      "amount": 0,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonText1": "adults",
-                    "additionalPersonText2": "7-14",
-                    "additionalPersonText3": "0-6",
-                    "minNumberOfNights": 3
-                  }
-                },
-                {
-                  "kind": "range",
-                  "from": "2023-12-21T00:00:00.000+01:00",
-                  "to": "2024-01-05T00:00:00.000+01:00",
-                  "entry": {
-                    "kind": "entry",
-                    "firstNightPrice": {
-                      "amount": 8500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "perNightPrice": {
-                      "amount": 5500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice1": {
-                      "amount": 1000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice2": {
-                      "amount": 500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice3": {
-                      "amount": 0,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonText1": "adults",
-                    "additionalPersonText2": "7-14",
-                    "additionalPersonText3": "0-6",
-                    "minNumberOfNights": 5
-                  }
-                }
-              ],
-              "footnote": "pricing-footnote-acco-cornflower"
-            }
-          }
-        ]
-      },
-      {
-        "columnCount": 1,
-        "blocks": [
-          {
-            "kind": "calendar",
-            "content": {
-              "calUrl": "https://calendar.google.com/calendar/ical/0512a05fa900ee7118de13a14d5244d3ebe2eba056af845e76996e6b9c4f885c%40group.calendar.google.com/public/basic.ics"
-            }
-          }
-        ]
-      },
-      {
-        "header": "impressions",
-        "columnCount": 1,
-        "blocks": [
-          {
-            "kind": "photo-gallery",
-            "content": {
-              "photos": [
-                {
-                  "photoPath": "prev/users/template1/kitchen_1.jpg",
-                  "alt": "kitchen"
-                },
-                {
-                  "photoPath": "prev/users/template1/living_1.jpg",
-                  "alt": "living"
-                },
-                {
-                  "photoPath": "prev/users/template1/bed_1.jpg",
-                  "alt": "bed"
-                }
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "path": "/accomodations/acco_sunflower",
-    "displayName": "Wohnung: Sonnenblume",
-    "cardContent": {
-      "coverPhoto": {
-        "photoPath": "prev/users/template1/building_2.jpg",
-        "alt": "apartment_1_alt",
-        "link": "/accomodations/acco_sunflower"
-      },
-      "slug": "cornflower_card_slug",
-      "blocks": [
-        {
-          "kind": "amneties-core",
-          "content": {
-            "core": {
-              "peopleMin": 2,
-              "peopleMax": 5,
-              "size": 65,
-              "bedRooms": 2,
-              "bathRooms": 2,
-              "pets": false,
-              "wifi": true,
-              "smoking": false,
-              "ac": true,
-              "tv": true,
-              "parking": false
-            }
-          }
-        },
-        {
-          "kind": "pricing-short",
-          "content": {
+            "footnote": "basic-common-onion",
             "global": {
-              "kind": "entry",
               "firstNightPrice": {
-                "amount": 8500,
+                "amount": 10000,
                 "currency": {
-                  "code": "EUR",
                   "base": 10,
-                  "exponent": 2
-                },
-                "scale": 2
-              },
-              "perNightPrice": {
-                "amount": 5500,
-                "currency": {
                   "code": "EUR",
-                  "base": 10,
                   "exponent": 2
-                },
-                "scale": 2
-              },
-              "additionalPersonPrice1": {
-                "amount": 1000,
-                "currency": {
-                  "code": "EUR",
-                  "base": 10,
-                  "exponent": 2
-                },
-                "scale": 2
-              },
-              "additionalPersonPrice2": {
-                "amount": 500,
-                "currency": {
-                  "code": "EUR",
-                  "base": 10,
-                  "exponent": 2
-                },
-                "scale": 2
-              },
-              "additionalPersonPrice3": {
-                "amount": 0,
-                "currency": {
-                  "code": "EUR",
-                  "base": 10,
-                  "exponent": 2
-                },
-                "scale": 2
-              },
-              "additionalPersonText1": "adults",
-              "additionalPersonText2": "7-14",
-              "additionalPersonText3": "0-6",
-              "minNumberOfNights": 5
-            }
-          }
-        },
-        {
-          "kind": "calendar-available",
-          "content": {
-            "calUrl": "https://calendar.google.com/calendar/ical/0512a05fa900ee7118de13a14d5244d3ebe2eba056af845e76996e6b9c4f885c%40group.calendar.google.com/public/basic.ics",
-            "search": [
-              3,
-              14,
-              21
-            ]
-          }
-        }
-      ]
-    },
-    "siteContent": [
-      {
-        "header": "pricing",
-        "columnCount": 1,
-        "blocks": [
-          {
-            "kind": "pricing",
-            "content": {
-              "global": {
-                "kind": "entry",
-                "firstNightPrice": {
-                  "amount": 8500,
-                  "currency": {
-                    "code": "EUR",
-                    "base": 10,
-                    "exponent": 2
-                  },
-                  "scale": 2
-                },
-                "perNightPrice": {
-                  "amount": 5500,
-                  "currency": {
-                    "code": "EUR",
-                    "base": 10,
-                    "exponent": 2
-                  },
-                  "scale": 2
-                },
-                "additionalPersonPrice1": {
-                  "amount": 1000,
-                  "currency": {
-                    "code": "EUR",
-                    "base": 10,
-                    "exponent": 2
-                  },
-                  "scale": 2
-                },
-                "additionalPersonPrice2": {
-                  "amount": 500,
-                  "currency": {
-                    "code": "EUR",
-                    "base": 10,
-                    "exponent": 2
-                  },
-                  "scale": 2
-                },
-                "additionalPersonPrice3": {
-                  "amount": 0,
-                  "currency": {
-                    "code": "EUR",
-                    "base": 10,
-                    "exponent": 2
-                  },
-                  "scale": 2
-                },
-                "additionalPersonText1": "adults",
-                "additionalPersonText2": "7-14",
-                "additionalPersonText3": "0-6",
-                "minNumberOfNights": 5
-              }
-            }
-          }
-        ]
-      },
-      {
-        "columnCount": 1,
-        "blocks": [
-          {
-            "kind": "calendar",
-            "content": {
-              "calUrl": "https://calendar.google.com/calendar/ical/0512a05fa900ee7118de13a14d5244d3ebe2eba056af845e76996e6b9c4f885c%40group.calendar.google.com/public/basic.ics"
-            }
-          }
-        ]
-      },
-      {
-        "header": "impressions",
-        "columnCount": 1,
-        "blocks": [
-          {
-            "kind": "photo-gallery",
-            "content": {
-              "photos": [
-                {
-                  "photoPath": "prev/users/template1/kitchen_2.jpg",
-                  "alt": "kitchen"
-                },
-                {
-                  "photoPath": "prev/users/template1/living_2.jpg",
-                  "alt": "living"
-                },
-                {
-                  "photoPath": "prev/users/template1/bed_4.jpg",
-                  "alt": "bed"
                 }
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "path": "/accomodations/acco_rosebush",
-    "displayName": "Wohnung: Buschwindröschen",
-    "cardContent": {
-      "coverPhoto": {
-        "photoPath": "prev/users/template1/building_3.jpg",
-        "alt": "apartment_1_alt",
-        "link": "/accomodations/acco_rosebush"
-      },
-      "slug": "cornflower_card_slug",
-      "blocks": [
-        {
-          "kind": "amneties-core",
-          "content": {
-            "core": {
-              "peopleMin": 2,
-              "peopleMax": 6,
-              "size": 80,
-              "bedRooms": 3,
-              "bathRooms": 2,
-              "pets": false,
-              "wifi": true,
-              "smoking": false,
-              "ac": true,
-              "tv": true,
-              "parking": true
-            }
-          }
-        },
-        {
-          "kind": "pricing-short",
-          "content": {
-            "global": {
+              },
               "kind": "entry",
-              "firstNightPrice": {
-                "amount": 9500,
-                "currency": {
-                  "code": "EUR",
-                  "base": 10,
-                  "exponent": 2
-                },
-                "scale": 2
-              },
+              "minNumberOfNights": 5,
               "perNightPrice": {
-                "amount": 7500,
+                "amount": 7000,
                 "currency": {
-                  "code": "EUR",
                   "base": 10,
-                  "exponent": 2
-                },
-                "scale": 2
-              },
-              "additionalPersonPrice1": {
-                "amount": 1000,
-                "currency": {
                   "code": "EUR",
-                  "base": 10,
                   "exponent": 2
-                },
-                "scale": 2
-              },
-              "additionalPersonPrice2": {
-                "amount": 500,
-                "currency": {
-                  "code": "EUR",
-                  "base": 10,
-                  "exponent": 2
-                },
-                "scale": 2
-              },
-              "additionalPersonPrice3": {
-                "amount": 0,
-                "currency": {
-                  "code": "EUR",
-                  "base": 10,
-                  "exponent": 2
-                },
-                "scale": 2
-              },
-              "additionalPersonText1": "adults",
-              "additionalPersonText2": "7-14",
-              "additionalPersonText3": "0-6",
-              "minNumberOfNights": 5
+                }
+              }
             },
+            "showMaximum": true,
+            "showMinimum": true
+          },
+          "kind": "pricing-short"
+        },
+        {
+          "acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+          "content": {
+            "accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+            "calUrl": "https://accoma.de/ical?user=81e66599-ac3c-4ad6-b261-fceeb784f9e9&acco=050edcb4-680e-4542-96df-3ae4a2af89a5",
+            "search": [
+              3,
+              7,
+              14
+            ]
+          },
+          "kind": "calendar-available"
+        }
+      ],
+      "coverPhoto": {
+        "alt": "acco_default_alt",
+        "external": false,
+        "link": "accomodations/050edcb4-680e-4542-96df-3ae4a2af89a5",
+        "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/9fe17253-9343-4aa3-a375-25518ba11eeb"
+      },
+      "slug": "acco_card_slug"
+    },
+    "displayName": "Wohnung 2 Freienhaus",
+    "path": "/accomodations/050edcb4-680e-4542-96df-3ae4a2af89a5",
+    "siteContent": [
+      {
+        "blocks": [
+          {
+            "content": {
+              "ref": "substantial-silky-dogwood",
+              "minFontSize": "",
+              "maxFontSize": "",
+              "minHeight": ""
+            },
+            "kind": "text"
+          },
+          {
+            "acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+            "content": {
+              "accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+              "calUrl": "https://accoma.de/ical?user=81e66599-ac3c-4ad6-b261-fceeb784f9e9&acco=050edcb4-680e-4542-96df-3ae4a2af89a5"
+            },
+            "kind": "calendar"
+          }
+        ],
+        "columnCount": 2,
+        "header": "capitalist-eytelia",
+        "padding": "10vw"
+      },
+      {
+        "blocks": [
+          {
+            "acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+            "content": {
+              "accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+              "columns": [
+                "timeRange",
+                "firstNight",
+                "eachNight",
+                "minNumNights"
+              ],
+              "entries": [
+                {
+                  "entry": {
+                    "firstNightPrice": {
+                      "amount": 8000,
+                      "currency": {
+                        "base": 10,
+                        "code": "EUR",
+                        "exponent": 2
+                      }
+                    },
+                    "kind": "entry",
+                    "minNumberOfNights": 3,
+                    "perNightPrice": {
+                      "amount": 5000,
+                      "currency": {
+                        "base": 10,
+                        "code": "EUR",
+                        "exponent": 2
+                      }
+                    }
+                  },
+                  "from": "2024-01-06T01:00:00.000+01:00",
+                  "kind": "range",
+                  "to": "2024-06-30T02:00:00.000+02:00"
+                },
+                {
+                  "entry": {
+                    "firstNightPrice": {
+                      "amount": 8000,
+                      "currency": {
+                        "base": 10,
+                        "code": "EUR",
+                        "exponent": 2
+                      }
+                    },
+                    "kind": "entry",
+                    "minNumberOfNights": 3,
+                    "perNightPrice": {
+                      "amount": 5000,
+                      "currency": {
+                        "base": 10,
+                        "code": "EUR",
+                        "exponent": 2
+                      }
+                    }
+                  },
+                  "from": "2024-09-01T02:00:00.000+02:00",
+                  "kind": "range",
+                  "to": "2024-12-21T01:00:00.000+01:00"
+                }
+              ],
+              "footnote": "entitled-california-walnut",
+              "global": {
+                "firstNightPrice": {
+                  "amount": 10000,
+                  "currency": {
+                    "base": 10,
+                    "code": "EUR",
+                    "exponent": 2
+                  }
+                },
+                "kind": "entry",
+                "minNumberOfNights": 5,
+                "perNightPrice": {
+                  "amount": 7000,
+                  "currency": {
+                    "base": 10,
+                    "code": "EUR",
+                    "exponent": 2
+                  }
+                }
+              }
+            },
+            "kind": "pricing"
+          }
+        ],
+        "columnCount": 1,
+        "header": "coming-winterberry-holly",
+        "padding": "10vw"
+      },
+      {
+        "blocks": [
+          {
+            "content": {
+              "photos": [
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/35a5389b-2ca1-4b07-91d6-b3738773cd1b"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/42354026-9d53-4f7d-81b0-81fa0cfef3f9"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/9fe17253-9343-4aa3-a375-25518ba11eeb"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/a2d1d3e2-bfa6-41bd-91b4-082c1657cdf6"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/08e0413b-8ac5-42d4-a511-e8c718659b72"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/3373e6e5-7bad-47b9-b46c-f0522da8570b"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/8e24d583-bb69-4df3-a8f8-956536a4b091"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/88fd68cc-dfd5-4db0-b655-35aec5cef8e3"
+                }
+              ],
+              "gridPhotoWidth": ""
+            },
+            "kind": "photo-gallery"
+          }
+        ],
+        "columnCount": 1,
+        "header": "arrogant-poor-annie",
+        "padding": "0"
+      }
+    ]
+  },
+  {
+    "cardContent": {
+      "blocks": [
+        {
+          "acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
+          "content": {
+            "core": {
+              "accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
+              "peopleMin": 1,
+              "peopleMax": 4,
+              "size": 50,
+              "bedRooms": 1,
+              "bathRooms": 1,
+              "pets": false,
+              "wifi": true,
+              "smoking": false,
+              "ac": false,
+              "tv": true,
+              "parking": true,
+              "showPets": true,
+              "showWifi": true,
+              "showSmoking": true,
+              "showAc": false,
+              "showTv": true,
+              "showParking": true
+            }
+          },
+          "kind": "amneties-core"
+        },
+        {
+          "acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
+          "content": {
+            "accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
+            "showMaximum": true,
+            "showMinimum": true,
+            "footnote": "left-hay-fever-weed",
             "entries": [
               {
                 "kind": "range",
-                "from": "2022-12-20T00:00:00.000+01:00",
-                "to": "2023-01-06T00:00:00.000+01:00",
+                "from": "2023-12-31T01:00:00.000+01:00",
+                "to": "2024-06-30T02:00:00.000+02:00",
                 "entry": {
                   "kind": "entry",
+                  "perNightPrice": {
+                    "amount": 5000,
+                    "currency": {
+                      "code": "EUR",
+                      "base": 10,
+                      "exponent": 2
+                    }
+                  },
+                  "minNumberOfNights": 3,
                   "firstNightPrice": {
                     "amount": 8000,
                     "currency": {
                       "code": "EUR",
                       "base": 10,
                       "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "perNightPrice": {
-                    "amount": 3500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice1": {
-                    "amount": 1000,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice2": {
-                    "amount": 500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice3": {
-                    "amount": 0,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonText1": "adults",
-                  "additionalPersonText2": "7-14",
-                  "additionalPersonText3": "0-6",
-                  "minNumberOfNights": 3
+                    }
+                  }
                 }
               },
               {
                 "kind": "range",
-                "from": "2023-01-01T00:00:00.000+01:00",
-                "to": "2023-03-24T00:00:00.000+01:00",
+                "from": "2024-09-01T02:00:00.000+02:00",
+                "to": "2024-12-31T01:00:00.000+01:00",
                 "entry": {
                   "kind": "entry",
-                  "firstNightPrice": {
-                    "amount": 5500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
                   "perNightPrice": {
-                    "amount": 3500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice1": {
-                    "amount": 1000,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice2": {
-                    "amount": 500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice3": {
-                    "amount": 0,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonText1": "adults",
-                  "additionalPersonText2": "7-14",
-                  "additionalPersonText3": "0-6",
-                  "minNumberOfNights": 3
-                }
-              },
-              {
-                "kind": "range",
-                "from": "2023-03-25T00:00:00.000+01:00",
-                "to": "2023-06-30T00:00:00.000+02:00",
-                "entry": {
-                  "kind": "entry",
-                  "firstNightPrice": {
                     "amount": 5000,
                     "currency": {
                       "code": "EUR",
                       "base": 10,
                       "exponent": 2
-                    },
-                    "scale": 2
+                    }
                   },
-                  "perNightPrice": {
-                    "amount": 3000,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice1": {
-                    "amount": 1000,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice2": {
-                    "amount": 500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice3": {
-                    "amount": 0,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonText1": "adults",
-                  "additionalPersonText2": "7-14",
-                  "additionalPersonText3": "0-6",
-                  "minNumberOfNights": 3
-                }
-              },
-              {
-                "kind": "range",
-                "from": "2023-07-01T00:00:00.000+02:00",
-                "to": "2023-08-31T00:00:00.000+02:00",
-                "entry": {
-                  "kind": "entry",
+                  "minNumberOfNights": 3,
                   "firstNightPrice": {
-                    "amount": 8500,
+                    "amount": 8000,
                     "currency": {
                       "code": "EUR",
                       "base": 10,
                       "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "perNightPrice": {
-                    "amount": 5500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice1": {
-                    "amount": 1000,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice2": {
-                    "amount": 500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice3": {
-                    "amount": 0,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonText1": "adults",
-                  "additionalPersonText2": "7-14",
-                  "additionalPersonText3": "0-6",
-                  "minNumberOfNights": 7
-                }
-              },
-              {
-                "kind": "range",
-                "from": "2023-09-01T00:00:00.000+02:00",
-                "to": "2023-12-20T00:00:00.000+01:00",
-                "entry": {
-                  "kind": "entry",
-                  "firstNightPrice": {
-                    "amount": 5500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "perNightPrice": {
-                    "amount": 3500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice1": {
-                    "amount": 1000,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice2": {
-                    "amount": 500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice3": {
-                    "amount": 0,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonText1": "adults",
-                  "additionalPersonText2": "7-14",
-                  "additionalPersonText3": "0-6",
-                  "minNumberOfNights": 3
-                }
-              },
-              {
-                "kind": "range",
-                "from": "2023-12-21T00:00:00.000+01:00",
-                "to": "2024-01-05T00:00:00.000+01:00",
-                "entry": {
-                  "kind": "entry",
-                  "firstNightPrice": {
-                    "amount": 8500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "perNightPrice": {
-                    "amount": 5500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice1": {
-                    "amount": 1000,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice2": {
-                    "amount": 500,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonPrice3": {
-                    "amount": 0,
-                    "currency": {
-                      "code": "EUR",
-                      "base": 10,
-                      "exponent": 2
-                    },
-                    "scale": 2
-                  },
-                  "additionalPersonText1": "adults",
-                  "additionalPersonText2": "7-14",
-                  "additionalPersonText3": "0-6",
-                  "minNumberOfNights": 5
+                    }
+                  }
                 }
               }
             ],
-            "footnote": "pricing-footnote-acco-cornflower"
-          }
+            "global": {
+              "kind": "entry",
+              "perNightPrice": {
+                "amount": 7000,
+                "currency": {
+                  "code": "EUR",
+                  "base": 10,
+                  "exponent": 2
+                }
+              },
+              "minNumberOfNights": 6,
+              "firstNightPrice": {
+                "amount": 10000,
+                "currency": {
+                  "code": "EUR",
+                  "base": 10,
+                  "exponent": 2
+                }
+              }
+            }
+          },
+          "kind": "pricing-short"
         },
         {
-          "kind": "calendar-available",
+          "acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
           "content": {
-            "calUrl": "https://calendar.google.com/calendar/ical/0512a05fa900ee7118de13a14d5244d3ebe2eba056af845e76996e6b9c4f885c%40group.calendar.google.com/public/basic.ics",
+            "accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
+            "calUrl": "https://accoma.de/ical?user=81e66599-ac3c-4ad6-b261-fceeb784f9e9&acco=e5cace58-d435-420f-a1dc-17e844469e7e",
             "search": [
               3,
-              14,
-              21
+              7,
+              14
             ]
-          }
+          },
+          "kind": "calendar-available"
         }
-      ]
+      ],
+      "coverPhoto": {
+        "alt": "acco_default_alt",
+        "external": false,
+        "link": "accomodations/e5cace58-d435-420f-a1dc-17e844469e7e",
+        "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/5554bf63-2c4c-48df-9177-2330447c39e9"
+      },
+      "slug": "acco_card_slug"
     },
+    "displayName": "Wohnung DG",
+    "path": "/accomodations/e5cace58-d435-420f-a1dc-17e844469e7e",
     "siteContent": [
       {
-        "header": "pricing",
+        "blocks": [
+          {
+            "content": {
+              "ref": "resonant-horsetail-milkweed",
+              "minFontSize": "",
+              "maxFontSize": "",
+              "minHeight": ""
+            },
+            "kind": "text"
+          },
+          {
+            "acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
+            "content": {
+              "accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
+              "calUrl": "https://accoma.de/ical?user=81e66599-ac3c-4ad6-b261-fceeb784f9e9&acco=e5cace58-d435-420f-a1dc-17e844469e7e"
+            },
+            "kind": "calendar"
+          }
+        ],
+        "columnCount": 2,
+        "header": "top-violet",
+        "padding": "10vw"
+      },
+      {
+        "header": "frequent-moose-maple",
         "columnCount": 1,
+        "padding": "10vw",
         "blocks": [
           {
             "kind": "pricing",
+            "acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
             "content": {
-              "global": {
-                "kind": "entry",
-                "firstNightPrice": {
-                  "amount": 9500,
-                  "currency": {
-                    "code": "EUR",
-                    "base": 10,
-                    "exponent": 2
-                  },
-                  "scale": 2
-                },
-                "perNightPrice": {
-                  "amount": 7500,
-                  "currency": {
-                    "code": "EUR",
-                    "base": 10,
-                    "exponent": 2
-                  },
-                  "scale": 2
-                },
-                "additionalPersonPrice1": {
-                  "amount": 1000,
-                  "currency": {
-                    "code": "EUR",
-                    "base": 10,
-                    "exponent": 2
-                  },
-                  "scale": 2
-                },
-                "additionalPersonPrice2": {
-                  "amount": 500,
-                  "currency": {
-                    "code": "EUR",
-                    "base": 10,
-                    "exponent": 2
-                  },
-                  "scale": 2
-                },
-                "additionalPersonPrice3": {
-                  "amount": 0,
-                  "currency": {
-                    "code": "EUR",
-                    "base": 10,
-                    "exponent": 2
-                  },
-                  "scale": 2
-                },
-                "additionalPersonText1": "adults",
-                "additionalPersonText2": "7-14",
-                "additionalPersonText3": "0-6",
-                "minNumberOfNights": 5
-              },
+              "accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
               "columns": [
                 "timeRange",
                 "firstNight",
                 "eachNight",
-                "extraPerson",
                 "minNumNights"
               ],
+              "footnote": "high-pitched-california-bay",
               "entries": [
                 {
                   "kind": "range",
-                  "from": "2022-12-20T00:00:00.000+01:00",
-                  "to": "2023-01-06T00:00:00.000+01:00",
+                  "from": "2023-12-31T01:00:00.000+01:00",
+                  "to": "2024-06-30T02:00:00.000+02:00",
                   "entry": {
                     "kind": "entry",
+                    "perNightPrice": {
+                      "amount": 5000,
+                      "currency": {
+                        "code": "EUR",
+                        "base": 10,
+                        "exponent": 2
+                      }
+                    },
+                    "minNumberOfNights": 3,
                     "firstNightPrice": {
                       "amount": 8000,
                       "currency": {
                         "code": "EUR",
                         "base": 10,
                         "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "perNightPrice": {
-                      "amount": 3500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice1": {
-                      "amount": 1000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice2": {
-                      "amount": 500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice3": {
-                      "amount": 0,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonText1": "adults",
-                    "additionalPersonText2": "7-14",
-                    "additionalPersonText3": "0-6",
-                    "minNumberOfNights": 3
+                      }
+                    }
                   }
                 },
                 {
                   "kind": "range",
-                  "from": "2023-01-01T00:00:00.000+01:00",
-                  "to": "2023-03-24T00:00:00.000+01:00",
+                  "from": "2024-09-01T02:00:00.000+02:00",
+                  "to": "2024-12-31T01:00:00.000+01:00",
                   "entry": {
                     "kind": "entry",
-                    "firstNightPrice": {
-                      "amount": 5500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
                     "perNightPrice": {
-                      "amount": 3500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice1": {
-                      "amount": 1000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice2": {
-                      "amount": 500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice3": {
-                      "amount": 0,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonText1": "adults",
-                    "additionalPersonText2": "7-14",
-                    "additionalPersonText3": "0-6",
-                    "minNumberOfNights": 3
-                  }
-                },
-                {
-                  "kind": "range",
-                  "from": "2023-03-25T00:00:00.000+01:00",
-                  "to": "2023-06-30T00:00:00.000+02:00",
-                  "entry": {
-                    "kind": "entry",
-                    "firstNightPrice": {
                       "amount": 5000,
                       "currency": {
                         "code": "EUR",
                         "base": 10,
                         "exponent": 2
-                      },
-                      "scale": 2
+                      }
                     },
-                    "perNightPrice": {
-                      "amount": 3000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice1": {
-                      "amount": 1000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice2": {
-                      "amount": 500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice3": {
-                      "amount": 0,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonText1": "adults",
-                    "additionalPersonText2": "7-14",
-                    "additionalPersonText3": "0-6",
-                    "minNumberOfNights": 3
-                  }
-                },
-                {
-                  "kind": "range",
-                  "from": "2023-07-01T00:00:00.000+02:00",
-                  "to": "2023-08-31T00:00:00.000+02:00",
-                  "entry": {
-                    "kind": "entry",
+                    "minNumberOfNights": 3,
                     "firstNightPrice": {
-                      "amount": 8500,
+                      "amount": 8000,
                       "currency": {
                         "code": "EUR",
                         "base": 10,
                         "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "perNightPrice": {
-                      "amount": 5500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice1": {
-                      "amount": 1000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice2": {
-                      "amount": 500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice3": {
-                      "amount": 0,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonText1": "adults",
-                    "additionalPersonText2": "7-14",
-                    "additionalPersonText3": "0-6",
-                    "minNumberOfNights": 7
-                  }
-                },
-                {
-                  "kind": "range",
-                  "from": "2023-09-01T00:00:00.000+02:00",
-                  "to": "2023-12-20T00:00:00.000+01:00",
-                  "entry": {
-                    "kind": "entry",
-                    "firstNightPrice": {
-                      "amount": 5500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "perNightPrice": {
-                      "amount": 3500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice1": {
-                      "amount": 1000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice2": {
-                      "amount": 500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice3": {
-                      "amount": 0,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonText1": "adults",
-                    "additionalPersonText2": "7-14",
-                    "additionalPersonText3": "0-6",
-                    "minNumberOfNights": 3
-                  }
-                },
-                {
-                  "kind": "range",
-                  "from": "2023-12-21T00:00:00.000+01:00",
-                  "to": "2024-01-05T00:00:00.000+01:00",
-                  "entry": {
-                    "kind": "entry",
-                    "firstNightPrice": {
-                      "amount": 8500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "perNightPrice": {
-                      "amount": 5500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice1": {
-                      "amount": 1000,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice2": {
-                      "amount": 500,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonPrice3": {
-                      "amount": 0,
-                      "currency": {
-                        "code": "EUR",
-                        "base": 10,
-                        "exponent": 2
-                      },
-                      "scale": 2
-                    },
-                    "additionalPersonText1": "adults",
-                    "additionalPersonText2": "7-14",
-                    "additionalPersonText3": "0-6",
-                    "minNumberOfNights": 5
+                      }
+                    }
                   }
                 }
               ],
-              "footnote": "pricing-footnote-acco-cornflower"
+              "global": {
+                "kind": "entry",
+                "perNightPrice": {
+                  "amount": 7000,
+                  "currency": {
+                    "code": "EUR",
+                    "base": 10,
+                    "exponent": 2
+                  }
+                },
+                "minNumberOfNights": 5,
+                "firstNightPrice": {
+                  "amount": 10000,
+                  "currency": {
+                    "code": "EUR",
+                    "base": 10,
+                    "exponent": 2
+                  }
+                }
+              }
             }
-          }
-        ]
-      },
-      {
-        "columnCount": 1,
-        "blocks": [
-          {
-            "kind": "calendar",
-            "content": {
-              "calUrl": "https://calendar.google.com/calendar/ical/0512a05fa900ee7118de13a14d5244d3ebe2eba056af845e76996e6b9c4f885c%40group.calendar.google.com/public/basic.ics"
-            }
-          }
-        ]
-      },
-      {
-        "header": "impressions",
-        "columnCount": 1,
-        "blocks": [
+          },
           {
             "kind": "photo-gallery",
             "content": {
+              "gridPhotoWidth": 300,
               "photos": [
                 {
-                  "photoPath": "prev/users/template1/kitchen_3.jpg",
-                  "alt": "kitchen"
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/c4d00922-ce0e-41a6-8365-d864dc1baa2c"
                 },
                 {
-                  "photoPath": "prev/users/template1/living_3.jpg",
-                  "alt": "living"
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/5554bf63-2c4c-48df-9177-2330447c39e9"
                 },
                 {
-                  "photoPath": "prev/users/template1/bed_3.jpg",
-                  "alt": "bed"
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/4283cf54-9ef6-4633-8c4c-335189cb9388"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/06e3183c-add0-4e9b-b1b0-f338cad0e54e"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/76b0bc78-bb4d-44fe-9266-8f58110e3e5f"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/01da5040-90ab-4028-86b7-c0ae99a1aaa8"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/b76b8088-420c-4a61-9a9e-661faf310748"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/adf51ea8-f4d4-4206-aa97-f54d5ee33f39"
+                },
+                {
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/1a914183-0561-45d4-a349-c4dd7d04534a"
                 }
               ]
             }
