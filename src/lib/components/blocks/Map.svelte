@@ -2,14 +2,23 @@
   import { onMount } from 'svelte';
   import { load } from '$lib/maps';
 
-  export let lat: number;
-  export let long: number;
-  export let zoom: number;
-  export let address: string = 'Achterstr. 4, 17459 Koserow';
+  interface Props {
+    lat: number;
+    long: number;
+    zoom: number;
+    address?: string;
+  }
 
-  $: navUrl=`https://www.google.com/maps/dir//${encodeURIComponent(address)}/@${lat},${long},${zoom-6}z/`
+  let {
+    lat,
+    long,
+    zoom,
+    address = 'Achterstr. 4, 17459 Koserow'
+  }: Props = $props();
 
-  let mapDiv:HTMLDivElement;
+  let navUrl=$derived(`https://www.google.com/maps/dir//${encodeURIComponent(address)}/@${lat},${long},${zoom-6}z/`)
+
+  let mapDiv:HTMLDivElement = $state();
   const mapsCallback = () => {
     //console.log('maps ready')
     const place = { lat: lat, lng: long };

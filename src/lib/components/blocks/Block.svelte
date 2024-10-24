@@ -16,10 +16,14 @@
   import CalendarAvailable from './CalendarAvailable.svelte';
   import AmnetiesCore from './AmnetiesCore.svelte';
   
-  export let spec:Block;
+  interface Props {
+    spec: Block;
+  }
+
+  let { spec }: Props = $props();
   
-  let props:any
-  let component: typeof SvelteComponent<any>
+  let props:any = $state()
+  let component: typeof SvelteComponent<any> = $state()
 
   if(!!spec) {
     switch (spec.kind) {
@@ -80,5 +84,6 @@
 </script>
 
 {#if component}
-<svelte:component this={component} {...props}/>
+{@const SvelteComponent_1 = component}
+<SvelteComponent_1 {...props}/>
 {/if}

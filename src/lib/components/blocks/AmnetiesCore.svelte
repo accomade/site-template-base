@@ -16,9 +16,13 @@
   import { currentLang } from '$lib/stores/lang';
   
   import type { AmnetiesCore } from "$lib/types/accos";
-  export let core:AmnetiesCore;
+  interface Props {
+    core: AmnetiesCore;
+  }
 
-  $: theCore = core
+  let { core }: Props = $props();
+
+  let theCore = $derived(core)
 
 </script>
 

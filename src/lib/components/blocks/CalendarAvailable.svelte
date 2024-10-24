@@ -6,33 +6,39 @@
   import { formatAvailability } from '$lib/conf/formats';
 
   import { currentLang } from '$lib/stores/lang';
-  $: fromFun = ( from:DateTime|null, forDays:number):string => {
-    return formatAvailability($currentLang, from, forDays, maxFutureDate)
-  }
     
-  export let calUrl:string;
-  export let search = [3,7,14];
-  export let maxFutureDate=DateTime.now().plus({years: 2})
-  let calLoading = true;
+  interface Props {
+    calUrl: string;
+    search?: any;
+    maxFutureDate?: any;
+  }
 
+  let { calUrl, search = [3,7,14], maxFutureDate = DateTime.now().plus({years: 2}) }: Props = $props();
+  let calLoading = $state(true);
+
+  let fromFun = $derived(( from:DateTime|null, forDays:number):string => {
+    return formatAvailability($currentLang, from, forDays, maxFutureDate)
+  })
 </script>
 
 <div class="cal-wrapper">
   <h3>{dictEntry($currentLang, "availability")}</h3>
   <OccuPlanAvailableInfo
-      let:available={ av }
+      
       { search }
       on:result={ () => calLoading = false }
       { calUrl }
       >
 
-      <ul>
-        {#each search as s} 
-        <li>{ fromFun( av[s], s) }</li>
-        {/each}
-      </ul>
+      {#snippet children({ available: av })}
+        <ul>
+          {#each search as s} 
+          <li>{ fromFun( av[s], s) }</li>
+          {/each}
+        </ul>
 
-  </OccuPlanAvailableInfo>
+          {/snippet}
+    </OccuPlanAvailableInfo>
   {#if calLoading}
   <Spinner size="5rem"/>
   {/if}

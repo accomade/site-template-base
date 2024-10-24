@@ -6,10 +6,14 @@
   import { onMount } from 'svelte';
   
   
-  export let data: App.PageData & Record<string, any>;
-  $: acco = accos.find( (a) => {
+  interface Props {
+    data: App.PageData & Record<string, any>;
+  }
+
+  let { data }: Props = $props();
+  let acco = $derived(accos.find( (a) => {
       return a.path === $page.url.pathname || `${a.path}/` === $page.url.pathname 
-    })
+    }))
 
   onMount( () => {
     if( !acco ) {

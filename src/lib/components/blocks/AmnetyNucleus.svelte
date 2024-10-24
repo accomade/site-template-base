@@ -13,36 +13,45 @@
     formatBed,
   } from '$lib/conf/formats';
 
-  export let label:string="";
-  export let kind:AmnetyNucleusType;
   
-  export let value: boolean | number | string | Beds | CoffeeMachine[] | undefined = "";
-  export let desc: string = "";
+  interface Props {
+    label?: string;
+    kind: AmnetyNucleusType;
+    value?: boolean | number | string | Beds | CoffeeMachine[] | undefined;
+    desc?: string;
+  }
+
+  let {
+    label = "",
+    kind,
+    value = "",
+    desc = ""
+  }: Props = $props();
   
-  $:t = dictEntry($currentLang,label) ? dictEntry($currentLang,label) : label
+  let t = $derived(dictEntry($currentLang,label) ? dictEntry($currentLang,label) : label)
 
 
   
-  $: asNumber = ():string => {
+  let asNumber = $derived(():string => {
     return formatNumberOf($currentLang, value as number)
-  }
+  })
 
-  $: asSize = ():string => {
+  let asSize = $derived(():string => {
     return formatSize($currentLang, value as number)
-  }
+  })
 
-  $: asSeats = ():string => {
+  let asSeats = $derived(():string => {
     return formatSeating($currentLang, value as number)
-  }
+  })
 
-  $: asCheck = value as boolean
-  $: asBeds = value as Beds
-  $: asCoffeeMachines = value as CoffeeMachine[]
+  let asCheck = $derived(value as boolean)
+  let asBeds = $derived(value as Beds)
+  let asCoffeeMachines = $derived(value as CoffeeMachine[])
 
-  $: asString = value as string
-  $: asLookupString = dictEntry($currentLang,asString) ? dictEntry($currentLang,asString) : asString
+  let asString = $derived(value as string)
+  let asLookupString = $derived(dictEntry($currentLang,asString) ? dictEntry($currentLang,asString) : asString)
 
-  $: descLookup = dictEntry($currentLang,desc) ? dictEntry($currentLang,desc) : desc
+  let descLookup = $derived(dictEntry($currentLang,desc) ? dictEntry($currentLang,desc) : desc)
 
 </script>
 

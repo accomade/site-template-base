@@ -1,23 +1,34 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import type { Block } from '$lib/types/blocks'
   import BlockBlock from '$lib/components/blocks/Block.svelte'
   import { dictEntry } from '$lib/conf/translations';
   import { currentLang } from '$lib/stores/lang';
   
-  export let header: string | undefined = undefined;
-  export let columnCount = 2;
-  export let padding:string = "10vw";
-  export let blocks: Block[] = [];
+  interface Props {
+    header?: string | undefined;
+    columnCount?: number;
+    padding?: string;
+    blocks?: Block[];
+  }
+
+  let {
+    header = undefined,
+    columnCount = 2,
+    padding = $bindable("10vw"),
+    blocks = []
+  }: Props = $props();
   
-  let gridTemplateColumns = "1fr";
-  $: {
+  let gridTemplateColumns = $state("1fr");
+  run(() => {
     if(!!columnCount && columnCount > 1) {
       gridTemplateColumns = `repeat(${columnCount}, 1fr)`
     }
-  }
+  });
 
-  let clientWidth = Number.MAX_SAFE_INTEGER;
-  $: {
+  let clientWidth = $state(Number.MAX_SAFE_INTEGER);
+  run(() => {
     if(clientWidth  < 500) {
       gridTemplateColumns = "1fr"
       padding = "0"
@@ -33,7 +44,7 @@
         gridTemplateColumns = `repeat(${columnCount}, 1fr)`
       }
     }
-  }
+  });
   
 </script>
 

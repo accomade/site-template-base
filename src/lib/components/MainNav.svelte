@@ -9,7 +9,11 @@
 	import { isMenuOpen } from '$lib/stores/menu';
 	import NavItem from './NavItem.svelte';
   
-	export let nav:Nav
+	interface Props {
+		nav: Nav;
+	}
+
+	let { nav }: Props = $props();
 
 	
 	let allTranslations = i18n.supportedLangs;
@@ -27,7 +31,7 @@
 
 </script>
 
-<button class="not-nav" on:click={close} transition:fade|global></button>
+<button class="not-nav" onclick={close} transition:fade|global></button>
 
 <nav class="main-nav" class:open={$isMenuOpen} transition:fade|global>
 	<ul>
@@ -45,7 +49,7 @@
 				{#each allTranslations as langKey}
 				<div class="radio-wrapper">
 					<input 
-							on:change={selected}
+							onchange={selected}
 							type="radio"
 							name="language"
 							id="{langKey}"

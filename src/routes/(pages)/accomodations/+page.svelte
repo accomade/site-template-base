@@ -1,9 +1,13 @@
 <script lang="ts">
   import AccoCard from "$lib/components/blocks/AccoCard.svelte";
   import { accos } from "$lib/conf";
-  export let maxWidth:string = "100rem";
   import { currentLang } from '$lib/stores/lang';
   import { dictEntry } from "$lib/conf/translations";
+  interface Props {
+    maxWidth?: string;
+  }
+
+  let { maxWidth = "100rem" }: Props = $props();
 
 </script>
 

@@ -12,9 +12,17 @@
   // Here is an example of +layout.svelte file
   import { installTwicPics } from "@twicpics/components/sveltekit";
   import "@twicpics/components/style.css";
+ 
+
   import type { LayoutData } from './$types';
+  import type { Snippet } from 'svelte';
   
-  export let data: LayoutData;
+  interface Props {
+    data: LayoutData;
+    children?: Snippet;
+  }
+
+  let { data, children }: Props = $props();
   
   initLangStore(data?.lang)
 
@@ -22,7 +30,7 @@
       "domain": `https://accomade.twic.pics`,
   } );
   
-  $: currentTranslation = i18n.translations[$currentLang]
+  let currentTranslation = $derived(i18n.translations[$currentLang])
   
   const analyticsCookies = ( e:CustomEvent ) => {
     const currentSelection = $cookieSelection
@@ -48,7 +56,7 @@
 </svelte:head>
 
 
-<slot></slot>
+{@render children?.()}
 
 <Banner 
   on:analytics={ analyticsCookies }

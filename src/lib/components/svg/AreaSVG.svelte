@@ -1,6 +1,12 @@
 <script>
 
-  export let size="1rem"
+  /**
+   * @typedef {Object} Props
+   * @property {string} [size]
+   */
+
+  /** @type {Props} */
+  let { size = "1rem" } = $props();
   //let color="black"
 
 </script>

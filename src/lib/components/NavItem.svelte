@@ -1,10 +1,17 @@
 <script lang="ts">
+  import { createBubbler } from 'svelte/legacy';
+
+  const bubble = createBubbler();
   import type { NavItem } from "$lib/types/nav";
   import ExtLinkSvg  from "./svg/ExtLinkSVG.svelte";
   import { currentLang } from '$lib/stores/lang';  
   
   import { dictEntry } from '$lib/conf/translations';
-  export let n:NavItem
+  interface Props {
+    n: NavItem;
+  }
+
+  let { n }: Props = $props();
 
 </script>
 
@@ -15,7 +22,7 @@
       <a 
         href="{n.path}" 
         target="_blank"
-        on:click
+        onclick={bubble('click')}
         rel="noreferrer noopener">
           { dictEntry($currentLang, n.key) }
       </a>
@@ -24,7 +31,7 @@
       </div>
     </div>
     {:else}
-      <a href="{n.path}" on:click>
+      <a href="{n.path}" onclick={bubble('click')}>
           { dictEntry($currentLang, n.key) }
       </a>
     {/if}

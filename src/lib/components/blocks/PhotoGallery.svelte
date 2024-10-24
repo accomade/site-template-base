@@ -3,30 +3,34 @@
   import type { GridPhoto, Photo } from '$lib/types/photos'
   import { browser } from '$app/environment'
 
-  export let photos: Photo[]
-  export let gridPhotoWidth = 300;
+  interface Props {
+    photos: Photo[];
+    gridPhotoWidth?: number;
+  }
 
-  let landscape = true
+  let { photos, gridPhotoWidth = 300 }: Props = $props();
+
+  let landscape = $state(true)
   if(browser) {
     landscape = window.innerWidth > window.innerHeight
     window.onresize = () => {
       landscape = window.innerWidth > window.innerHeight
     }
   }
-  $: ratio = landscape ? "16/9" : "9/16"
+  let ratio = $derived(landscape ? "16/9" : "9/16")
 
-  let galleryContainer:HTMLDivElement;
+  let galleryContainer:HTMLDivElement = $state();
   
-  let gridPhotos:GridPhoto[] = photos.map( (p:Photo):GridPhoto => {
+  let gridPhotos:GridPhoto[] = $state(photos.map( (p:Photo):GridPhoto => {
     return {
       photo: p,
       zoomed: false,
       id: crypto.randomUUID(),
     } 
-  })
+  }))
 
-  let width = 1000;
-  $: numberOfCols = Math.floor(width / ( (gridPhotoWidth && Number.isInteger(gridPhotoWidth) ) ? gridPhotoWidth : 300));
+  let width = $state(1000);
+  let numberOfCols = $derived(Math.floor(width / ( (gridPhotoWidth && Number.isInteger(gridPhotoWidth) ) ? gridPhotoWidth : 300)));
 
   const zoom = (z:GridPhoto, i:number) => {
     let unzoom = false
@@ -61,8 +65,8 @@
         aria-label="resize"
         role="button"
         tabindex="-1"
-        on:click={() => zoom(p,i)}
-        on:keyup={() => zoom(p,i)}
+        onclick={() => zoom(p,i)}
+        onkeyup={() => zoom(p,i)}
         class="photo-container">
     
       <PhotoComponent

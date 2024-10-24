@@ -6,8 +6,12 @@
   import { dictEntry } from '$lib/conf/translations';
   import { currentLang } from '$lib/stores/lang';
 
-  export let cardContent:AccoCardContent
-  export let displayName:string
+  interface Props {
+    cardContent: AccoCardContent;
+    displayName: string;
+  }
+
+  let { cardContent, displayName }: Props = $props();
 
 </script>
 

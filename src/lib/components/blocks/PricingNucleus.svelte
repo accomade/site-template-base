@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import { dictEntry } from '$lib/conf/translations';
   import { 
     formatAdditionalPersonPrice,
@@ -10,13 +12,18 @@
 
   import type { PricingEntry, PricingRange, PricingColumn} from "$lib/types/accos";
   
-  export let pricingSpec:PricingEntry|PricingRange
-  $: pricingEntry = pricingSpec?.kind == "entry" ? pricingSpec : pricingSpec?.entry;
 
 
-  export let pricingColumn:PricingColumn
-  let formattedContent = ""
-  $: {
+  interface Props {
+    pricingSpec: PricingEntry|PricingRange;
+    pricingColumn: PricingColumn;
+  }
+
+  let { pricingSpec, pricingColumn }: Props = $props();
+  let formattedContent = $state("")
+
+  let pricingEntry = $derived(pricingSpec?.kind == "entry" ? pricingSpec : pricingSpec?.entry);
+  run(() => {
     switch(pricingColumn) {
       case "timeRange":
         if( pricingSpec?.kind == "range" ) {
@@ -68,8 +75,7 @@
       default:
         formattedContent = ``
     }
-  }
-
+  });
 </script>
 
 <span class="cell-wrapper">{@html formattedContent}</span>

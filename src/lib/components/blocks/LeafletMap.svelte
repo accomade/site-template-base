@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import type { MapOptions, Map } from 'leaflet';
   import 'leaflet/dist/leaflet.css';
   import "leaflet/dist/images/marker-shadow.png";
@@ -6,15 +8,24 @@
 
   import { onMount, onDestroy } from 'svelte';
   
-  export let lat: number;
-  export let long: number;
-  export let zoom: number;
-  export let address: string = 'Achterstr. 4, 17459 Koserow';
+  interface Props {
+    lat: number;
+    long: number;
+    zoom: number;
+    address?: string;
+  }
 
-  let theMap:Map|undefined;
-  let mapElement: HTMLElement;
+  let {
+    lat,
+    long,
+    zoom,
+    address = 'Achterstr. 4, 17459 Koserow'
+  }: Props = $props();
+
+  let theMap:Map|undefined = $state();
+  let mapElement: HTMLElement = $state();
   
-  $: gMapsNavURL=`https://www.google.com/maps/dir//${encodeURIComponent(address)}/@${lat},${long},${zoom-6}z/`
+  let gMapsNavURL=$derived(`https://www.google.com/maps/dir//${encodeURIComponent(address)}/@${lat},${long},${zoom-6}z/`)
 
 
   onMount( async () => {
@@ -34,10 +45,12 @@
     L.marker([lat, long]).addTo(theMap)
   });
 
-  $: if(theMap) {
-    theMap.setView([lat,long])
-    theMap.setZoom(zoom)
-  }
+  run(() => {
+    if(theMap) {
+      theMap.setView([lat,long])
+      theMap.setZoom(zoom)
+    }
+  });
 
 	onDestroy(() => {
 		theMap?.remove();

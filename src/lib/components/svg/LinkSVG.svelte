@@ -1,6 +1,10 @@
 <script lang="ts">
 
-  export let size:string="1rem"
+  interface Props {
+    size?: string;
+  }
+
+  let { size = "1rem" }: Props = $props();
 
 </script>
 

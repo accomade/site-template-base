@@ -6,7 +6,11 @@
   import type { Amneties } from "$lib/types/accos";
   import AmnetyNucleus from '$lib/components/blocks/AmnetyNucleus.svelte';
   
-  export let amneties:Amneties
+  interface Props {
+    amneties: Amneties;
+  }
+
+  let { amneties }: Props = $props();
 </script>
 
 <div class="amneties-wrapper">

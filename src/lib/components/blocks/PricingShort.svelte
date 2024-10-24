@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import type { PricingRange, PricingEntry} from "$lib/types/accos";
   import { DateTime } from 'luxon';
   import { add, allocate, dinero, multiply, greaterThan, lessThan, type Dinero } from 'dinero.js'
@@ -12,23 +14,32 @@
   import { dictEntry } from "$lib/conf/translations";
   import { currentLang } from '$lib/stores/lang';
   
-  export let global:PricingEntry|undefined = undefined;
-  export let entries:PricingRange[] = [];
-  export let showMaximun=true;
-  export let showMinimum=true;
+  interface Props {
+    global?: PricingEntry|undefined;
+    entries?: PricingRange[];
+    showMaximun?: boolean;
+    showMinimum?: boolean;
+  }
+
+  let {
+    global = undefined,
+    entries = [],
+    showMaximun = true,
+    showMinimum = true
+  }: Props = $props();
   
-  let filteredEntries:PricingRange[] = [];
-  $: {
+  let filteredEntries:PricingRange[] = $state([]);
+  run(() => {
     let now = DateTime.now()
     filteredEntries = entries.filter( e => {
       if (! e.to) return true
       return e.to > now 
     })
-  }
+  });
 
-  let calculatedMinium = dinero({amount: Number.MAX_SAFE_INTEGER, currency: EUR});
-  let calculatedMaximum = dinero({amount: 0, currency: EUR});
-  $: {
+  let calculatedMinium = $state(dinero({amount: Number.MAX_SAFE_INTEGER, currency: EUR}));
+  let calculatedMaximum = $state(dinero({amount: 0, currency: EUR}));
+  run(() => {
     filteredEntries.forEach( ( fe ) => {
       let entry = fe.entry;
       let avg:Dinero<number>|undefined;
@@ -71,7 +82,7 @@
         }
       }
     }
-  } 
+  }); 
 </script>
 
 <div class="pricing-short-wrapper">

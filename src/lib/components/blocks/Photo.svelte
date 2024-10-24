@@ -6,22 +6,38 @@
   import ExtLinkSvg from '$lib/components/svg/ExtLinkSVG.svelte';
   import Photo000 from '../Photo000.svelte';
 
-  export let alt:string;
-  export let photoPath:string;
-  export let eager:boolean = false;
-  export let link:string = '';
-  export let external:boolean = false;
-  export let attribution:string|undefined = undefined;
-  export let ratio = 'none';
-  export let frame = false;
-  export let transition = 'none';
 
-  export let width="100%"
-  export let height="100%"
+  interface Props {
+    alt: string;
+    photoPath: string;
+    eager?: boolean;
+    link?: string;
+    external?: boolean;
+    attribution?: string|undefined;
+    ratio?: string;
+    frame?: boolean;
+    transition?: string;
+    width?: string;
+    height?: string;
+  }
+
+  let {
+    alt,
+    photoPath,
+    eager = false,
+    link = '',
+    external = false,
+    attribution = undefined,
+    ratio = 'none',
+    frame = false,
+    transition = 'none',
+    width = "100%",
+    height = "100%"
+  }: Props = $props();
   
   export const className:string = "photo-container-sizing";
 
-  let photoHeight = 0;
+  let photoHeight = $state(0);
 </script>
 
 {#if link}

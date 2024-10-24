@@ -1,7 +1,13 @@
 <script>
-  export let color="darkgrey"
-  export let size="20vw"
-  export let disableScrollingOnBody=false
+  /**
+   * @typedef {Object} Props
+   * @property {string} [color]
+   * @property {string} [size]
+   * @property {boolean} [disableScrollingOnBody]
+   */
+
+  /** @type {Props} */
+  let { color = "darkgrey", size = "20vw", disableScrollingOnBody = false } = $props();
 </script>
 
 <div class="background">

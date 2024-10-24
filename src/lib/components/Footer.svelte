@@ -5,7 +5,11 @@
 	import type { Nav } from '$lib/types/nav';
   import NavItem from './NavItem.svelte';
   
-  export let nav:Nav
+  interface Props {
+    nav: Nav;
+  }
+
+  let { nav }: Props = $props();
 
 </script>
 

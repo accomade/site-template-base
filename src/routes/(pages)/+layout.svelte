@@ -8,6 +8,13 @@
   import { isMenuOpen } from '$lib/stores/menu';
   
   import { nav } from '$lib/conf';
+  /**
+   * @typedef {Object} Props
+   * @property {import('svelte').Snippet} [children]
+   */
+
+  /** @type {Props} */
+  let { children } = $props();
 </script>
 
 <div class="layout-wrapper">
@@ -15,7 +22,7 @@
   <Header/>
 
   <main>
-    <slot></slot>
+    {@render children?.()}
   </main>
 
   <Footer nav={nav}/>

@@ -4,10 +4,14 @@
   import Spinner from '$lib/components/Spinner.svelte';
 
   import { currentLang } from '$lib/stores/lang';
-  $: calendar = i18n.translations[$currentLang].calendar;
+  let calendar = $derived(i18n.translations[$currentLang].calendar);
     
-  export let calUrl:string;
-  let calLoading = true;
+  interface Props {
+    calUrl: string;
+  }
+
+  let { calUrl }: Props = $props();
+  let calLoading = $state(true);
 
 </script>
 

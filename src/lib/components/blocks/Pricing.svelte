@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { run } from 'svelte/legacy';
+
   import type { PricingRange, PricingEntry, PricingColumn} from "$lib/types/accos";
   import { DateTime } from 'luxon';
   import PricingNucleus from './PricingNucleus.svelte'
@@ -6,20 +8,22 @@
   import { currentLang } from '$lib/stores/lang';
   import { dictEntry } from '$lib/conf/translations';
 
-  export let global:PricingEntry|undefined = undefined;
-  export let entries:PricingRange[] = [];
 
-  let filteredEntries:PricingRange[] = [];
-  $: {
-    let now = DateTime.now()
-    filteredEntries = entries.filter( e => {
-      if (! e.to) return true
-      return e.to > now 
-    })
+  let filteredEntries:PricingRange[] = $state([]);
+
+  interface Props {
+    global?: PricingEntry|undefined;
+    entries?: PricingRange[];
+    columns?: PricingColumn[];
+    footnote?: string;
   }
 
-  export let columns:PricingColumn[] = [];
-  export let footnote:string = "";
+  let {
+    global = undefined,
+    entries = [],
+    columns = [],
+    footnote = ""
+  }: Props = $props();
 
   const colHeaderStyle = {
     timeRange: 'width: 20%;', 
@@ -39,8 +43,15 @@
     minNumNights: 'text-align:right;'
   }
 
-  let w:number = 801;
+  let w:number = $state(801);
 
+  run(() => {
+    let now = DateTime.now()
+    filteredEntries = entries.filter( e => {
+      if (! e.to) return true
+      return e.to > now 
+    })
+  });
 </script>
 
 {#key $currentLang}

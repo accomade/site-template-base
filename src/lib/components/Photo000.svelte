@@ -3,15 +3,28 @@
 	import { TwicImg } from '@twicpics/components/sveltekit'
 	import { onMount } from 'svelte';
 
-	export let frame = false;
-	export let photoPath:string;
-	export let className:string;
-	export let alt:string;
-	export let transition = 'none';
 	//export let maxWidth:string;
-	//export let maxHeight:string;
-	export let eager:boolean = false;
-	export let ratio = 'none';
+	
+	interface Props {
+		frame?: boolean;
+		photoPath: string;
+		className: string;
+		alt: string;
+		transition?: string;
+		//export let maxHeight:string;
+		eager?: boolean;
+		ratio?: string;
+	}
+
+	let {
+		frame = false,
+		photoPath,
+		className,
+		alt,
+		transition = 'none',
+		eager = false,
+		ratio = 'none'
+	}: Props = $props();
 
 	let mounted = false;
 	onMount( () => {

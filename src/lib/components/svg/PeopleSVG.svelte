@@ -1,5 +1,11 @@
 <script>
-  export let size="1rem"
+  /**
+   * @typedef {Object} Props
+   * @property {string} [size]
+   */
+
+  /** @type {Props} */
+  let { size = "1rem" } = $props();
 </script>
 
 <div style="width: {size}; height: {size};">

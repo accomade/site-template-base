@@ -1,10 +1,19 @@
 <script lang="ts">
   import { currentLang } from '$lib/stores/lang';
   import { dictEntry } from '$lib/conf/translations';
-  export let ref:string
-  export let minHeight='100%'
-  export let textFontSize='1rem'
-  export let headerFontSize='1.5rem'
+  interface Props {
+    ref: string;
+    minHeight?: string;
+    textFontSize?: string;
+    headerFontSize?: string;
+  }
+
+  let {
+    ref,
+    minHeight = '100%',
+    textFontSize = '1rem',
+    headerFontSize = '1.5rem'
+  }: Props = $props();
 
 </script>
 
