@@ -4,7 +4,7 @@
 
   import LinkSvg from '$lib/components/svg/LinkSVG.svelte';
   import ExtLinkSvg from '$lib/components/svg/ExtLinkSVG.svelte';
-  import Photo000 from '../Photo000.svelte';
+  import { TwicImg } from '@twicpics/components/svelte5';
 
 
   interface Props {
@@ -49,16 +49,34 @@
       target="_blank" 
       rel="noreferrer noopener">
 
-    <Photo000
-      {transition}
-      {frame}
-      {className}
-      {photoPath}
-      {eager}
-      {ratio}
-      alt={dictEntry($currentLang, alt)} />
-  
-    {#if attribution}
+{#if frame}
+	<div class="frame">
+		<TwicImg 
+			class={className}
+			src={photoPath}
+			alt={dictEntry($currentLang, alt)}
+			{ratio}
+			mode="cover"
+			{eager}
+			transition={transition}
+		/>
+	</div>
+{:else}
+	<div class="no-frame">
+		<TwicImg 
+			class={className}
+			src={photoPath}	
+			alt={dictEntry($currentLang, alt)}
+			{ratio}
+			mode="cover"
+			{eager}
+			transition={transition}
+		/>
+	</div>
+{/if}
+
+
+   {#if attribution}
     <div 
         style="height:calc({photoHeight}px - 0.5rem);"
         class="attribution-container">
@@ -75,15 +93,34 @@
       bind:clientHeight={photoHeight}
       style="width: {width}; height: {height};"
       href="{link}">
-    
-    <Photo000
-      {transition}
-      {frame}
-      {photoPath}
-      {className}
-      {eager}
-      {ratio}
-      alt={dictEntry($currentLang, alt)} />
+   
+
+{#if frame}
+	<div class="frame">
+		<TwicImg 
+			class={className}
+			src={photoPath}
+			alt={dictEntry($currentLang, alt)}
+			{ratio}
+			mode="cover"
+			{eager}
+			transition={transition}
+		/>
+	</div>
+{:else}
+	<div class="no-frame">
+		<TwicImg 
+			class={className}
+			src={photoPath}	
+			alt={dictEntry($currentLang, alt)}
+			{ratio}
+			mode="cover"
+			{eager}
+			transition={transition}
+		/>
+	</div>
+{/if}
+
 
     {#if attribution}
     <div 
@@ -103,14 +140,32 @@
     bind:clientHeight={photoHeight}
     style="width: {width}; height: {height};">
   
-  <Photo000
-    {transition}
-    {frame}
-    {photoPath}
-    {className}
-    {eager}
-    {ratio}
-    alt={dictEntry($currentLang, alt)} />
+{#if frame}
+	<div class="frame">
+		<TwicImg 
+			class={className}
+			src={photoPath}
+			alt={dictEntry($currentLang, alt)}
+			{ratio}
+			mode="cover"
+			{eager}
+			transition={transition}
+		/>
+	</div>
+{:else}
+	<div class="no-frame">
+		<TwicImg 
+			class={className}
+			src={photoPath}	
+			alt={dictEntry($currentLang, alt)}
+			{ratio}
+			mode="cover"
+			{eager}
+			transition={transition}
+		/>
+	</div>
+{/if}
+
 
   {#if attribution}
   <div 
@@ -166,5 +221,22 @@
     left: 0;
     width: 100%;
   }
+
+	.no-frame {
+		width:100%;
+		height:100%;
+	}
+	.frame {
+		width:100%;
+		height:100%;
+		padding: 0.3rem;
+		box-shadow: 0px 1.1px 2.2px rgba(0, 0, 0, 0.02),
+			0px 2.7px 5.3px rgba(0, 0, 0, 0.028),
+			0px 5px 10px rgba(0, 0, 0, 0.035),
+			0px 8.9px 17.9px rgba(0, 0, 0, 0.042),
+			0px 16.7px 33.4px rgba(0, 0, 0, 0.05),
+			0px 40px 80px rgba(0, 0, 0, 0.07);
+	}
+
 
 </style>

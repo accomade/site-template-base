@@ -19,7 +19,7 @@
   }
   let ratio = $derived(landscape ? "16/9" : "9/16")
 
-  let galleryContainer:HTMLDivElement = $state();
+  let galleryContainer:HTMLDivElement | undefined = $state();
   
   let gridPhotos:GridPhoto[] = $state(photos.map( (p:Photo):GridPhoto => {
     return {
@@ -47,7 +47,7 @@
     gridPhotos = [z, ...gridPhotos]
 
     setTimeout( () => {
-      galleryContainer.scrollIntoView();
+      galleryContainer?.scrollIntoView();
     }, 100)
   }
 
