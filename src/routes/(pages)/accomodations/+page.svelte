@@ -1,28 +1,28 @@
 <script lang="ts">
-  import AccoCard from "$lib/components/blocks/AccoCard.svelte";
-  import { accos } from "$lib/conf";
-  import { currentLang } from '$lib/stores/lang';
-  import { dictEntry } from "$lib/conf/translations";
-  interface Props {
-    maxWidth?: string;
-  }
+  import { AccoCard } from 'accomadesc';
+  import { accos } from '$lib/conf';
+  import type { SiteState } from '$lib/state.svelte';
+  import { getContext } from 'svelte';
 
-  let { maxWidth = "100rem" }: Props = $props();
+  const ss: SiteState = getContext('SITE_STATE');
 
+  let { maxWidth = '100rem' }: { maxWidth?: string } = $props();
 </script>
 
 <svelte:head>
-  <title>{ dictEntry($currentLang,"accomodations") }</title>
+  <title>{ss.translateFunc('accomodations')}</title>
 </svelte:head>
 
-<h1>{ dictEntry($currentLang, "accomodations") }</h1>
+<h1>{ss.translateFunc('accomodations')}</h1>
 
 <main style="max-width: {maxWidth};">
   {#each accos as a}
-    {#if a.cardContent}
-    <AccoCard 
-      cardContent={a.cardContent}
-      displayName={a.displayName}
+    {#if a.cardContent && a.displayName}
+      <AccoCard
+        translateFunc={ss.translateFunc}
+        formatFunc={ss.formatFunc}
+        cardContent={a.cardContent}
+        displayName={a.displayName}
       />
     {/if}
   {/each}
@@ -39,5 +39,5 @@
     margin-top: 1rem;
     margin-bottom: 0;
   }
-
 </style>
+

@@ -1,22 +1,20 @@
 <script lang="ts">
-  import { currentLang } from '$lib/stores/lang';
-  
-  import { dictEntry } from '$lib/conf/translations';
-
   import { ACCOMADE_USER_ID, PUBLIC_SUPABASE_URL } from '$lib/conf/settings';
+  import type { SiteState } from '$lib/state.svelte';
+  import { getContext } from 'svelte';
 
-  interface Props {
-    logoLink?: string;
-  }
+  let {
+    logoLink = `${PUBLIC_SUPABASE_URL}/storage/v1/object/public/users/${ACCOMADE_USER_ID}/logo.svg`,
+  }: { logoLink?: string } = $props();
 
-  let { logoLink = `${PUBLIC_SUPABASE_URL}/storage/v1/object/public/users/${ACCOMADE_USER_ID}/logo.svg` }: Props = $props();
+  let ss: SiteState = getContext('SITE_STATE');
 </script>
 
 <header>
-  <object title="logo" class="logo" data="{logoLink}"></object>
+  <object title="logo" class="logo" data={logoLink}></object>
   <div class="text-wrapper">
-    <div class="header"><h1>{dictEntry($currentLang, "headerTitle")}</h1></div>
-    <div class="slug">{dictEntry($currentLang,"headerSlug")}</div>
+    <div class="header"><h1>{ss.translateFunc('headerTitle')}</h1></div>
+    <div class="slug">{ss.translateFunc('headerSlug')}</div>
   </div>
 </header>
 
@@ -103,6 +101,4 @@
       padding-left: 1rem;
     }
   }
-
-
 </style>

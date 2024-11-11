@@ -1,11 +1,5 @@
 <script lang="ts">
-
-  interface Props {
-    size?: string;
-  }
-
-  let { size = "1rem" }: Props = $props();
-
+  let { size = "1rem" }: { size?: string; } = $props();
 </script>
 
 <div style="width: {size}; height: {size};">

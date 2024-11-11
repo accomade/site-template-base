@@ -5,29 +5,24 @@
   import Footer from '$lib/components/Footer.svelte';
 
   import { nav, landing } from '$lib/conf';
-  const ss:SiteState = getContext("SITE_STATE")
+  const ss: SiteState = getContext('SITE_STATE');
   let currentLang = $derived(ss.currentLang);
   let isMenuOpen = $derived(ss.isMenuOpen);
- 
-  import { dictEntry } from '$lib/conf/translations';
+
   import { getContext } from 'svelte';
   import type { SiteState } from '$lib/state.svelte';
-  
 </script>
 
 <svelte:head>
-  <title>{ dictEntry($currentLang, "title") }</title>
+  <title>{ss.translateFunc('title')}</title>
 </svelte:head>
 
 <header class="header-image">
-  <Photo 
-    photoPath={landing.headerPhoto} 
-    alt="Header Image" 
-    eager={true}/>
+  <Photo photoPath={landing.headerPhoto} alt="Header Image" eager={true} />
 </header>
 
 <div class="floating-title">
-  <h1>{ dictEntry($currentLang, "title") }</h1>
+  <h1>{ss.translateFunc('title')}</h1>
 </div>
 
 <main>
@@ -36,22 +31,21 @@
   {/each}
 </main>
 
-{#if $isMenuOpen}
-  <MainNav nav={nav} />
+{#if ss.isMenuOpen}
+  <MainNav {nav} />
 {/if}
 
 <div class="ham-wrapper">
-  <HamburgerMenuButton/>
+  <HamburgerMenuButton />
 </div>
 
-<Footer nav={nav}/>
+<Footer {nav} />
 
 <style>
-
   header {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: calc(100vh - 2rem);
   }
@@ -63,7 +57,7 @@
     overflow-y: clip;
 
     width: 100%;
-    
+
     margin-top: calc(100vh - 1rem);
     text-align: center;
   }
@@ -92,7 +86,7 @@
     filter: drop-shadow(0.2rem 0.3rem 0.2rem black);
   }
 
-  @media( max-width: 300px ) {
+  @media (max-width: 300px) {
     .floating-title h1 {
       font-size: 1.6rem;
     }
@@ -106,5 +100,4 @@
     height: 3rem;
     z-index: 999;
   }
-
 </style>

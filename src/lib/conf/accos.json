@@ -32,81 +32,81 @@
           "acco": "83cd06fd-858d-4e21-994f-325778812713",
           "content": {
             "accoPath": "83cd06fd-858d-4e21-994f-325778812713",
+            "showMaximum": true,
+            "showMinimum": true,
+            "footnote": "delicate-broadleaf",
             "entries": [
               {
+                "kind": "range",
+                "from": "2024-09-01T02:00:00.000+02:00",
+                "to": "2025-06-30T00:00:00.000Z",
                 "entry": {
-                  "firstNightPrice": {
-                    "amount": 8000,
-                    "currency": {
-                      "base": 10,
-                      "code": "EUR",
-                      "exponent": 2
-                    }
-                  },
                   "kind": "entry",
-                  "minNumberOfNights": 3,
                   "perNightPrice": {
                     "amount": 5000,
                     "currency": {
-                      "base": 10,
                       "code": "EUR",
-                      "exponent": 2
-                    }
-                  }
-                },
-                "from": "2024-08-01T02:00:00.000+02:00",
-                "kind": "range",
-                "to": "2024-12-21T01:00:00.000+01:00"
-              },
-              {
-                "entry": {
-                  "firstNightPrice": {
-                    "amount": 8000,
-                    "currency": {
                       "base": 10,
-                      "code": "EUR",
                       "exponent": 2
                     }
                   },
-                  "kind": "entry",
                   "minNumberOfNights": 3,
-                  "perNightPrice": {
-                    "amount": 5000,
+                  "firstNightPrice": {
+                    "amount": 8000,
                     "currency": {
-                      "base": 10,
                       "code": "EUR",
+                      "base": 10,
                       "exponent": 2
                     }
                   }
-                },
-                "from": "2024-01-09T01:00:00.000+01:00",
-                "kind": "range",
-                "to": "2024-06-30T02:00:00.000+02:00"
-              }
-            ],
-            "footnote": "beautiful-sycamore-american",
-            "global": {
-              "firstNightPrice": {
-                "amount": 10000,
-                "currency": {
-                  "base": 10,
-                  "code": "EUR",
-                  "exponent": 2
                 }
               },
+              {
+                "kind": "range",
+                "from": "2025-09-01T02:00:00.000+02:00",
+                "to": "2026-06-30T00:00:00.000Z",
+                "entry": {
+                  "kind": "entry",
+                  "perNightPrice": {
+                    "amount": 5000,
+                    "currency": {
+                      "code": "EUR",
+                      "base": 10,
+                      "exponent": 2
+                    }
+                  },
+                  "minNumberOfNights": 3,
+                  "firstNightPrice": {
+                    "amount": 8000,
+                    "currency": {
+                      "code": "EUR",
+                      "base": 10,
+                      "exponent": 2
+                    }
+                  }
+                }
+              }
+            ],
+            "global": {
               "kind": "entry",
-              "minNumberOfNights": 5,
               "perNightPrice": {
                 "amount": 7000,
                 "currency": {
-                  "base": 10,
                   "code": "EUR",
+                  "base": 10,
+                  "exponent": 2
+                }
+              },
+              "minNumberOfNights": 5,
+              "firstNightPrice": {
+                "amount": 10000,
+                "currency": {
+                  "code": "EUR",
+                  "base": 10,
                   "exponent": 2
                 }
               }
-            },
-            "showMaximum": true,
-            "showMinimum": true
+            }
           },
           "kind": "pricing-short"
         },
@@ -114,7 +114,7 @@
           "acco": "83cd06fd-858d-4e21-994f-325778812713",
           "content": {
             "accoPath": "83cd06fd-858d-4e21-994f-325778812713",
-            "calUrl": "https://accoma.de/ical?user=81e66599-ac3c-4ad6-b261-fceeb784f9e9&acco=83cd06fd-858d-4e21-994f-325778812713",
+            "calUrl": "https://popnapdkcdnabruxkjti.supabase.co/storage/v1/object/public/ical/81e66599-ac3c-4ad6-b261-fceeb784f9e9/83cd06fd-858d-4e21-994f-325778812713",
             "search": [
               3,
               7,
@@ -139,22 +139,20 @@
         "blocks": [
           {
             "content": {
-              "headerFontSize": "1.5rem",
-              "textFontSize": "1.1rem",
+              "maxFontSize": "",
+              "minFontSize": "",
               "minHeight": "",
               "ref": "equal-black-cap"
             },
-            "kind": "text",
-            "id": "tough-collard"
+            "kind": "text"
           },
           {
             "acco": "83cd06fd-858d-4e21-994f-325778812713",
             "content": {
               "accoPath": "83cd06fd-858d-4e21-994f-325778812713",
-              "calUrl": "https://accoma.de/ical?user=81e66599-ac3c-4ad6-b261-fceeb784f9e9&acco=83cd06fd-858d-4e21-994f-325778812713"
+              "calUrl": "https://popnapdkcdnabruxkjti.supabase.co/storage/v1/object/public/ical/81e66599-ac3c-4ad6-b261-fceeb784f9e9/83cd06fd-858d-4e21-994f-325778812713"
             },
-            "kind": "calendar",
-            "id": "extraordinary-river-ash"
+            "kind": "calendar"
           }
         ],
         "columnCount": 2,
@@ -171,84 +169,85 @@
                 "timeRange",
                 "firstNight",
                 "eachNight",
+                "peopleNum",
+                "extraPerson",
                 "minNumNights"
               ],
+              "footnote": "combined-colic-weed",
               "entries": [
                 {
+                  "kind": "range",
+                  "from": "2024-09-01T02:00:00.000+02:00",
+                  "to": "2025-06-30T00:00:00.000Z",
                   "entry": {
-                    "firstNightPrice": {
-                      "amount": 8000,
-                      "currency": {
-                        "base": 10,
-                        "code": "EUR",
-                        "exponent": 2
-                      }
-                    },
                     "kind": "entry",
-                    "minNumberOfNights": 3,
                     "perNightPrice": {
                       "amount": 5000,
                       "currency": {
-                        "base": 10,
                         "code": "EUR",
-                        "exponent": 2
-                      }
-                    }
-                  },
-                  "from": "2024-08-01T02:00:00.000+02:00",
-                  "kind": "range",
-                  "to": "2024-12-21T01:00:00.000+01:00"
-                },
-                {
-                  "entry": {
-                    "firstNightPrice": {
-                      "amount": 8000,
-                      "currency": {
                         "base": 10,
-                        "code": "EUR",
                         "exponent": 2
                       }
                     },
-                    "kind": "entry",
                     "minNumberOfNights": 3,
-                    "perNightPrice": {
-                      "amount": 5000,
+                    "firstNightPrice": {
+                      "amount": 8000,
                       "currency": {
-                        "base": 10,
                         "code": "EUR",
+                        "base": 10,
                         "exponent": 2
                       }
                     }
-                  },
-                  "from": "2024-01-09T01:00:00.000+01:00",
-                  "kind": "range",
-                  "to": "2024-06-30T02:00:00.000+02:00"
-                }
-              ],
-              "footnote": "main-coast-live-oak",
-              "global": {
-                "firstNightPrice": {
-                  "amount": 10000,
-                  "currency": {
-                    "base": 10,
-                    "code": "EUR",
-                    "exponent": 2
                   }
                 },
+                {
+                  "kind": "range",
+                  "from": "2025-09-01T02:00:00.000+02:00",
+                  "to": "2026-06-30T00:00:00.000Z",
+                  "entry": {
+                    "kind": "entry",
+                    "perNightPrice": {
+                      "amount": 5000,
+                      "currency": {
+                        "code": "EUR",
+                        "base": 10,
+                        "exponent": 2
+                      }
+                    },
+                    "minNumberOfNights": 3,
+                    "firstNightPrice": {
+                      "amount": 8000,
+                      "currency": {
+                        "code": "EUR",
+                        "base": 10,
+                        "exponent": 2
+                      }
+                    }
+                  }
+                }
+              ],
+              "global": {
                 "kind": "entry",
-                "minNumberOfNights": 5,
                 "perNightPrice": {
                   "amount": 7000,
                   "currency": {
-                    "base": 10,
                     "code": "EUR",
+                    "base": 10,
+                    "exponent": 2
+                  }
+                },
+                "minNumberOfNights": 5,
+                "firstNightPrice": {
+                  "amount": 10000,
+                  "currency": {
+                    "code": "EUR",
+                    "base": 10,
                     "exponent": 2
                   }
                 }
               }
             },
-            "kind": "pricing",
-            "id": "fatal-common-tansy"
+            "kind": "pricing"
           }
         ],
         "columnCount": 1,
@@ -284,8 +283,7 @@
                 }
               ]
             },
-            "kind": "photo-gallery",
-            "id": "dark-drumstick"
+            "kind": "photo-gallery"
           }
         ],
         "columnCount": 1,
@@ -327,81 +325,81 @@
           "acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
           "content": {
             "accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+            "showMaximum": true,
+            "showMinimum": true,
+            "footnote": "promising-tassel-weed",
             "entries": [
               {
-                "entry": {
-                  "firstNightPrice": {
-                    "amount": 8000,
-                    "currency": {
-                      "base": 10,
-                      "code": "EUR",
-                      "exponent": 2
-                    }
-                  },
-                  "kind": "entry",
-                  "minNumberOfNights": 3,
-                  "perNightPrice": {
-                    "amount": 5000,
-                    "currency": {
-                      "base": 10,
-                      "code": "EUR",
-                      "exponent": 2
-                    }
-                  }
-                },
-                "from": "2024-01-06T01:00:00.000+01:00",
                 "kind": "range",
-                "to": "2024-06-30T02:00:00.000+02:00"
-              },
-              {
-                "entry": {
-                  "firstNightPrice": {
-                    "amount": 8000,
-                    "currency": {
-                      "base": 10,
-                      "code": "EUR",
-                      "exponent": 2
-                    }
-                  },
-                  "kind": "entry",
-                  "minNumberOfNights": 3,
-                  "perNightPrice": {
-                    "amount": 5000,
-                    "currency": {
-                      "base": 10,
-                      "code": "EUR",
-                      "exponent": 2
-                    }
-                  }
-                },
                 "from": "2024-09-01T02:00:00.000+02:00",
-                "kind": "range",
-                "to": "2024-12-21T01:00:00.000+01:00"
-              }
-            ],
-            "footnote": "basic-common-onion",
-            "global": {
-              "firstNightPrice": {
-                "amount": 10000,
-                "currency": {
-                  "base": 10,
-                  "code": "EUR",
-                  "exponent": 2
+                "to": "2025-06-30T00:00:00.000Z",
+                "entry": {
+                  "kind": "entry",
+                  "perNightPrice": {
+                    "amount": 5000,
+                    "currency": {
+                      "code": "EUR",
+                      "base": 10,
+                      "exponent": 2
+                    }
+                  },
+                  "minNumberOfNights": 3,
+                  "firstNightPrice": {
+                    "amount": 8000,
+                    "currency": {
+                      "code": "EUR",
+                      "base": 10,
+                      "exponent": 2
+                    }
+                  }
                 }
               },
+              {
+                "kind": "range",
+                "from": "2025-09-01T02:00:00.000+02:00",
+                "to": "2026-06-30T00:00:00.000Z",
+                "entry": {
+                  "kind": "entry",
+                  "perNightPrice": {
+                    "amount": 5000,
+                    "currency": {
+                      "code": "EUR",
+                      "base": 10,
+                      "exponent": 2
+                    }
+                  },
+                  "minNumberOfNights": 3,
+                  "firstNightPrice": {
+                    "amount": 8000,
+                    "currency": {
+                      "code": "EUR",
+                      "base": 10,
+                      "exponent": 2
+                    }
+                  }
+                }
+              }
+            ],
+            "global": {
               "kind": "entry",
-              "minNumberOfNights": 5,
               "perNightPrice": {
                 "amount": 7000,
                 "currency": {
-                  "base": 10,
                   "code": "EUR",
+                  "base": 10,
+                  "exponent": 2
+                }
+              },
+              "minNumberOfNights": 5,
+              "firstNightPrice": {
+                "amount": 10000,
+                "currency": {
+                  "code": "EUR",
+                  "base": 10,
                   "exponent": 2
                 }
               }
-            },
-            "showMaximum": true,
-            "showMinimum": true
+            }
           },
           "kind": "pricing-short"
         },
@@ -409,7 +407,7 @@
           "acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
           "content": {
             "accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
-            "calUrl": "https://accoma.de/ical?user=81e66599-ac3c-4ad6-b261-fceeb784f9e9&acco=050edcb4-680e-4542-96df-3ae4a2af89a5",
+            "calUrl": "https://popnapdkcdnabruxkjti.supabase.co/storage/v1/object/public/ical/81e66599-ac3c-4ad6-b261-fceeb784f9e9/050edcb4-680e-4542-96df-3ae4a2af89a5",
             "search": [
               3,
               7,
@@ -435,8 +433,8 @@
           {
             "content": {
               "ref": "substantial-silky-dogwood",
-              "headerFontSize": "1.5rem",
-              "textFontSize": "1.1rem",
+              "minFontSize": "",
+              "maxFontSize": "",
               "minHeight": ""
             },
             "kind": "text"
@@ -445,7 +443,7 @@
             "acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
             "content": {
               "accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
-              "calUrl": "https://accoma.de/ical?user=81e66599-ac3c-4ad6-b261-fceeb784f9e9&acco=050edcb4-680e-4542-96df-3ae4a2af89a5"
+              "calUrl": "https://popnapdkcdnabruxkjti.supabase.co/storage/v1/object/public/ical/81e66599-ac3c-4ad6-b261-fceeb784f9e9/050edcb4-680e-4542-96df-3ae4a2af89a5"
             },
             "kind": "calendar"
           }
@@ -464,77 +462,79 @@
                 "timeRange",
                 "firstNight",
                 "eachNight",
+                "peopleNum",
+                "extraPerson",
                 "minNumNights"
               ],
+              "footnote": "dear-scotch-cap",
               "entries": [
                 {
-                  "entry": {
-                    "firstNightPrice": {
-                      "amount": 8000,
-                      "currency": {
-                        "base": 10,
-                        "code": "EUR",
-                        "exponent": 2
-                      }
-                    },
-                    "kind": "entry",
-                    "minNumberOfNights": 3,
-                    "perNightPrice": {
-                      "amount": 5000,
-                      "currency": {
-                        "base": 10,
-                        "code": "EUR",
-                        "exponent": 2
-                      }
-                    }
-                  },
-                  "from": "2024-01-06T01:00:00.000+01:00",
                   "kind": "range",
-                  "to": "2024-06-30T02:00:00.000+02:00"
-                },
-                {
-                  "entry": {
-                    "firstNightPrice": {
-                      "amount": 8000,
-                      "currency": {
-                        "base": 10,
-                        "code": "EUR",
-                        "exponent": 2
-                      }
-                    },
-                    "kind": "entry",
-                    "minNumberOfNights": 3,
-                    "perNightPrice": {
-                      "amount": 5000,
-                      "currency": {
-                        "base": 10,
-                        "code": "EUR",
-                        "exponent": 2
-                      }
-                    }
-                  },
                   "from": "2024-09-01T02:00:00.000+02:00",
-                  "kind": "range",
-                  "to": "2024-12-21T01:00:00.000+01:00"
-                }
-              ],
-              "footnote": "entitled-california-walnut",
-              "global": {
-                "firstNightPrice": {
-                  "amount": 10000,
-                  "currency": {
-                    "base": 10,
-                    "code": "EUR",
-                    "exponent": 2
+                  "to": "2025-06-30T00:00:00.000Z",
+                  "entry": {
+                    "kind": "entry",
+                    "perNightPrice": {
+                      "amount": 5000,
+                      "currency": {
+                        "code": "EUR",
+                        "base": 10,
+                        "exponent": 2
+                      }
+                    },
+                    "minNumberOfNights": 3,
+                    "firstNightPrice": {
+                      "amount": 8000,
+                      "currency": {
+                        "code": "EUR",
+                        "base": 10,
+                        "exponent": 2
+                      }
+                    }
                   }
                 },
+                {
+                  "kind": "range",
+                  "from": "2025-09-01T02:00:00.000+02:00",
+                  "to": "2026-06-30T00:00:00.000Z",
+                  "entry": {
+                    "kind": "entry",
+                    "perNightPrice": {
+                      "amount": 5000,
+                      "currency": {
+                        "code": "EUR",
+                        "base": 10,
+                        "exponent": 2
+                      }
+                    },
+                    "minNumberOfNights": 3,
+                    "firstNightPrice": {
+                      "amount": 8000,
+                      "currency": {
+                        "code": "EUR",
+                        "base": 10,
+                        "exponent": 2
+                      }
+                    }
+                  }
+                }
+              ],
+              "global": {
                 "kind": "entry",
-                "minNumberOfNights": 5,
                 "perNightPrice": {
                   "amount": 7000,
                   "currency": {
-                    "base": 10,
                     "code": "EUR",
+                    "base": 10,
+                    "exponent": 2
+                  }
+                },
+                "minNumberOfNights": 5,
+                "firstNightPrice": {
+                  "amount": 10000,
+                  "currency": {
+                    "code": "EUR",
+                    "base": 10,
                     "exponent": 2
                   }
                 }
@@ -623,12 +623,12 @@
             "accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
             "showMaximum": true,
             "showMinimum": true,
-            "footnote": "left-hay-fever-weed",
+            "footnote": "coherent-milk-thistle",
             "entries": [
               {
                 "kind": "range",
-                "from": "2023-12-31T01:00:00.000+01:00",
-                "to": "2024-06-30T02:00:00.000+02:00",
+                "from": "2024-09-01T02:00:00.000+02:00",
+                "to": "2025-06-30T00:00:00.000Z",
                 "entry": {
                   "kind": "entry",
                   "perNightPrice": {
@@ -652,8 +652,8 @@
               },
               {
                 "kind": "range",
-                "from": "2024-09-01T02:00:00.000+02:00",
-                "to": "2024-12-31T01:00:00.000+01:00",
+                "from": "2025-09-01T02:00:00.000+02:00",
+                "to": "2026-06-30T00:00:00.000Z",
                 "entry": {
                   "kind": "entry",
                   "perNightPrice": {
@@ -686,7 +686,7 @@
                   "exponent": 2
                 }
               },
-              "minNumberOfNights": 6,
+              "minNumberOfNights": 5,
               "firstNightPrice": {
                 "amount": 10000,
                 "currency": {
@@ -703,7 +703,7 @@
           "acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
           "content": {
             "accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
-            "calUrl": "https://accoma.de/ical?user=81e66599-ac3c-4ad6-b261-fceeb784f9e9&acco=e5cace58-d435-420f-a1dc-17e844469e7e",
+            "calUrl": "https://popnapdkcdnabruxkjti.supabase.co/storage/v1/object/public/ical/81e66599-ac3c-4ad6-b261-fceeb784f9e9/e5cace58-d435-420f-a1dc-17e844469e7e",
             "search": [
               3,
               7,
@@ -729,8 +729,8 @@
           {
             "content": {
               "ref": "resonant-horsetail-milkweed",
-              "headerFontSize": "1.5rem",
-              "textFontSize": "1.1rem",
+              "minFontSize": "",
+              "maxFontSize": "",
               "minHeight": ""
             },
             "kind": "text"
@@ -739,7 +739,7 @@
             "acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
             "content": {
               "accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
-              "calUrl": "https://accoma.de/ical?user=81e66599-ac3c-4ad6-b261-fceeb784f9e9&acco=e5cace58-d435-420f-a1dc-17e844469e7e"
+              "calUrl": "https://popnapdkcdnabruxkjti.supabase.co/storage/v1/object/public/ical/81e66599-ac3c-4ad6-b261-fceeb784f9e9/e5cace58-d435-420f-a1dc-17e844469e7e"
             },
             "kind": "calendar"
           }

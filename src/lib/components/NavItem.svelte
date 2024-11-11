@@ -1,43 +1,38 @@
 <script lang="ts">
-
-  import type { NavItem } from "$lib/types/nav";
-  import ExtLinkSvg  from "./svg/ExtLinkSVG.svelte";
-    import { getContext } from 'svelte';
+  import type { NavItem } from '$lib/types/nav';
+  import ExtLinkSvg from './svg/ExtLinkSVG.svelte';
+  import { getContext } from 'svelte';
   import { SiteState } from '$lib/state.svelte';
 
-  const ss:SiteState = getContext("SITE_STATE");
+  const ss: SiteState = getContext('SITE_STATE');
 
-  let { 
-    n, 
-    onclick, 
+  let {
+    n,
+    onclick,
   }: {
-    n: NavItem; 
-    onclick: () => void;
+    n: NavItem;
+    onclick?: () => void;
   } = $props();
-
 </script>
 
-  <div class="wrapper" class:sub={n.sub}>
+<div class="wrapper" class:sub={n.sub}>
   {#if n.path}
     {#if n.external}
-    <div class="ext-link-wrapper">
-      <a 
-        href="{n.path}" 
-        target="_blank"
-        rel="noreferrer noopener">
-          { ss.translateFunc(n.key) }
-      </a>
-      <div class="link-icon-wrapper">
-        <ExtLinkSvg size="2rem"/>
+      <div class="ext-link-wrapper">
+        <a href={n.path} target="_blank" rel="noreferrer noopener">
+          {ss.translateFunc(n.key)}
+        </a>
+        <div class="link-icon-wrapper">
+          <ExtLinkSvg size="2rem" />
+        </div>
       </div>
-    </div>
     {:else}
       <a href={n.path} {onclick}>
-          { ss.translateFunc(n.key) }
+        {ss.translateFunc(n.key)}
       </a>
     {/if}
   {:else}
-      <span>{ ss.translateFunc(n.key) }</span>
+    <span>{ss.translateFunc(n.key)}</span>
   {/if}
 </div>
 

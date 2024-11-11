@@ -1,51 +1,42 @@
-<script>
+<script lang="ts">
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
-
   import HamburgerMenuButton from '$lib/components/HamburgerMenuButton.svelte';
   import MainNav from '$lib/components/MainNav.svelte';
-  
-  import { isMenuOpen } from '$lib/stores/menu';
-  
-  import { nav } from '$lib/conf';
-  /**
-   * @typedef {Object} Props
-   * @property {import('svelte').Snippet} [children]
-   */
 
-  /** @type {Props} */
-  let { children } = $props();
+  import { nav } from '$lib/conf';
+  import { getContext, type Snippet } from 'svelte';
+  import type { SiteState } from '$lib/state.svelte';
+
+  const ss: SiteState = getContext('SITE_STATE');
+
+  let { children }: { children?: Snippet } = $props();
 </script>
 
 <div class="layout-wrapper">
-
-  <Header/>
+  <Header />
 
   <main>
     {@render children?.()}
   </main>
 
-  <Footer nav={nav}/>
-
+  <Footer {nav} />
 </div>
 
-
-{#if $isMenuOpen}
-<MainNav nav={nav} />
+{#if ss.isMenuOpen}
+  <MainNav {nav} />
 {/if}
 
-
 <div class="ham-wrapper">
-  <HamburgerMenuButton/>
+  <HamburgerMenuButton />
 </div>
 
 <style>
   .layout-wrapper {
     display: flex;
     height: 100vh;
-    flex-direction: column
+    flex-direction: column;
   }
-
 
   main {
     display: flex;
@@ -54,7 +45,6 @@
     width: 100%;
     flex: 2;
   }
-
 
   .ham-wrapper {
     position: fixed;
@@ -65,3 +55,4 @@
     z-index: 999;
   }
 </style>
+

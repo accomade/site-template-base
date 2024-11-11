@@ -1,16 +1,17 @@
 <script lang="ts">
-  import { dictEntry } from '$lib/conf/translations';
-  import { currentLang } from '$lib/stores/lang';
+  import type { SiteState } from '$lib/state.svelte';
+  import { getContext } from 'svelte';
+
+  const ss: SiteState = getContext('SITE_STATE');
 </script>
 
 <svelte:head>
-  <title>{dictEntry($currentLang, 'terms')}</title>
+  <title>{ss.translateFunc('terms')}</title>
 </svelte:head>
 
 <div class="terms-wrapper">
-  {@html dictEntry($currentLang, 'tos_html')}
+  {@html ss.translateFunc('tos_html')}
 </div>
-
 
 <style>
   .terms-wrapper {
@@ -18,5 +19,5 @@
     margin-left: 2rem;
     margin-right: 2rem;
   }
-
 </style>
+

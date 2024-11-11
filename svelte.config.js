@@ -1,6 +1,6 @@
 import adapter from "@sveltejs/adapter-static";
-
 import Accos from "./src/lib/conf/accos.json" with { type: "json" };
+import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 
 let accoEntries = [];
 if (!!Accos && Accos.length > 0) {
@@ -15,7 +15,7 @@ const config = {
 
   // Consult https://kit.svelte.dev/docs/integrations#preprocessors
   // for more information about preprocessors
-  //preprocess: [ vitePreprocess() ],
+  preprocess: vitePreprocess(),
 
   kit: {
     adapter: adapter(),

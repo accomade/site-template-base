@@ -1,39 +1,40 @@
-import { browser } from "$app/environment";
-import type { CookieSelection } from "./types/cookies";
-import Cookie from "js-cookie";
-import type { I18nFacade } from "accomadesc";
-import { dinero, toDecimal, type Dinero, type DineroSnapshot } from "dinero.js";
-import type { DateTime } from "luxon";
-import { type I18n as CalI18n } from "occuplan";
+import { browser } from '$app/environment';
+import type { CookieSelection } from './types/cookies';
+import Cookie from 'js-cookie';
+import type { I18nFacade } from 'accomadesc';
+import { dinero, toDecimal, type Dinero, type DineroSnapshot } from 'dinero.js';
+import type { DateTime } from 'luxon';
+import { type I18n as CalI18n } from 'occuplan';
 
-import formats from "./conf/formats.json";
-import translations from "./conf/translations.json";
-import type { I18n, Translation } from "./types/i18n";
-import type { TemplateFunction } from "squirrelly/dist/types/compile";
-import * as Sqrl from "squirrelly";
+import formats from './conf/formats.json';
+import translations from './conf/translations.json';
+import type { I18n, Translation } from './types/i18n';
+import type { TemplateFunction } from 'squirrelly/dist/types/compile';
+import * as Sqrl from 'squirrelly';
 
-type SupportedLang = "en" | "pl" | "de" | "es" | "fr"; //(typeof translations.supportedLangs)[number];
+export type SupportedLang = 'en' | 'pl' | 'de' | 'es' | 'fr'; //(typeof translations.supportedLangs)[number];
 
 export class SiteState implements I18nFacade {
   i18n: I18n;
-
+  supportedLangs: SupportedLang[];
   fTemplates: Record<string, TemplateFunction>;
   isMenuOpen = $state(false);
-  currentPage = $state("");
+  currentPage = $state('');
   cookieSelection: CookieSelection = $state({
     analytics: false,
     marketing: false,
     preferences: false,
     necessary: true,
   });
-  currentLang = $state(translations.defaultLang ?? "en");
-  calendarTranslation: CalI18n = $state(
-    translations.translations[
-      (translations.defaultLang as SupportedLang) ?? "en"
-    ].calendar,
+  currentLang = $state((translations.defaultLang ?? 'en') as SupportedLang);
+  calendarTranslation: CalI18n = $derived(
+    translations.translations[this.currentLang].calendar,
+  );
+  cookiesTranslation = $derived(
+    translations.translations[this.currentLang].cookies,
   );
 
-  constructor(lang: string, document: Document) {
+  constructor(lang: SupportedLang, document: Document) {
     this.currentLang = lang;
     if (browser && document) {
       document.documentElement.lang = this.currentLang;
@@ -46,6 +47,7 @@ export class SiteState implements I18nFacade {
 
     this.i18n = $state(mapTranslations());
     this.fTemplates = $state(mapFormats());
+    this.supportedLangs = translations.supportedLangs as SupportedLang[];
   }
 
   handleCookie() {
@@ -53,32 +55,32 @@ export class SiteState implements I18nFacade {
       const expires = new Date();
       expires.setDate(expires.getDate() + 365);
 
-      Cookie.set("lang", this.currentLang, {
-        sameSite: "strict",
-        path: "/",
+      Cookie.set('lang', this.currentLang, {
+        sameSite: 'strict',
+        path: '/',
         expires,
       });
     } else {
-      Cookie.remove("lang");
+      Cookie.remove('lang');
     }
   }
 
   translateFunc(ref: string): string {
-    let res = "";
+    let res = '';
     if (!ref) return res;
 
     if (this.i18n) {
       const t = this.i18n.translations[this.currentLang];
       if (!t) {
         console.log(`No translations found for lang: ${this.currentLang}`);
-        return "";
+        return '';
       }
       const dict = t.site;
       if (!dict) {
         console.log(
           `Translation for: ${ref} not found in lang: ${this.currentLang}`,
         );
-        return "";
+        return '';
       }
 
       res = dict[ref];
@@ -93,7 +95,7 @@ export class SiteState implements I18nFacade {
       console.log(
         `FormatFunc not found for ${formatter} and lang ${this.currentLang}`,
       );
-      return "";
+      return '';
     }
     return templFun(props, Sqrl.defaultConfig);
   }
@@ -105,13 +107,13 @@ export class SiteState implements I18nFacade {
     return toDecimal<number, string>(d, ({ value, currency }) => {
       let f = parseFloat(value);
       return new Intl.NumberFormat(locale, {
-        style: "currency",
+        style: 'currency',
         currency: currency.code,
       }).format(f);
     });
   }
   formatDateFunc(d: DateTime | string): string {
-    return "";
+    return '';
   }
 }
 
@@ -152,7 +154,7 @@ const mapFormats = (): Record<string, TemplateFunction> => {
   const result: Record<string, TemplateFunction> = {};
   for (const entry of Object.entries(formats)) {
     const [lang, format] = entry;
-    if (lang !== "default") {
+    if (lang !== 'default') {
       for (const fEntry of Object.entries(format)) {
         const [templateName, formatTemplate] = fEntry;
         const fullTemplateName = `${lang}_${templateName}`;
@@ -168,7 +170,7 @@ const mapFormats = (): Record<string, TemplateFunction> => {
 export const isDinero = (
   d: Dinero<number> | DineroSnapshot<number>,
 ): d is Dinero<number> => {
-  if ("calculator" in d) {
+  if ('calculator' in d) {
     return true;
   } else {
     return false;

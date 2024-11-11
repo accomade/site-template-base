@@ -1,19 +1,30 @@
-import { sveltekit } from '@sveltejs/kit/vite';
+//import { sveltekit } from "@sveltejs/kit/vite";
+//
+//import type { UserConfig } from "vite";
+//
+//const config: UserConfig = {
+//  server: {
+//    fs: {
+//      allow: ["src", "node_modules", "static"],
+//    },
+//  },
+//  build: {
+//    commonjsOptions: {
+//      transformMixedEsModules: true,
+//    },
+//  },
+//  plugins: [sveltekit()], // {force: true} )]
+//};
 
-import type { UserConfig } from 'vite';
+//export default config;
 
-const config: UserConfig = {
-	server: {
-    fs: {
-      allow: ['src', 'node_modules', 'static']
-    }
+import { defineConfig } from "vitest/config";
+import { sveltekit } from "@sveltejs/kit/vite";
+
+export default defineConfig({
+  plugins: [sveltekit()],
+
+  test: {
+    include: ["src/**/*.{test,spec}.{js,ts}"],
   },
-  build: {
-    commonjsOptions: {
-      transformMixedEsModules: true
-    }
-  },
-	plugins: [sveltekit()] // {force: true} )]
-};
-
-export default config;
+});

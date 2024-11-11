@@ -1,28 +1,24 @@
 <script lang="ts">
-  import { currentLang } from '$lib/stores/lang';
-  import { dictEntry } from '$lib/conf/translations';
+  import type { SiteState } from '$lib/state.svelte';
 
-	import type { Nav } from '$lib/types/nav';
+  import type { Nav } from '$lib/types/nav';
+  import { getContext } from 'svelte';
   import NavItem from './NavItem.svelte';
-  
-  interface Props {
-    nav: Nav;
-  }
 
-  let { nav }: Props = $props();
-
+  const ss: SiteState = getContext('SITE_STATE');
+  let { nav }: { nav: Nav } = $props();
 </script>
 
 <footer>
   <div class="nav">
-    {#each nav.footer as n }
-    <div class="link-wrapper">
-      <NavItem {n}/>
-    </div>
+    {#each nav.footer as n}
+      <div class="link-wrapper">
+        <NavItem {n} />
+      </div>
     {/each}
   </div>
   <div class="content">
-    {@html dictEntry($currentLang, 'footer_html')}
+    {@html ss.translateFunc('footer_html')}
   </div>
 </footer>
 
@@ -42,13 +38,13 @@
   }
 
   .link-wrapper {
-		text-decoration: underline;
-		color: var(--nav-font-color);
+    text-decoration: underline;
+    color: var(--nav-font-color);
     font-family: var(--nav-font-family, 'mono');
     font-variant: var(--nav-font-variant, 'normal');
     font-size: 1.4rem;
     font-weight: bold;
-	
+
     display: flex;
     align-items: center;
     margin-left: 1rem;
@@ -71,11 +67,10 @@
     padding-right: 2rem;
   }
 
-  @media(max-width: 500px) {
+  @media (max-width: 500px) {
     .nav {
       flex-direction: row;
       justify-content: left;
     }
   }
-
 </style>

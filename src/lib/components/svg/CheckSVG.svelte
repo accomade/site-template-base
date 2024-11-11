@@ -1,14 +1,5 @@
-<script>
-
-  /**
-   * @typedef {Object} Props
-   * @property {string} [size]
-   */
-
-  /** @type {Props} */
-  let { size = "1rem" } = $props();
-  //let color="black"
-
+<script lang="ts">
+  let { size = "1rem" }: { size?: string; } = $props();
 </script>
 
 <div style="width: {size}; height: {size};">
