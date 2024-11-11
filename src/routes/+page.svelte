@@ -1,15 +1,17 @@
 <script lang="ts">
-  import Photo from '$lib/components/blocks/Photo.svelte';
+  import { Photo, Section } from 'accomadesc';
   import HamburgerMenuButton from '$lib/components/HamburgerMenuButton.svelte';
   import MainNav from '$lib/components/MainNav.svelte';
   import Footer from '$lib/components/Footer.svelte';
-  import Section from '$lib/components/blocks/Section.svelte';
 
-  import { nav, landing } from '$lib/conf'
-  import { currentLang } from '$lib/stores/lang';
-  import { isMenuOpen } from '$lib/stores/menu';
-  
+  import { nav, landing } from '$lib/conf';
+  const ss:SiteState = getContext("SITE_STATE")
+  let currentLang = $derived(ss.currentLang);
+  let isMenuOpen = $derived(ss.isMenuOpen);
+ 
   import { dictEntry } from '$lib/conf/translations';
+  import { getContext } from 'svelte';
+  import type { SiteState } from '$lib/state.svelte';
   
 </script>
 

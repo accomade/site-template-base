@@ -1,51 +1,36 @@
 <script lang="ts">
-  import '$lib/loadFonts';
-
-  import { i18n } from '$lib/conf/translations';
+  import type { LayoutData } from './$types';
+  import { setContext, type Snippet } from 'svelte'; 
   import { Banner } from 'gdpr-cooco-banner';
   
+  import '$lib/loadFonts';
   import { cookieSettings } from '$lib/conf'
-  import { currentLang, initLangStore } from '$lib/stores/lang';
-
-  import { cookieSelection } from '$lib/stores/cookies';
-
   // Here is an example of +layout.svelte file
   import { installTwicPics } from "@twicpics/components/sveltekit";
   import "@twicpics/components/style.css";
  
-
-  import type { LayoutData } from './$types';
-  import type { Snippet } from 'svelte';
+  import { SiteState } from '$lib/state.svelte';
   
-  interface Props {
+  let { data, children }: Props = $props();
+  const ss = new SiteState(data.lang, document);
+  setContext("SITE_STATE", ss)
+    interface Props {
     data: LayoutData;
     children?: Snippet;
   }
-
-  let { data, children }: Props = $props();
-  
-  initLangStore(data?.lang)
 
   installTwicPics( {
       "domain": `https://accomade.twic.pics`,
   } );
   
-  let currentTranslation = $derived(i18n.translations[$currentLang])
-  
   const analyticsCookies = ( e:CustomEvent ) => {
-    const currentSelection = $cookieSelection
-    currentSelection.analytics = e.detail.enabled
-    cookieSelection.set(currentSelection)
+    ss.cookieSelection.analytics = e.detail.enabled
   }
   const preferenceCookies = ( e:CustomEvent ) => {
-    const currentSelection = $cookieSelection
-    currentSelection.preferences = e.detail.enabled
-    cookieSelection.set(currentSelection)
+    ss.cookieSelection = e.detail.enabled
   }
   const marketingCookies = ( e:CustomEvent ) => {
-    const currentSelection = $cookieSelection
-    currentSelection.marketing = e.detail.enabled
-    cookieSelection.set(currentSelection)
+    ss.cookieSelection.marketing = e.detail.enabled
   }
 
   
@@ -63,7 +48,7 @@
   on:preferences={ preferenceCookies }
   on:marketing={ marketingCookies }
   showEditIcon={cookieSettings.showIcon}
-  translation={currentTranslation.cookies} 
+  translation={ss.cookies} 
   choices={cookieSettings.types}/>
 
 <style>

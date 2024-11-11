@@ -11,7 +11,6 @@
     "monthHeader": "{{month}} / {{year}}",
     "nothingAvailable": "Nichts frei für {{forDays}} Tage bis {{maxFutureDate}}",
     "numberOf": "Anzahl {{num}}",
-    "seating": "Sitzplätze für {{num}} Erwachsene",
     "size": "{{size}}&nbsp;m²"
   },
   "en": {
@@ -26,7 +25,6 @@
     "monthHeader": "{{month}} / {{year}}",
     "nothingAvailable": "No availability for {{forDays}} days until {{maxFutureDate}}",
     "numberOf": "{{num}} pieces",
-    "seating": "Seating for {{num}} people",
     "size": "{{size}}&nbsp;m²"
   },
   "es": {
@@ -41,7 +39,6 @@
     "monthHeader": "{{month}} / {{year}}",
     "nothingAvailable": "No availability for {{forDays}} days until {{maxFutureDate}}",
     "numberOf": "{{num}} pieces",
-    "seating": "Seating for {{num}} people",
     "size": "{{size}}&nbsp;m²"
   },
   "fr": {
@@ -56,7 +53,6 @@
     "monthHeader": "{{month}} / {{year}}",
     "nothingAvailable": "No availability for {{forDays}} days until {{maxFutureDate}}",
     "numberOf": "{{num}} pieces",
-    "seating": "Seating for {{num}} people",
     "size": "{{size}}&nbsp;m²"
   },
   "pl": {
@@ -71,7 +67,6 @@
     "monthHeader": "{{month}} / {{year}}",
     "nothingAvailable": "No availability for {{forDays}} days until {{maxFutureDate}}",
     "numberOf": "{{num}} pieces",
-    "seating": "Seating for {{num}} people",
     "size": "{{size}}&nbsp;m²"
   }
 }

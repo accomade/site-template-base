@@ -1,17 +1,19 @@
 <script lang="ts">
-  import { createBubbler } from 'svelte/legacy';
 
-  const bubble = createBubbler();
   import type { NavItem } from "$lib/types/nav";
   import ExtLinkSvg  from "./svg/ExtLinkSVG.svelte";
-  import { currentLang } from '$lib/stores/lang';  
-  
-  import { dictEntry } from '$lib/conf/translations';
-  interface Props {
-    n: NavItem;
-  }
+    import { getContext } from 'svelte';
+  import { SiteState } from '$lib/state.svelte';
 
-  let { n }: Props = $props();
+  const ss:SiteState = getContext("SITE_STATE");
+
+  let { 
+    n, 
+    onclick, 
+  }: {
+    n: NavItem; 
+    onclick: () => void;
+  } = $props();
 
 </script>
 
@@ -22,21 +24,20 @@
       <a 
         href="{n.path}" 
         target="_blank"
-        onclick={bubble('click')}
         rel="noreferrer noopener">
-          { dictEntry($currentLang, n.key) }
+          { ss.translateFunc(n.key) }
       </a>
       <div class="link-icon-wrapper">
         <ExtLinkSvg size="2rem"/>
       </div>
     </div>
     {:else}
-      <a href="{n.path}" onclick={bubble('click')}>
-          { dictEntry($currentLang, n.key) }
+      <a href={n.path} {onclick}>
+          { ss.translateFunc(n.key) }
       </a>
     {/if}
   {:else}
-      <span>{ dictEntry($currentLang, n.key) }</span>
+      <span>{ ss.translateFunc(n.key) }</span>
   {/if}
 </div>
 
@@ -47,9 +48,9 @@
   }
 
   a {
-		text-decoration: underline;
-		color: var(--nav-font-color);
-	}
+    text-decoration: underline;
+    color: var(--nav-font-color);
+  }
 
   .ext-link-wrapper {
     position: relative;
