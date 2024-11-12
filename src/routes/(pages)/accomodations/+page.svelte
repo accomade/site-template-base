@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { AccoCard } from 'accomadesc';
-  import { accos } from '$lib/conf';
+  import { AccoCard, type AccoCardContent, type AccoI } from 'accomadesc';
+  import accos from '$lib/conf/accos.json';
   import type { SiteState } from '$lib/state.svelte';
   import { getContext } from 'svelte';
 
@@ -18,12 +18,7 @@
 <main style="max-width: {maxWidth};">
   {#each accos as a}
     {#if a.cardContent && a.displayName}
-      <AccoCard
-        translateFunc={ss.translateFunc}
-        formatFunc={ss.formatFunc}
-        cardContent={a.cardContent}
-        displayName={a.displayName}
-      />
+      <AccoCard {...a.cardContent as AccoCardContent} {...ss} />
     {/if}
   {/each}
 </main>
@@ -40,4 +35,3 @@
     margin-bottom: 0;
   }
 </style>
-

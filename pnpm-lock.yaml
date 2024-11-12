@@ -70,8 +70,8 @@ importers:
         specifier: ^0.0.119
         version: 0.0.119
       accomadesc:
-        specifier: ^0.0.7
-        version: 0.0.7(svelte@5.1.15)
+        specifier: ^0.0.8
+        version: 0.0.8(svelte@5.1.15)
       gdpr-cooco-banner:
         specifier: ^0.0.7
         version: 0.0.7(svelte@5.1.15)
@@ -461,8 +461,8 @@ packages:
   '@vitest/utils@2.1.4':
     resolution: {integrity: sha512-MXDnZn0Awl2S86PSNIim5PWXgIAx8CIkzu35mBdSApUip6RFOGXBCf3YFyeEu8n1IHk4bWD46DeYFu9mQlFIRg==}
 
-  accomadesc@0.0.7:
-    resolution: {integrity: sha512-LqIrcRharFGFoBG6O79QQL3+POh6On4qF/zE7RWJ8vTDnFJjyK06Crtvgj1vFVbdGwLMOwfSm5qlTDW0+lQiig==}
+  accomadesc@0.0.8:
+    resolution: {integrity: sha512-qRoefHs4ZaTTePTuhuq8CZKovnEAlYYVG6lNQ9AKWx0+pLMU/4jllufSSOb+DxB6ti5xJt+Pt3mBGnY3r9r4IA==}
     peerDependencies:
       svelte: ^5.0.0
 
@@ -576,8 +576,8 @@ packages:
   import-meta-resolve@4.1.0:
     resolution: {integrity: sha512-I6fiaX09Xivtk+THaMfAwnA3MVA5Big1WHF1Dfx9hFuvNIWpXnorlkzhcQf6ehrqQiiZECRt1poOAkPmer3ruw==}
 
-  is-reference@3.0.2:
-    resolution: {integrity: sha512-v3rht/LgVcsdZa3O2Nqs+NMowLOxeOm7Ay9+/ARQ2F+qEoANRcqrjAZKGN0v8ymUetZGgkp26LTnGT7H0Qo9Pg==}
+  is-reference@3.0.3:
+    resolution: {integrity: sha512-ixkJoqQvAP88E6wLydLGGqCJsrFUnqoH6HnaczB8XmDH1oaWU+xxdptvikTgaEhtZ53Ky6YXiBuUI2WXLMCwjw==}
 
   js-cookie@3.0.5:
     resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
@@ -1083,7 +1083,7 @@ snapshots:
       loupe: 3.1.2
       tinyrainbow: 1.2.0
 
-  accomadesc@0.0.7(svelte@5.1.15):
+  accomadesc@0.0.8(svelte@5.1.15):
     dependencies:
       '@dinero.js/currencies': 2.0.0-alpha.14
       '@fontsource/raleway': 5.1.0
@@ -1196,7 +1196,7 @@ snapshots:
 
   import-meta-resolve@4.1.0: {}
 
-  is-reference@3.0.2:
+  is-reference@3.0.3:
     dependencies:
       '@types/estree': 1.0.6
 
@@ -1319,7 +1319,7 @@ snapshots:
       axobject-query: 4.1.0
       esm-env: 1.1.4
       esrap: 1.2.2
-      is-reference: 3.0.2
+      is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.12
       zimmerframe: 1.1.2

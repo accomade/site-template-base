@@ -4,9 +4,9 @@
   import HamburgerMenuButton from '$lib/components/HamburgerMenuButton.svelte';
   import MainNav from '$lib/components/MainNav.svelte';
 
-  import { nav } from '$lib/conf';
   import { getContext, type Snippet } from 'svelte';
   import type { SiteState } from '$lib/state.svelte';
+  import nav from '$lib/conf/nav.json';
 
   const ss: SiteState = getContext('SITE_STATE');
 
@@ -55,4 +55,3 @@
     z-index: 999;
   }
 </style>
-

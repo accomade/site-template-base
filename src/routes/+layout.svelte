@@ -1,15 +1,15 @@
 <script lang="ts">
   import type { LayoutData } from './$types';
   import { setContext, type Snippet } from 'svelte';
-  import { Banner } from 'gdpr-cooco-banner';
+  import { Banner, type CookieType } from 'gdpr-cooco-banner';
 
   import '$lib/loadFonts';
-  import { cookieSettings } from '$lib/conf';
+  import cookies from '$lib/conf/cookies.json';
   // Here is an example of +layout.svelte file
   import { installTwicPics } from '@twicpics/components/sveltekit';
   import '@twicpics/components/style.css';
 
-  import { SiteState } from '$lib/state.svelte';
+  import { SiteState, type SupportedLang } from '$lib/state.svelte';
 
   let {
     data,
@@ -19,7 +19,7 @@
     children?: Snippet;
   } = $props();
 
-  const ss = new SiteState(data.lang, document);
+  const ss = new SiteState(data.lang as SupportedLang, document);
   setContext('SITE_STATE', ss);
   installTwicPics({
     domain: `https://accomade.twic.pics`,
@@ -49,9 +49,9 @@
   on:analytics={analyticsCookies}
   on:preferences={preferenceCookies}
   on:marketing={marketingCookies}
-  showEditIcon={cookieSettings.showIcon}
+  showEditIcon={cookies.showIcon}
   translation={ss.cookiesTranslation}
-  choices={cookieSettings.types}
+  choices={cookies.types as CookieType[]}
 />
 
 <style>

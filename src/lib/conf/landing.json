@@ -5,33 +5,24 @@
       "blocks": [
         {
           "content": {
-            "headerFontSize": "2rem",
+            "maxFontSize": "",
+            "minFontSize": "",
             "minHeight": "",
-            "ref": "excellent-coakum",
-            "textFontSize": "1.4rem"
+            "ref": "excellent-coakum"
           },
           "kind": "text",
-          "id": "comparative-goldenglow"
+          "id": "printed-marsh-ragwort"
         },
         {
           "content": {
             "alt": "rich-black-eyed-susan",
             "attribution": "",
-            "height": "40vh",
+            "height": "30vh",
             "link": "",
             "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/299435a8-7844-48ca-b8c2-167bc6ce6389"
           },
           "kind": "photo",
-          "id": "pale-mahogany-birch"
-        },
-        {
-          "kind": "text",
-          "content": {
-            "ref": "arbitrary-sharp-fringed-sow-thistle-text",
-            "textFontSize": "1rem",
-            "headerFontSize": "1.5rem"
-          },
-          "id": "gothic-three-leaved-coneflower"
+          "id": "long-carolina-azolla"
         }
       ],
       "columnCount": 2,
@@ -47,7 +38,7 @@
             "header2": "nasty-thin-leaved-coneflower-block-devoted-mango"
           },
           "kind": "weather",
-          "id": "cooing-bur-oak"
+          "id": "available-birds-nest-plant"
         }
       ],
       "columnCount": 1,
@@ -78,7 +69,7 @@
             ]
           },
           "kind": "photo-gallery",
-          "id": "salty-bow-wood"
+          "id": "varying-hedge-plant"
         }
       ],
       "columnCount": 1,
@@ -95,7 +86,7 @@
             "zoom": 17
           },
           "kind": "leaflet-map",
-          "id": "constitutional-orange-milkweed"
+          "id": "still-trillium"
         }
       ],
       "columnCount": 1,

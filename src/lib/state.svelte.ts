@@ -1,18 +1,38 @@
 import { browser } from '$app/environment';
-import type { CookieSelection } from './types/cookies';
 import Cookie from 'js-cookie';
 import type { I18nFacade } from 'accomadesc';
 import { dinero, toDecimal, type Dinero, type DineroSnapshot } from 'dinero.js';
 import type { DateTime } from 'luxon';
 import { type I18n as CalI18n } from 'occuplan';
 
+import type { Translation as CookieTranslation } from 'gdpr-cooco-banner';
+
 import formats from './conf/formats.json';
 import translations from './conf/translations.json';
-import type { I18n, Translation } from './types/i18n';
 import type { TemplateFunction } from 'squirrelly/dist/types/compile';
 import * as Sqrl from 'squirrelly';
 
 export type SupportedLang = 'en' | 'pl' | 'de' | 'es' | 'fr'; //(typeof translations.supportedLangs)[number];
+
+export interface CookieSelection {
+  analytics: boolean;
+  marketing: boolean;
+  preferences: boolean;
+  necessary: boolean;
+}
+
+export interface Translation {
+  site: Record<string, string>;
+  cookies: CookieTranslation;
+  calendar: CalI18n;
+}
+
+export interface I18n {
+  defaultLang: SupportedLang;
+  supportedLangs: SupportedLang[];
+  preferBrowserLang: boolean;
+  translations: Partial<Record<SupportedLang, Translation>>;
+}
 
 export class SiteState implements I18nFacade {
   i18n: I18n;
@@ -119,11 +139,12 @@ export class SiteState implements I18nFacade {
 
 const mapTranslations = (): I18n => {
   const mappedTranslations: I18n = {
-    defaultLang: translations.defaultLang,
-    supportedLangs: translations.supportedLangs,
+    defaultLang: translations.defaultLang as SupportedLang,
+    supportedLangs: translations.supportedLangs as SupportedLang[],
     preferBrowserLang: true,
     translations: {},
   };
+
   for (const tEntry of Object.entries(translations.translations)) {
     const [lang, jsonT] = tEntry;
     const t: Translation = {
@@ -144,9 +165,8 @@ const mapTranslations = (): I18n => {
     if (!mappedTranslations.translations) {
       mappedTranslations.translations = {};
     }
-    mappedTranslations.translations[lang] = t;
+    mappedTranslations.translations[lang as SupportedLang] = t;
   }
-
   return mappedTranslations;
 };
 

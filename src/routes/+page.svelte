@@ -1,14 +1,13 @@
 <script lang="ts">
-  import { Photo, Section } from 'accomadesc';
+  import landing from '$lib/conf/landing.json';
+  import nav from '$lib/conf/nav.json';
+
+  import { Photo, Section, type SectionI } from 'accomadesc';
   import HamburgerMenuButton from '$lib/components/HamburgerMenuButton.svelte';
   import MainNav from '$lib/components/MainNav.svelte';
   import Footer from '$lib/components/Footer.svelte';
 
-  import { nav, landing } from '$lib/conf';
   const ss: SiteState = getContext('SITE_STATE');
-  let currentLang = $derived(ss.currentLang);
-  let isMenuOpen = $derived(ss.isMenuOpen);
-
   import { getContext } from 'svelte';
   import type { SiteState } from '$lib/state.svelte';
 </script>
@@ -27,7 +26,7 @@
 
 <main>
   {#each landing.sections as s}
-    <Section {...s} />
+    <Section {...s as SectionI} {...ss} />
   {/each}
 </main>
 

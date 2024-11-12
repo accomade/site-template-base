@@ -22,7 +22,7 @@
 		"@types/node": "^18.19.64",
 		"@types/squirrelly": "^7.1.5",
 		"@types/web": "^0.0.119",
-		"accomadesc": "^0.0.7",
+		"accomadesc": "^0.0.8",
 		"gdpr-cooco-banner": "^0.0.7",
 		"occuplan": "^0.3.16",
 		"prettier-plugin-svelte": "^3.2.8",
