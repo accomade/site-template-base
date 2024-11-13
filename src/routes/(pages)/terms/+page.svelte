@@ -1,7 +1,6 @@
 <script lang="ts">
   import type { SiteState } from '$lib/state.svelte';
   import { getContext } from 'svelte';
-
   const ss: SiteState = getContext('SITE_STATE');
 </script>
 
@@ -20,4 +19,3 @@
     margin-right: 2rem;
   }
 </style>
-

@@ -1,0 +1,587 @@
+{
+	"cardContent": {
+		"blocks": [
+			{
+				"acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+				"content": {
+					"core": {
+						"accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+						"peopleMin": 2,
+						"peopleMax": 4,
+						"size": 55,
+						"bedRooms": 2,
+						"bathRooms": 1,
+						"pets": true,
+						"wifi": true,
+						"smoking": false,
+						"ac": false,
+						"tv": true,
+						"parking": true,
+						"showPets": true,
+						"showWifi": true,
+						"showSmoking": true,
+						"showAc": false,
+						"showTv": true,
+						"showParking": true
+					}
+				},
+				"kind": "amneties-core"
+			},
+			{
+				"acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+				"content": {
+					"accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+					"showMaximum": true,
+					"showMinimum": true,
+					"footnote": "promising-tassel-weed",
+					"entries": [
+						{
+							"kind": "range",
+							"from": "2024-09-01T02:00:00.000+02:00",
+							"to": "2025-06-30T00:00:00.000Z",
+							"entry": {
+								"kind": "entry",
+								"perNightPrice": {
+									"amount": 5000,
+									"currency": {
+										"code": "EUR",
+										"base": 10,
+										"exponent": 2
+									}
+								},
+								"minNumberOfNights": 3,
+								"firstNightPrice": {
+									"amount": 8000,
+									"currency": {
+										"code": "EUR",
+										"base": 10,
+										"exponent": 2
+									}
+								}
+							}
+						},
+						{
+							"kind": "range",
+							"from": "2025-09-01T02:00:00.000+02:00",
+							"to": "2026-06-30T00:00:00.000Z",
+							"entry": {
+								"kind": "entry",
+								"perNightPrice": {
+									"amount": 5000,
+									"currency": {
+										"code": "EUR",
+										"base": 10,
+										"exponent": 2
+									}
+								},
+								"minNumberOfNights": 3,
+								"firstNightPrice": {
+									"amount": 8000,
+									"currency": {
+										"code": "EUR",
+										"base": 10,
+										"exponent": 2
+									}
+								}
+							}
+						}
+					],
+					"global": {
+						"kind": "entry",
+						"perNightPrice": {
+							"amount": 7000,
+							"currency": {
+								"code": "EUR",
+								"base": 10,
+								"exponent": 2
+							}
+						},
+						"minNumberOfNights": 5,
+						"firstNightPrice": {
+							"amount": 10000,
+							"currency": {
+								"code": "EUR",
+								"base": 10,
+								"exponent": 2
+							}
+						}
+					}
+				},
+				"kind": "pricing-short"
+			},
+			{
+				"acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+				"content": {
+					"accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+					"calUrl": "https://popnapdkcdnabruxkjti.supabase.co/storage/v1/object/public/ical/81e66599-ac3c-4ad6-b261-fceeb784f9e9/050edcb4-680e-4542-96df-3ae4a2af89a5",
+					"search": [
+						3,
+						7,
+						14
+					]
+				},
+				"kind": "calendar-available"
+			}
+		],
+		"coverPhoto": {
+			"alt": "acco_default_alt",
+			"external": false,
+			"link": "accomodations/050edcb4-680e-4542-96df-3ae4a2af89a5",
+			"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/9fe17253-9343-4aa3-a375-25518ba11eeb"
+		},
+		"slug": "acco_card_slug"
+	},
+	"displayName": "Wohnung 2 Freienhaus",
+	"path": "/accomodations/050edcb4-680e-4542-96df-3ae4a2af89a5",
+	"siteContent": [
+		{
+			"blocks": [
+				{
+					"content": {
+						"ref": "substantial-silky-dogwood",
+						"minFontSize": "",
+						"maxFontSize": "",
+						"minHeight": ""
+					},
+					"kind": "text"
+				},
+				{
+					"acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+					"content": {
+						"accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+						"calUrl": "https://popnapdkcdnabruxkjti.supabase.co/storage/v1/object/public/ical/81e66599-ac3c-4ad6-b261-fceeb784f9e9/050edcb4-680e-4542-96df-3ae4a2af89a5"
+					},
+					"kind": "calendar"
+				}
+			],
+			"columnCount": 2,
+			"header": "capitalist-eytelia",
+			"padding": "10vw"
+		},
+		{
+			"blocks": [
+				{
+					"acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+					"content": {
+						"accoPath": "050edcb4-680e-4542-96df-3ae4a2af89a5",
+						"columns": [
+							"timeRange",
+							"firstNight",
+							"eachNight",
+							"peopleNum",
+							"extraPerson",
+							"minNumNights"
+						],
+						"footnote": "dear-scotch-cap",
+						"entries": [
+							{
+								"kind": "range",
+								"from": "2024-09-01T02:00:00.000+02:00",
+								"to": "2025-06-30T00:00:00.000Z",
+								"entry": {
+									"kind": "entry",
+									"perNightPrice": {
+										"amount": 5000,
+										"currency": {
+											"code": "EUR",
+											"base": 10,
+											"exponent": 2
+										}
+									},
+									"minNumberOfNights": 3,
+									"firstNightPrice": {
+										"amount": 8000,
+										"currency": {
+											"code": "EUR",
+											"base": 10,
+											"exponent": 2
+										}
+									}
+								}
+							},
+							{
+								"kind": "range",
+								"from": "2025-09-01T02:00:00.000+02:00",
+								"to": "2026-06-30T00:00:00.000Z",
+								"entry": {
+									"kind": "entry",
+									"perNightPrice": {
+										"amount": 5000,
+										"currency": {
+											"code": "EUR",
+											"base": 10,
+											"exponent": 2
+										}
+									},
+									"minNumberOfNights": 3,
+									"firstNightPrice": {
+										"amount": 8000,
+										"currency": {
+											"code": "EUR",
+											"base": 10,
+											"exponent": 2
+										}
+									}
+								}
+							}
+						],
+						"global": {
+							"kind": "entry",
+							"perNightPrice": {
+								"amount": 7000,
+								"currency": {
+									"code": "EUR",
+									"base": 10,
+									"exponent": 2
+								}
+							},
+							"minNumberOfNights": 5,
+							"firstNightPrice": {
+								"amount": 10000,
+								"currency": {
+									"code": "EUR",
+									"base": 10,
+									"exponent": 2
+								}
+							}
+						}
+					},
+					"kind": "pricing"
+				}
+			],
+			"columnCount": 1,
+			"header": "coming-winterberry-holly",
+			"padding": "10vw"
+		},
+		{
+			"blocks": [
+				{
+					"content": {
+						"photos": [
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/35a5389b-2ca1-4b07-91d6-b3738773cd1b"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/42354026-9d53-4f7d-81b0-81fa0cfef3f9"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/9fe17253-9343-4aa3-a375-25518ba11eeb"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/a2d1d3e2-bfa6-41bd-91b4-082c1657cdf6"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/08e0413b-8ac5-42d4-a511-e8c718659b72"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/3373e6e5-7bad-47b9-b46c-f0522da8570b"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/8e24d583-bb69-4df3-a8f8-956536a4b091"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/88fd68cc-dfd5-4db0-b655-35aec5cef8e3"
+							}
+						],
+						"gridPhotoWidth": ""
+					},
+					"kind": "photo-gallery"
+				}
+			],
+			"columnCount": 1,
+			"header": "arrogant-poor-annie",
+			"padding": "0"
+		}
+	]
+},
+{
+	"cardContent": {
+		"blocks": [
+			{
+				"acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
+				"content": {
+					"core": {
+						"accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
+						"peopleMin": 1,
+						"peopleMax": 4,
+						"size": 50,
+						"bedRooms": 1,
+						"bathRooms": 1,
+						"pets": false,
+						"wifi": true,
+						"smoking": false,
+						"ac": false,
+						"tv": true,
+						"parking": true,
+						"showPets": true,
+						"showWifi": true,
+						"showSmoking": true,
+						"showAc": false,
+						"showTv": true,
+						"showParking": true
+					}
+				},
+				"kind": "amneties-core"
+			},
+			{
+				"acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
+				"content": {
+					"accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
+					"showMaximum": true,
+					"showMinimum": true,
+					"footnote": "coherent-milk-thistle",
+					"entries": [
+						{
+							"kind": "range",
+							"from": "2024-09-01T02:00:00.000+02:00",
+							"to": "2025-06-30T00:00:00.000Z",
+							"entry": {
+								"kind": "entry",
+								"perNightPrice": {
+									"amount": 5000,
+									"currency": {
+										"code": "EUR",
+										"base": 10,
+										"exponent": 2
+									}
+								},
+								"minNumberOfNights": 3,
+								"firstNightPrice": {
+									"amount": 8000,
+									"currency": {
+										"code": "EUR",
+										"base": 10,
+										"exponent": 2
+									}
+								}
+							}
+						},
+						{
+							"kind": "range",
+							"from": "2025-09-01T02:00:00.000+02:00",
+							"to": "2026-06-30T00:00:00.000Z",
+							"entry": {
+								"kind": "entry",
+								"perNightPrice": {
+									"amount": 5000,
+									"currency": {
+										"code": "EUR",
+										"base": 10,
+										"exponent": 2
+									}
+								},
+								"minNumberOfNights": 3,
+								"firstNightPrice": {
+									"amount": 8000,
+									"currency": {
+										"code": "EUR",
+										"base": 10,
+										"exponent": 2
+									}
+								}
+							}
+						}
+					],
+					"global": {
+						"kind": "entry",
+						"perNightPrice": {
+							"amount": 7000,
+							"currency": {
+								"code": "EUR",
+								"base": 10,
+								"exponent": 2
+							}
+						},
+						"minNumberOfNights": 5,
+						"firstNightPrice": {
+							"amount": 10000,
+							"currency": {
+								"code": "EUR",
+								"base": 10,
+								"exponent": 2
+							}
+						}
+					}
+				},
+				"kind": "pricing-short"
+			},
+			{
+				"acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
+				"content": {
+					"accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
+					"calUrl": "https://popnapdkcdnabruxkjti.supabase.co/storage/v1/object/public/ical/81e66599-ac3c-4ad6-b261-fceeb784f9e9/e5cace58-d435-420f-a1dc-17e844469e7e",
+					"search": [
+						3,
+						7,
+						14
+					]
+				},
+				"kind": "calendar-available"
+			}
+		],
+		"coverPhoto": {
+			"alt": "acco_default_alt",
+			"external": false,
+			"link": "accomodations/e5cace58-d435-420f-a1dc-17e844469e7e",
+			"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/5554bf63-2c4c-48df-9177-2330447c39e9"
+		},
+		"slug": "acco_card_slug"
+	},
+	"displayName": "Wohnung DG",
+	"path": "/accomodations/e5cace58-d435-420f-a1dc-17e844469e7e",
+	"siteContent": [
+		{
+			"blocks": [
+				{
+					"content": {
+						"ref": "resonant-horsetail-milkweed",
+						"minFontSize": "",
+						"maxFontSize": "",
+						"minHeight": ""
+					},
+					"kind": "text"
+				},
+				{
+					"acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
+					"content": {
+						"accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
+						"calUrl": "https://popnapdkcdnabruxkjti.supabase.co/storage/v1/object/public/ical/81e66599-ac3c-4ad6-b261-fceeb784f9e9/e5cace58-d435-420f-a1dc-17e844469e7e"
+					},
+					"kind": "calendar"
+				}
+			],
+			"columnCount": 2,
+			"header": "top-violet",
+			"padding": "10vw"
+		},
+		{
+			"header": "frequent-moose-maple",
+			"columnCount": 1,
+			"padding": "10vw",
+			"blocks": [
+				{
+					"kind": "pricing",
+					"acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
+					"content": {
+						"accoPath": "e5cace58-d435-420f-a1dc-17e844469e7e",
+						"columns": [
+							"timeRange",
+							"firstNight",
+							"eachNight",
+							"minNumNights"
+						],
+						"footnote": "high-pitched-california-bay",
+						"entries": [
+							{
+								"kind": "range",
+								"from": "2023-12-31T01:00:00.000+01:00",
+								"to": "2024-06-30T02:00:00.000+02:00",
+								"entry": {
+									"kind": "entry",
+									"perNightPrice": {
+										"amount": 5000,
+										"currency": {
+											"code": "EUR",
+											"base": 10,
+											"exponent": 2
+										}
+									},
+									"minNumberOfNights": 3,
+									"firstNightPrice": {
+										"amount": 8000,
+										"currency": {
+											"code": "EUR",
+											"base": 10,
+											"exponent": 2
+										}
+									}
+								}
+							},
+							{
+								"kind": "range",
+								"from": "2024-09-01T02:00:00.000+02:00",
+								"to": "2024-12-31T01:00:00.000+01:00",
+								"entry": {
+									"kind": "entry",
+									"perNightPrice": {
+										"amount": 5000,
+										"currency": {
+											"code": "EUR",
+											"base": 10,
+											"exponent": 2
+										}
+									},
+									"minNumberOfNights": 3,
+									"firstNightPrice": {
+										"amount": 8000,
+										"currency": {
+											"code": "EUR",
+											"base": 10,
+											"exponent": 2
+										}
+									}
+								}
+							}
+						],
+						"global": {
+							"kind": "entry",
+							"perNightPrice": {
+								"amount": 7000,
+								"currency": {
+									"code": "EUR",
+									"base": 10,
+									"exponent": 2
+								}
+							},
+							"minNumberOfNights": 5,
+							"firstNightPrice": {
+								"amount": 10000,
+								"currency": {
+									"code": "EUR",
+									"base": 10,
+									"exponent": 2
+								}
+							}
+						}
+					}
+				},
+				{
+					"kind": "photo-gallery",
+					"content": {
+						"gridPhotoWidth": 300,
+						"photos": [
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/c4d00922-ce0e-41a6-8365-d864dc1baa2c"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/5554bf63-2c4c-48df-9177-2330447c39e9"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/4283cf54-9ef6-4633-8c4c-335189cb9388"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/06e3183c-add0-4e9b-b1b0-f338cad0e54e"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/76b0bc78-bb4d-44fe-9266-8f58110e3e5f"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/01da5040-90ab-4028-86b7-c0ae99a1aaa8"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/b76b8088-420c-4a61-9a9e-661faf310748"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/adf51ea8-f4d4-4206-aa97-f54d5ee33f39"
+							},
+							{
+								"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/1a914183-0561-45d4-a349-c4dd7d04534a"
+							}
+						]
+					}
+				}
+			]
+		}
+	]
+}
+]

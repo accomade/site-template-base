@@ -12,7 +12,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.6",
-		"@sveltejs/kit": "^2.8.0",
+		"@sveltejs/kit": "^2.8.1",
 		"@sveltejs/vite-plugin-svelte": "^4.0.0",
 		"@twicpics/components": "^0.31.1",
 		"@types/geojson": "^7946.0.14",
@@ -22,16 +22,16 @@
 		"@types/node": "^18.19.64",
 		"@types/squirrelly": "^7.1.5",
 		"@types/web": "^0.0.119",
-		"accomadesc": "^0.0.8",
+		"accomadesc": "^0.0.14",
 		"gdpr-cooco-banner": "^0.0.7",
 		"occuplan": "^0.3.16",
 		"prettier-plugin-svelte": "^3.2.8",
-		"svelte": "^5.1.15",
+		"svelte": "^5.1.16",
 		"svelte-check": "^4.0.7",
 		"tslib": "^2.8.1",
 		"typescript": "^5.6.3",
 		"vite": "^5.4.11",
-		"vitest": "^2.1.4"
+		"vitest": "^2.1.5"
 	},
 	"type": "module",
 	"engines": {

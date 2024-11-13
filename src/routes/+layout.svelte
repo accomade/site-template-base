@@ -5,11 +5,12 @@
 
   import '$lib/loadFonts';
   import cookies from '$lib/conf/cookies.json';
-  // Here is an example of +layout.svelte file
+
   import { installTwicPics } from '@twicpics/components/sveltekit';
   import '@twicpics/components/style.css';
 
   import { SiteState, type SupportedLang } from '$lib/state.svelte';
+  import { browser } from '$app/environment';
 
   let {
     data,
@@ -19,7 +20,14 @@
     children?: Snippet;
   } = $props();
 
-  const ss = new SiteState(data.lang as SupportedLang, document);
+  const ss = new SiteState(data.lang as SupportedLang);
+
+  $effect(() => {
+    if (browser && document) {
+      document.documentElement.lang = ss.currentLang;
+    }
+  });
+
   setContext('SITE_STATE', ss);
   installTwicPics({
     domain: `https://accomade.twic.pics`,

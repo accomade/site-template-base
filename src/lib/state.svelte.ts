@@ -35,11 +35,10 @@ export interface I18n {
 }
 
 export class SiteState implements I18nFacade {
-  i18n: I18n;
+  i18n = $state(mapTranslations());
+  fTemplates = $state(mapFormats());
   supportedLangs: SupportedLang[];
-  fTemplates: Record<string, TemplateFunction>;
   isMenuOpen = $state(false);
-  currentPage = $state('');
   cookieSelection: CookieSelection = $state({
     analytics: false,
     marketing: false,
@@ -54,19 +53,12 @@ export class SiteState implements I18nFacade {
     translations.translations[this.currentLang].cookies,
   );
 
-  constructor(lang: SupportedLang, document: Document) {
+  constructor(lang: SupportedLang) {
     this.currentLang = lang;
-    if (browser && document) {
-      document.documentElement.lang = this.currentLang;
-    }
-
     //register reactivity?! TODO test it
     if (this.cookieSelection) {
       this.handleCookie();
     }
-
-    this.i18n = $state(mapTranslations());
-    this.fTemplates = $state(mapFormats());
     this.supportedLangs = translations.supportedLangs as SupportedLang[];
   }
 
