@@ -1,4 +1,3 @@
-import { browser } from '$app/environment';
 import Cookie from 'js-cookie';
 import type { I18nFacade } from 'accomadesc';
 import { dinero, toDecimal, type Dinero, type DineroSnapshot } from 'dinero.js';
@@ -45,11 +44,12 @@ export class SiteState implements I18nFacade {
     preferences: false,
     necessary: true,
   });
-  currentLang = $state((translations.defaultLang ?? 'en') as SupportedLang);
+  currentLang: SupportedLang = $state('en'); //= $state((translations.defaultLang ?? 'en') as SupportedLang);
   calendarTranslation: CalI18n = $derived(
     translations.translations[this.currentLang].calendar,
   );
-  cookiesTranslation = $derived(
+  //
+  cookiesTranslation: CookieTranslation = $derived(
     translations.translations[this.currentLang].cookies,
   );
 
@@ -101,15 +101,19 @@ export class SiteState implements I18nFacade {
     return res;
   }
   formatFunc(formatter: string, props: Record<string, any>): string {
-    const fullTemplateName = `${this.currentLang}_${formatter}`;
-    const templFun = this.fTemplates[fullTemplateName];
-    if (!templFun) {
-      console.log(
-        `FormatFunc not found for ${formatter} and lang ${this.currentLang}`,
-      );
-      return '';
+    console.log(formatter, this.currentLang);
+    if (this.currentLang) {
+      const fullTemplateName = `${this.currentLang}_${formatter}`;
+      const templFun = this.fTemplates[fullTemplateName];
+      if (!templFun) {
+        console.log(
+          `FormatFunc not found for ${formatter} and lang ${this.currentLang}`,
+        );
+        return '';
+      }
+      return templFun(props, Sqrl.defaultConfig);
     }
-    return templFun(props, Sqrl.defaultConfig);
+    return '';
   }
 
   formatMoneyFunc(d: Dinero<number> | DineroSnapshot<number>): string {

@@ -585,3 +585,135 @@
 	]
 }
 ]
+// SITE CONTENT:
+{
+"id": "some-new-id-2",
+"blocks": [
+	{
+		"id": "fake-block-id-2",
+		"acco": "83cd06fd-858d-4e21-994f-325778812713",
+		"content": {
+			"accoPath": "83cd06fd-858d-4e21-994f-325778812713",
+			"columns": [
+				"timeRange",
+				"firstNight",
+				"eachNight",
+				"peopleNum",
+				"extraPerson",
+				"minNumNights"
+			],
+			"footnote": "combined-colic-weed",
+			"entries": [
+				{
+					"from": "2024-09-01T02:00:00.000+02:00",
+					"to": "2025-06-30T00:00:00.000Z",
+					"entry": {
+						"perNightPrice": {
+							"amount": 5000,
+							"currency": {
+								"code": "EUR",
+								"base": 10,
+								"exponent": 2
+							},
+							"scale": 2
+						},
+						"minNumberOfNights": 3,
+						"firstNightPrice": {
+							"amount": 8000,
+							"currency": {
+								"code": "EUR",
+								"base": 10,
+								"exponent": 2
+							},
+							"scale": 2
+						}
+					}
+				},
+				{
+					"from": "2025-09-01T02:00:00.000+02:00",
+					"to": "2026-06-30T00:00:00.000Z",
+					"entry": {
+						"perNightPrice": {
+							"amount": 5000,
+							"currency": {
+								"code": "EUR",
+								"base": 10,
+								"exponent": 2
+							},
+							"scale": 2
+						},
+						"minNumberOfNights": 3,
+						"firstNightPrice": {
+							"amount": 8000,
+							"currency": {
+								"code": "EUR",
+								"base": 10,
+								"exponent": 2
+							},
+							"scale": 2
+						}
+					}
+				}
+			],
+			"global": {
+				"perNightPrice": {
+					"amount": 7000,
+					"currency": {
+						"code": "EUR",
+						"base": 10,
+						"exponent": 2
+					},
+					"scale": 2
+				},
+				"minNumberOfNights": 5,
+				"firstNightPrice": {
+					"amount": 10000,
+					"currency": {
+						"code": "EUR",
+						"base": 10,
+						"exponent": 2
+					},
+					"scale": 2
+				}
+			}
+		},
+		"kind": "pricing"
+	}
+],
+"columnCount": 1,
+"header": "furious-skunk-cabbage",
+"padding": "10vw"
+},
+{
+"id": "some-new-id-3",
+"blocks": [
+	{
+		"id": "fake-block-id-1",
+		"content": {
+			"gridPhotoWidth": 100,
+			"photos": [
+				{
+					"id": "p-id-1",
+					"kind": "photo",
+					"content": {
+						"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/c3a3cb48-1ab0-49c7-a693-7cba87f9baa8",
+						"alt": "alt"
+					}
+				},
+				{
+					"id": "p-id-2",
+					"kind": "photo",
+					"content": {
+						"photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/f611ec78-293b-4248-b458-37f1aaf1c4c9",
+						"alt": "alt"
+					}
+				}
+			]
+		},
+		"kind": "photo-gallery"
+	}
+],
+"columnCount": 1,
+"header": "funny-nodding-thistle",
+"padding": "0"
+}

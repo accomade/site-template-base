@@ -28,20 +28,6 @@
       "path": "/accomodations"
     },
     {
-      "acco": "e5cace58-d435-420f-a1dc-17e844469e7e",
-      "external": false,
-      "key": "e5cace58-d435-420f-a1dc-17e844469e7e",
-      "path": "/accomodations/e5cace58-d435-420f-a1dc-17e844469e7e",
-      "sub": true
-    },
-    {
-      "acco": "050edcb4-680e-4542-96df-3ae4a2af89a5",
-      "external": false,
-      "key": "050edcb4-680e-4542-96df-3ae4a2af89a5",
-      "path": "/accomodations/050edcb4-680e-4542-96df-3ae4a2af89a5",
-      "sub": true
-    },
-    {
       "acco": "83cd06fd-858d-4e21-994f-325778812713",
       "external": false,
       "key": "83cd06fd-858d-4e21-994f-325778812713",

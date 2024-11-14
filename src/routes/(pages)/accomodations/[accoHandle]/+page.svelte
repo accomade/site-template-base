@@ -3,7 +3,7 @@
   import { page } from '$app/stores';
   import { getContext, onMount } from 'svelte';
   import accos from '$lib/conf/accos.json';
-  import { Section } from 'accomadesc';
+  import { Section, type SectionI } from 'accomadesc';
   import type { SiteState } from '$lib/state.svelte';
 
   let {
@@ -43,7 +43,7 @@
     {#if acco.siteContent}
       {#each acco.siteContent as s}
         <div class="section-wrapper">
-          <Section {...s} {...ss} />
+          <Section {...s as SectionI} {...ss} />
         </div>
       {/each}
     {/if}
@@ -55,7 +55,6 @@
     margin-bottom: 2rem;
     width: 100%;
     overflow-y: clip;
-
     display: flex;
     flex-direction: column;
     align-items: center;

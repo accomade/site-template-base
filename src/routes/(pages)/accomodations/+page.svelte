@@ -1,10 +1,5 @@
 <script lang="ts">
-  import {
-    AccoCard,
-    type AccoCardContent,
-    type AccoCardI,
-    type AccoI,
-  } from 'accomadesc';
+  import { AccoCard, type AccoCardContent } from 'accomadesc';
   import accos from '$lib/conf/accos.json';
   import type { SiteState } from '$lib/state.svelte';
   import { getContext } from 'svelte';

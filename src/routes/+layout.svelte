@@ -21,6 +21,7 @@
   } = $props();
 
   const ss = new SiteState(data.lang as SupportedLang);
+  setContext('SITE_STATE', ss);
 
   $effect(() => {
     if (browser && document) {
@@ -28,7 +29,6 @@
     }
   });
 
-  setContext('SITE_STATE', ss);
   installTwicPics({
     domain: `https://accomade.twic.pics`,
   });
@@ -42,6 +42,8 @@
   const marketingCookies = (e: CustomEvent) => {
     ss.cookieSelection.marketing = e.detail.enabled;
   };
+
+  $inspect(ss.currentLang).with(console.trace);
 </script>
 
 <svelte:head>
