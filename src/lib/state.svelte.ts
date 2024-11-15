@@ -62,7 +62,7 @@ export class SiteState implements I18nFacade {
     this.supportedLangs = translations.supportedLangs as SupportedLang[];
   }
 
-  handleCookie() {
+  handleCookie = () => {
     if (this.cookieSelection.preferences) {
       const expires = new Date();
       expires.setDate(expires.getDate() + 365);
@@ -75,9 +75,10 @@ export class SiteState implements I18nFacade {
     } else {
       Cookie.remove('lang');
     }
-  }
+  };
 
-  translateFunc(ref: string): string {
+  translateFunc = (ref: string): string => {
+    console.log(ref, this.currentLang);
     let res = '';
     if (!ref) return res;
 
@@ -99,8 +100,8 @@ export class SiteState implements I18nFacade {
     }
 
     return res;
-  }
-  formatFunc(formatter: string, props: Record<string, any>): string {
+  };
+  formatFunc = (formatter: string, props: Record<string, any>): string => {
     console.log(formatter, this.currentLang);
     if (this.currentLang) {
       const fullTemplateName = `${this.currentLang}_${formatter}`;
@@ -114,9 +115,9 @@ export class SiteState implements I18nFacade {
       return templFun(props, Sqrl.defaultConfig);
     }
     return '';
-  }
+  };
 
-  formatMoneyFunc(d: Dinero<number> | DineroSnapshot<number>): string {
+  formatMoneyFunc = (d: Dinero<number> | DineroSnapshot<number>): string => {
     const locale = formats[this.currentLang as SupportedLang].locale;
     if (!isDinero(d)) d = dinero(d);
 
@@ -127,10 +128,10 @@ export class SiteState implements I18nFacade {
         currency: currency.code,
       }).format(f);
     });
-  }
-  formatDateFunc(d: DateTime | string): string {
+  };
+  formatDateFunc = (d: DateTime | string): string => {
     return '';
-  }
+  };
 }
 
 const mapTranslations = (): I18n => {

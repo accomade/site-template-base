@@ -5,9 +5,9 @@
       "blocks": [
         {
           "content": {
-            "maxFontSize": "",
-            "minFontSize": "",
-            "minHeight": "",
+            "textFontSize": "1.1rem",
+            "headerFontSize": "1.4rem",
+            "minHeight": "2rem",
             "ref": "excellent-coakum"
           },
           "kind": "text",
@@ -52,23 +52,48 @@
             "gridPhotoWidth": 500,
             "photos": [
               {
-                "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/f883c950-da8d-4b07-ad79-44260e847c02"
+                "kind": "photo",
+                "id": "some-id-2",
+                "content": {
+                  "alt": "some-alt",
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/f883c950-da8d-4b07-ad79-44260e847c02"
+                }
               },
               {
-                "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/05b30839-e37b-4788-857a-43f2c3042598"
+                "kind": "photo",
+                "id": "some-id-3",
+                "content": {
+                  "alt": "some-alt",
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/05b30839-e37b-4788-857a-43f2c3042598"
+                }
               },
               {
-                "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/a04d9149-d9cf-4ae4-9bcd-681856955231"
+                "kind": "photo",
+                "id": "some-id-4",
+                "content": {
+                  "alt": "some-alt",
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/a04d9149-d9cf-4ae4-9bcd-681856955231"
+                }
               },
               {
-                "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/3656e302-28e9-46b0-926f-60f6dae4aa86"
+                "kind": "photo",
+                "id": "some-id-5",
+                "content": {
+                  "alt": "some-alt",
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/3656e302-28e9-46b0-926f-60f6dae4aa86"
+                }
               },
               {
-                "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/e5056f8f-5402-41d7-bda4-befda567d64b"
+                "kind": "photo",
+                "id": "some-id-6",
+                "content": {
+                  "alt": "some-alt",
+                  "photoPath": "prod/users/81e66599-ac3c-4ad6-b261-fceeb784f9e9/e5056f8f-5402-41d7-bda4-befda567d64b"
+                }
               }
             ]
           },
-          "kind": "photo-gallery",
+          "kind": "gallery",
           "id": "varying-hedge-plant"
         }
       ],
