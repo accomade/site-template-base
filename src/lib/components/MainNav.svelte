@@ -1,10 +1,12 @@
 <script lang="ts">
+  import { page } from '$app/stores';
   import { fade } from 'svelte/transition';
-  import type { Nav } from '$lib/types/nav';
+  import type { Nav } from '$lib/types.js';
   import NavItem from './NavItem.svelte';
-  import type { SiteState, SupportedLang } from '$lib/state.svelte';
+  import type { SiteState } from '$lib/state.svelte';
   import { getContext } from 'svelte';
 
+  let currentPath = $derived($page.url.pathname);
   let { nav }: { nav: Nav } = $props();
 
   let ss: SiteState = getContext('SITE_STATE');
@@ -14,11 +16,9 @@
     ss.isMenuOpen = false;
   };
 
-  const selected = (e: Event) => {
-    if (e.currentTarget) {
-      const element = e.currentTarget as HTMLInputElement;
-      ss.currentLang = element.value as SupportedLang;
-    }
+  const pathForLang = (lang: string) => {
+    const pathElements = currentPath.split('/');
+    return ['', lang, ...pathElements.slice(2)].join('/');
   };
 </script>
 
@@ -43,17 +43,23 @@
           <legend>{ss.translateFunc('lang')}</legend>
 
           {#each allTranslations as langKey}
-            <div class="radio-wrapper">
-              <input
-                onchange={selected}
-                type="radio"
-                name="language"
-                id={langKey}
-                value={langKey}
-                checked={langKey === ss.currentLang}
-              />
-              <label for={langKey}>{ss.translateFunc(langKey)}</label>
-            </div>
+            <a
+              class="lang-link"
+              rel="alternate"
+              href={pathForLang(langKey)}
+              hreflang={langKey}
+            >
+              <div class="radio-wrapper">
+                <input
+                  type="radio"
+                  name="language"
+                  id={langKey}
+                  value={langKey}
+                  checked={langKey === ss.currentLang}
+                />
+                <label for={langKey}>{ss.translateFunc(langKey)}</label>
+              </div>
+            </a>
           {/each}
         </fieldset>
       </li>
@@ -62,6 +68,10 @@
 </nav>
 
 <style>
+  .lang-link {
+    color: var(--nav-font-color);
+  }
+
   fieldset {
     padding-left: 1rem;
   }
@@ -120,4 +130,3 @@
     margin: 0;
   }
 </style>
-

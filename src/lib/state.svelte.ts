@@ -78,7 +78,7 @@ export class SiteState implements I18nFacade {
   };
 
   translateFunc = (ref: string): string => {
-    console.log(ref, this.currentLang);
+    //console.log(ref, this.currentLang);
     let res = '';
     if (!ref) return res;
 

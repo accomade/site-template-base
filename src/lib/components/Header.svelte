@@ -1,5 +1,8 @@
 <script lang="ts">
-  import { ACCOMADE_USER_ID, PUBLIC_SUPABASE_URL } from '$lib/conf/settings';
+  import {
+    ACCOMADE_USER_ID,
+    PUBLIC_SUPABASE_URL,
+  } from '$lib/conf/settings.json' with { type: 'json' };
   import type { SiteState } from '$lib/state.svelte';
   import { getContext } from 'svelte';
 

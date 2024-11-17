@@ -1,4 +1,5 @@
 {
+  "SEPARATE_PAGE_FOR_ACCO": true,
   "ACCOMADE_USER_ID": "template1",
   "PUBLIC_SUPABASE_URL": "https://ipajhcabityibeaqfzju.supabase.co"
 }

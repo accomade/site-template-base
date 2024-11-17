@@ -1,49 +1,20 @@
 <script lang="ts">
-  import type { LayoutData } from './$types';
-  import { setContext, type Snippet } from 'svelte';
-  import { Banner, type CookieType } from 'gdpr-cooco-banner';
+  import { type Snippet } from 'svelte';
 
   import '$lib/loadFonts';
-  import cookies from '$lib/conf/cookies.json';
 
   import { installTwicPics } from '@twicpics/components/sveltekit';
   import '@twicpics/components/style.css';
 
-  import { SiteState, type SupportedLang } from '$lib/state.svelte';
-  import { browser } from '$app/environment';
-
   let {
-    data,
     children,
   }: {
-    data: LayoutData;
     children?: Snippet;
   } = $props();
-
-  const ss = new SiteState(data.lang as SupportedLang);
-  setContext('SITE_STATE', ss);
-
-  $effect(() => {
-    if (browser && document) {
-      document.documentElement.lang = ss.currentLang;
-    }
-  });
 
   installTwicPics({
     domain: `https://accomade.twic.pics`,
   });
-
-  const analyticsCookies = (e: CustomEvent) => {
-    ss.cookieSelection.analytics = e.detail.enabled;
-  };
-  const preferenceCookies = (e: CustomEvent) => {
-    ss.cookieSelection = e.detail.enabled;
-  };
-  const marketingCookies = (e: CustomEvent) => {
-    ss.cookieSelection.marketing = e.detail.enabled;
-  };
-
-  $inspect(ss.currentLang).with(console.trace);
 </script>
 
 <svelte:head>
@@ -54,15 +25,6 @@
 </svelte:head>
 
 {@render children?.()}
-
-<Banner
-  on:analytics={analyticsCookies}
-  on:preferences={preferenceCookies}
-  on:marketing={marketingCookies}
-  showEditIcon={cookies.showIcon}
-  translation={ss.cookiesTranslation}
-  choices={cookies.types as CookieType[]}
-/>
 
 <style>
   :global(body, html) {

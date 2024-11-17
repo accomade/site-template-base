@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { SiteState } from '$lib/state.svelte';
 
-  import type { Nav } from '$lib/types/nav';
+  import type { Nav } from '$lib/types.js';
   import { getContext } from 'svelte';
   import NavItem from './NavItem.svelte';
 

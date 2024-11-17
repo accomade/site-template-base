@@ -1,11 +1,10 @@
 <script lang="ts">
-  import type { NavItem } from '$lib/types/nav';
+  import type { NavItem } from '$lib/types.js';
   import ExtLinkSvg from './svg/ExtLinkSVG.svelte';
   import { getContext } from 'svelte';
   import { SiteState } from '$lib/state.svelte';
 
   const ss: SiteState = getContext('SITE_STATE');
-
   let {
     n,
     onclick,
@@ -13,13 +12,15 @@
     n: NavItem;
     onclick?: () => void;
   } = $props();
+
+  const path = $derived(`/${ss.currentLang}${n.path}`);
 </script>
 
 <div class="wrapper" class:sub={n.sub}>
   {#if n.path}
     {#if n.external}
       <div class="ext-link-wrapper">
-        <a href={n.path} target="_blank" rel="noreferrer noopener">
+        <a href={path} target="_blank" rel="noreferrer noopener">
           {ss.translateFunc(n.key)}
         </a>
         <div class="link-icon-wrapper">
@@ -27,7 +28,7 @@
         </div>
       </div>
     {:else}
-      <a href={n.path} {onclick}>
+      <a href={path} {onclick}>
         {ss.translateFunc(n.key)}
       </a>
     {/if}
