@@ -1,53 +1,36 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
   import { page } from '$app/stores';
-  import { getContext, onMount } from 'svelte';
-  import accos from '$lib/conf/accos.json';
+  import { getContext } from 'svelte';
+  import accos from '$lib/conf/accos.json' with { type: 'json' };
   import { Section, type SectionI } from 'accomadesc';
   import type { SiteState } from '$lib/state.svelte';
-
-  let {
-    data,
-  }: {
-    data: App.PageData & Record<string, any>;
-  } = $props();
 
   const ss: SiteState = getContext('SITE_STATE');
 
   let acco = $derived(
     accos.find((a) => {
-      return (
-        a.path === $page.url.pathname || `${a.path}/` === $page.url.pathname
-      );
+      return $page.url.pathname.includes(a.path);
     }),
   );
-
-  onMount(() => {
-    if (!acco) {
-      goto('/accomodations');
-    }
-  });
 </script>
 
 <svelte:head>
   {#if acco && acco.displayName}
-    <title>{acco.displayName ? acco.displayName : data.accoHandle}</title>
+    <title>{acco.displayName ? acco.displayName : 'Unnamed Acco'}</title>
   {/if}
 </svelte:head>
 
 {#if acco}
-  {#key acco.displayName}
-    {#if acco.displayName}
-      <h1>{acco.displayName}</h1>
-    {/if}
-    {#if acco.siteContent}
-      {#each acco.siteContent as s}
-        <div class="section-wrapper">
-          <Section {...s as SectionI} {...ss} />
-        </div>
-      {/each}
-    {/if}
-  {/key}
+  {#if acco.displayName}
+    <h1>{acco.displayName}</h1>
+  {/if}
+  {#if acco.siteContent}
+    {#each acco.siteContent as s}
+      <div class="section-wrapper">
+        <Section {...s as SectionI} {...ss} />
+      </div>
+    {/each}
+  {/if}
 {/if}
 
 <style>

@@ -3,7 +3,7 @@
   import { fade } from 'svelte/transition';
   import type { Nav } from '$lib/types.js';
   import NavItem from './NavItem.svelte';
-  import type { SiteState } from '$lib/state.svelte';
+  import type { SiteState, SupportedLang } from '$lib/state.svelte';
   import { getContext } from 'svelte';
 
   let currentPath = $derived($page.url.pathname);
@@ -17,10 +17,16 @@
   };
 
   const pathForLang = (lang: string) => {
-    console.log(currentPath);
     const pathElements = currentPath.split('/');
-    console.log(pathElements);
-    return ['', lang, ...pathElements.slice(2)].join('/');
+    //initial slash results in empty string real first element
+    if (pathElements.length == 1) return `/${lang}`;
+
+    const firstElement = pathElements[1];
+    if (allTranslations.includes(firstElement as SupportedLang)) {
+      return ['', lang, ...pathElements.slice(2)].join('/');
+    } else {
+      return ['', lang, ...pathElements.slice(1)].join('/');
+    }
   };
 </script>
 

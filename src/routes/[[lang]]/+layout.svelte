@@ -7,6 +7,7 @@
   import '$lib/loadFonts';
   import cookies from '$lib/conf/cookies.json';
   import { SiteState, type SupportedLang } from '$lib/state.svelte';
+  import { browser } from '$app/environment';
 
   let {
     children,
@@ -14,8 +15,14 @@
     children?: Snippet;
   } = $props();
 
+  let browserLang: string | null = null;
+  if (browser) {
+    browserLang = navigator.language;
+    console.log(browserLang);
+  }
+
   let pathLang = $page.params['lang'];
-  if (!pathLang) pathLang = translations.defaultLang;
+  if (!pathLang) pathLang = browserLang ?? translations.defaultLang;
   if (!translations.supportedLangs.includes(pathLang))
     pathLang = translations.defaultLang;
 
@@ -24,7 +31,7 @@
 
   $effect(() => {
     let langParam = $page.params['lang'];
-    if (!langParam) langParam = translations.defaultLang;
+    if (!langParam) langParam = browserLang ?? translations.defaultLang;
     if (!translations.supportedLangs.includes(langParam))
       langParam = translations.defaultLang;
 
