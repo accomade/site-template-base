@@ -17,7 +17,9 @@
   };
 
   const pathForLang = (lang: string) => {
+    console.log(currentPath);
     const pathElements = currentPath.split('/');
+    console.log(pathElements);
     return ['', lang, ...pathElements.slice(2)].join('/');
   };
 </script>

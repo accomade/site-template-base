@@ -1,7 +1,7 @@
 import Cookie from 'js-cookie';
 import type { I18nFacade } from 'accomadesc';
 import { dinero, toDecimal, type Dinero, type DineroSnapshot } from 'dinero.js';
-import type { DateTime } from 'luxon';
+import { type DateTime, DateTime as luxon } from 'luxon';
 import { type I18n as CalI18n } from 'occuplan';
 
 import type { Translation as CookieTranslation } from 'gdpr-cooco-banner';
@@ -60,6 +60,7 @@ export class SiteState implements I18nFacade {
       this.handleCookie();
     }
     this.supportedLangs = translations.supportedLangs as SupportedLang[];
+    this.setFilters();
   }
 
   handleCookie = () => {
@@ -101,8 +102,18 @@ export class SiteState implements I18nFacade {
 
     return res;
   };
+
+  setFilters = () => {
+    Sqrl.filters.define('date', (str) => {
+      return this.formatDateFunc(str);
+    });
+    Sqrl.filters.define('money', (str) => {
+      return this.formatMoneyFunc(str);
+    });
+  };
+
   formatFunc = (formatter: string, props: Record<string, any>): string => {
-    console.log(formatter, this.currentLang);
+    //console.log(formatter, this.currentLang);
     if (this.currentLang) {
       const fullTemplateName = `${this.currentLang}_${formatter}`;
       const templFun = this.fTemplates[fullTemplateName];
@@ -129,8 +140,19 @@ export class SiteState implements I18nFacade {
       }).format(f);
     });
   };
+
   formatDateFunc = (d: DateTime | string): string => {
-    return '';
+    const df = formats[this.currentLang].dateFormat;
+
+    let dt: DateTime;
+    if (typeof d === 'string') {
+      dt = luxon.fromISO(d);
+    } else {
+      dt = d;
+    }
+
+    dt.setLocale(this.currentLang);
+    return dt.toFormat(df);
   };
 }
 
@@ -171,14 +193,12 @@ const mapFormats = (): Record<string, TemplateFunction> => {
   const result: Record<string, TemplateFunction> = {};
   for (const entry of Object.entries(formats)) {
     const [lang, format] = entry;
-    if (lang !== 'default') {
-      for (const fEntry of Object.entries(format)) {
-        const [templateName, formatTemplate] = fEntry;
-        const fullTemplateName = `${lang}_${templateName}`;
-        result[fullTemplateName] = Sqrl.compile(formatTemplate, {
-          useWith: true,
-        });
-      }
+    for (const fEntry of Object.entries(format)) {
+      const [templateName, formatTemplate] = fEntry;
+      const fullTemplateName = `${lang}_${templateName}`;
+      result[fullTemplateName] = Sqrl.compile(formatTemplate, {
+        useWith: true,
+      });
     }
   }
   return result;
