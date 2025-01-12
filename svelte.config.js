@@ -13,14 +13,14 @@ if (settings.SEPARATE_PAGE_FOR_ACCO) {
 const langEntries = [];
 translations.supportedLangs.forEach((sl) => {
   baseEntries.forEach((be) => {
-    langEntries.push(`/${sl}/${be}`);
+    langEntries.push(`/${sl}${be}`);
   });
 });
 
 const accoEntries = [];
 if (settings.SEPARATE_PAGE_FOR_ACCO) {
   translations.supportedLangs.forEach((sl) => {
-    accoEntries.push(...accos.map((a) => `/${sl}/${a.path}`));
+    accoEntries.push(...accos.map((a) => `/${sl}${a.path}`));
   });
 }
 //accoEntries = ['/en/accomodations/dummy_entry'];
