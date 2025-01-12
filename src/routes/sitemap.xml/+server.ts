@@ -1,6 +1,6 @@
 export const prerender = true;
 
-import accos from '$lib/conf/accos';
+import accos from '$lib/conf/accos.json' with { type: 'json' };
 
 import * as fs from 'fs';
 const deployDate = fs.readFileSync('./DEPLOY_DATE', {
@@ -57,4 +57,3 @@ export async function GET() {
     },
   );
 }
-
